@@ -4,6 +4,7 @@ import { HeroSection } from '@/components/sections/HeroSection'
 import { Container } from '@/components/ui/Container'
 import { ProjectsSection } from '@/components/sections/ProjectsSection'
 import { ServicesSection } from '@/components/sections/ServicesSection'
+import { AboutSection } from '@/components/sections/AboutSection'
 
 const statusItems = [
   'Architecture React propre',
@@ -22,6 +23,7 @@ export function HomePage() {
           <HeroSection />
           <ProjectsSection />
           <ServicesSection />
+          <AboutSection />
 
           <section className="status-section" aria-labelledby="status-title">
             <h2 id="status-title">Socle en cours de construction</h2>
