@@ -1,3 +1,6 @@
+import matostudioLogo from '@/assets/brand/matostudio-logo.png'
+import { siteConfig } from '@/data/site.config'
+
 const highlights = [
   'Portfolio freelance premium',
   'Développement web moderne',
@@ -9,22 +12,21 @@ export function HomePage() {
   return (
     <main className="page-shell">
       <section className="hero-section" aria-labelledby="home-title">
+        <img src={matostudioLogo} className="brand-logo" alt="MatoStudio" />
+
         <p className="eyebrow">MatoStudio Portfolio V2</p>
 
         <h1 id="home-title">Construire une présence web professionnelle, claire et premium.</h1>
 
-        <p className="hero-description">
-          Base technique stabilisée pour le futur portfolio MatoStudio : architecture React,
-          TypeScript, routing, styles globaux, branding et contenus modulaires.
-        </p>
+        <p className="hero-description">{siteConfig.description}</p>
 
         <div className="hero-actions" aria-label="Actions principales">
-          <a href="mailto:contact@matostudio.fr" className="button button-primary">
+          <a href={`mailto:${siteConfig.email}`} className="button button-primary">
             Me contacter
           </a>
 
           <a
-            href="https://github.com/Matomina"
+            href={siteConfig.links.github}
             className="button button-secondary"
             target="_blank"
             rel="noreferrer"

@@ -134,3 +134,9 @@ h2 {
     grid-template-columns: 1fr;
   }
 }
+
+.brand-logo {
+  width: min(220px, 70vw);
+  height: auto;
+  margin-bottom: 12px;
+}
