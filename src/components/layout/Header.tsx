@@ -4,12 +4,7 @@ import { siteConfig } from '@/data/site.config'
 import { Container } from '@/components/ui/Container'
 import { ButtonLink } from '@/components/ui/ButtonLink'
 
-const navigationItems = [
-  { label: 'Accueil', href: '/' },
-  { label: 'Projets', href: '#projects' },
-  { label: 'Services', href: '#services' },
-  { label: 'Contact', href: '#contact' },
-] as const
+import { navigationItems } from '@/data/navigation.data'
 
 export function Header() {
   return (
