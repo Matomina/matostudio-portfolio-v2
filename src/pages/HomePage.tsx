@@ -6,6 +6,7 @@ import { ProjectsSection } from '@/components/sections/ProjectsSection'
 import { ServicesSection } from '@/components/sections/ServicesSection'
 import { AboutSection } from '@/components/sections/AboutSection'
 import { ContactSection } from '@/components/sections/ContactSection'
+import { SkipLink } from '@/components/ui/SkipLink'
 
 const statusItems = [
   'Architecture React propre',
@@ -17,9 +18,10 @@ const statusItems = [
 export function HomePage() {
   return (
     <>
+      <SkipLink />
       <Header />
 
-      <main>
+      <main id="main-content">
         <Container className="page-shell">
           <HeroSection />
           <ProjectsSection />
