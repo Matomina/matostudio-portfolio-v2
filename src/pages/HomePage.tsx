@@ -1,52 +1,39 @@
-import matostudioLogo from '@/assets/brand/matostudio-logo.png'
-import { siteConfig } from '@/data/site.config'
+import { Footer } from '@/components/layout/Footer'
+import { Header } from '@/components/layout/Header'
+import { HeroSection } from '@/components/sections/HeroSection'
+import { Container } from '@/components/ui/Container'
 
-const highlights = [
-  'Portfolio freelance premium',
-  'Développement web moderne',
-  'React · TypeScript · Vite',
-  'Identité MatoStudio',
+const statusItems = [
+  'Architecture React propre',
+  'Branding MatoStudio intégré',
+  'Styles globaux préparés',
+  'Base scalable pour portfolio premium',
 ] as const
 
 export function HomePage() {
   return (
-    <main className="page-shell">
-      <section className="hero-section" aria-labelledby="home-title">
-        <img src={matostudioLogo} className="brand-logo" alt="MatoStudio" />
+    <>
+      <Header />
 
-        <p className="eyebrow">MatoStudio Portfolio V2</p>
+      <main>
+        <Container className="page-shell">
+          <HeroSection />
 
-        <h1 id="home-title">Construire une présence web professionnelle, claire et premium.</h1>
+          <section className="status-section" aria-labelledby="status-title">
+            <h2 id="status-title">Socle en cours de construction</h2>
 
-        <p className="hero-description">{siteConfig.description}</p>
+            <div className="status-grid">
+              {statusItems.map((item) => (
+                <article className="status-card" key={item}>
+                  <span>{item}</span>
+                </article>
+              ))}
+            </div>
+          </section>
+        </Container>
+      </main>
 
-        <div className="hero-actions" aria-label="Actions principales">
-          <a href={`mailto:${siteConfig.email}`} className="button button-primary">
-            Me contacter
-          </a>
-
-          <a
-            href={siteConfig.links.github}
-            className="button button-secondary"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Voir GitHub
-          </a>
-        </div>
-      </section>
-
-      <section className="status-section" aria-labelledby="status-title">
-        <h2 id="status-title">Socle en cours de construction</h2>
-
-        <div className="status-grid">
-          {highlights.map((item) => (
-            <article className="status-card" key={item}>
-              <span>{item}</span>
-            </article>
-          ))}
-        </div>
-      </section>
-    </main>
+      <Footer />
+    </>
   )
 }
