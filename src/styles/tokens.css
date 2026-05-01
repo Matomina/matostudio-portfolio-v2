@@ -15,4 +15,10 @@
   --radius-md: 16px;
 
   --shadow-soft: 0 24px 80px rgba(0, 0, 0, 0.35);
+
+  --transition-base: 0.25s ease;
+  --transition-smooth: 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+
+  --shadow-card: 0 18px 60px rgba(0, 0, 0, 0.28);
+  --shadow-card-hover: 0 26px 80px rgba(0, 0, 0, 0.42);
 }
