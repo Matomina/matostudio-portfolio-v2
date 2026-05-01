@@ -817,3 +817,129 @@ h3 {
     padding: 22px;
   }
 }
+
+.site-header__brand {
+  display: inline-flex;
+  align-items: center;
+  background: transparent;
+}
+
+.site-header__brand img {
+  display: block;
+  width: 160px;
+  height: auto;
+  background: transparent;
+  object-fit: contain;
+}
+
+@media (max-width: 760px) {
+  body {
+    text-align: center;
+  }
+
+  .section-heading,
+  .hero-section,
+  .about-panel,
+  .service-card,
+  .project-card,
+  .contact-panel,
+  .contact-card,
+  .status-card,
+  .site-footer__inner {
+    text-align: center;
+  }
+
+  .eyebrow,
+  .section-heading::before {
+    margin-inline: auto;
+  }
+
+  .hero-actions,
+  .contact-actions,
+  .hero-stack,
+  .project-card__stack,
+  .project-card__links {
+    justify-content: center;
+  }
+
+  .status-card {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .site-footer__inner {
+    align-items: center;
+  }
+}
+@media (max-width: 680px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(42px) scale(0.98);
+  filter: blur(10px);
+  transition:
+    opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+    filter 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform, filter;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  filter: blur(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    filter: none;
+    transition: none;
+  }
+}
+
+/* =========================================================
+   SCROLL REVEAL — Premium motion system
+========================================================= */
+
+[data-reveal] {
+  opacity: 0;
+  transform: translate3d(0, 46px, 0) scale(0.985);
+  filter: blur(12px);
+  transition:
+    opacity 1.15s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 1.15s cubic-bezier(0.16, 1, 0.3, 1),
+    filter 1.15s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: var(--reveal-delay, 0ms);
+  will-change: opacity, transform, filter;
+}
+
+[data-reveal='soft'] {
+  transform: translate3d(0, 28px, 0) scale(0.99);
+  filter: blur(8px);
+}
+
+[data-reveal='card'] {
+  transform: translate3d(0, 54px, 0) scale(0.965);
+  filter: blur(14px);
+}
+
+[data-reveal].is-visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0) scale(1);
+  filter: blur(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] {
+    opacity: 1;
+    transform: none;
+    filter: none;
+    transition: none;
+  }
+}

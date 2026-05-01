@@ -1,24 +1,39 @@
+import type { CSSProperties } from 'react'
+
 import { projects } from '@/data/projects.data'
+
+function revealDelay(delay: number): CSSProperties {
+  return {
+    '--reveal-delay': `${delay}ms`,
+  } as CSSProperties
+}
 
 export function ProjectsSection() {
   return (
     <section className="projects-section" id="projects" aria-labelledby="projects-title">
       <div className="section-heading">
-        <p className="eyebrow">Projets</p>
+        <p className="eyebrow" data-reveal="soft">
+          Projets
+        </p>
 
-        <h2 id="projects-title">
+        <h2 id="projects-title" data-reveal="soft" style={revealDelay(120)}>
           Des projets concrets, pensés pour progresser vers le niveau professionnel.
         </h2>
 
-        <p>
+        <p data-reveal="soft" style={revealDelay(240)}>
           Une sélection de projets construits pour démontrer la maîtrise du front-end, du back-end,
           de l’architecture, du design responsive et de la logique produit.
         </p>
       </div>
 
       <div className="projects-grid">
-        {projects.map((project) => (
-          <article className="project-card" key={project.id}>
+        {projects.map((project, index) => (
+          <article
+            className="project-card"
+            key={project.id}
+            data-reveal="card"
+            style={revealDelay(index * 140)}
+          >
             <div className="project-card__header">
               <div>
                 <p className="project-card__category">{project.category}</p>

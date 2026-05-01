@@ -1,21 +1,33 @@
+import type { CSSProperties } from 'react'
+
 import { aboutHighlights, aboutPillars } from '@/data/about.data'
+
+function revealDelay(delay: number): CSSProperties {
+  return {
+    '--reveal-delay': `${delay}ms`,
+  } as CSSProperties
+}
 
 export function AboutSection() {
   return (
     <section className="about-section" id="about" aria-labelledby="about-title">
       <div className="section-heading">
-        <p className="eyebrow">À propos</p>
+        <p className="eyebrow" data-reveal="soft">
+          À propos
+        </p>
 
-        <h2 id="about-title">Un profil orienté progression, qualité et projets concrets.</h2>
+        <h2 id="about-title" data-reveal="soft" style={revealDelay(120)}>
+          Un profil orienté progression, qualité et projets concrets.
+        </h2>
 
-        <p>
+        <p data-reveal="soft" style={revealDelay(240)}>
           MatoStudio représente une démarche professionnelle : construire des sites propres, utiles,
           crédibles et pensés pour évoluer sans repartir de zéro à chaque étape.
         </p>
       </div>
 
       <div className="about-layout">
-        <div className="about-panel">
+        <div className="about-panel" data-reveal="card" style={revealDelay(120)}>
           <p>
             Je construis mon portfolio comme un vrai produit : une base technique stable, une
             architecture claire, des composants réutilisables, des données séparées du rendu et une
@@ -29,8 +41,13 @@ export function AboutSection() {
         </div>
 
         <div className="about-highlights">
-          {aboutHighlights.map((item) => (
-            <article className="about-highlight" key={item.id}>
+          {aboutHighlights.map((item, index) => (
+            <article
+              className="about-highlight"
+              key={item.id}
+              data-reveal="card"
+              style={revealDelay((index + 1) * 140)}
+            >
               <span>{item.label}</span>
               <strong>{item.value}</strong>
             </article>
@@ -39,8 +56,13 @@ export function AboutSection() {
       </div>
 
       <div className="about-pillars">
-        {aboutPillars.map((pillar) => (
-          <article className="about-pillar" key={pillar.id}>
+        {aboutPillars.map((pillar, index) => (
+          <article
+            className="about-pillar"
+            key={pillar.id}
+            data-reveal="card"
+            style={revealDelay(index * 140)}
+          >
             <h3>{pillar.title}</h3>
             <p>{pillar.description}</p>
           </article>
