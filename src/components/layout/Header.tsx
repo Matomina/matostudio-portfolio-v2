@@ -1,9 +1,11 @@
 import { useEffect, useState } from 'react'
 import { Menu, X } from 'lucide-react'
+import { NavLink, Link as RouterLink } from 'react-router-dom'
 
 import matostudioLogo from '@/assets/brand/matostudio-logo.png'
 import { navigationItems } from '@/data/navigation.data'
 import { siteConfig } from '@/data/site.config'
+import { ROUTES } from '@/lib/constants/routes'
 
 import { ButtonLink } from '@/components/ui/ButtonLink'
 import { Container } from '@/components/ui/Container'
@@ -26,15 +28,20 @@ export function Header() {
   return (
     <header className="site-header">
       <Container className="site-header__inner">
-        <a href="/" className="site-header__brand" aria-label="Retour à l’accueil">
+        <RouterLink to={ROUTES.home} className="site-header__brand" aria-label="Retour à l’accueil">
           <img src={matostudioLogo} alt={siteConfig.name} />
-        </a>
+        </RouterLink>
 
         <nav className="site-header__nav" aria-label="Navigation principale">
           {navigationItems.map((item) => (
-            <a href={item.href} key={item.href}>
+            <NavLink
+              to={item.href}
+              key={item.href}
+              end={item.href === ROUTES.home}
+              className={({ isActive }) => (isActive ? 'is-active' : undefined)}
+            >
               {item.label}
-            </a>
+            </NavLink>
           ))}
         </nav>
 
@@ -66,9 +73,15 @@ export function Header() {
         <Container className="mobile-menu__inner">
           <nav className="mobile-menu__nav" aria-label="Navigation mobile">
             {navigationItems.map((item) => (
-              <a href={item.href} key={item.href} onClick={closeMobileMenu}>
+              <NavLink
+                to={item.href}
+                key={item.href}
+                end={item.href === ROUTES.home}
+                onClick={closeMobileMenu}
+                className={({ isActive }) => (isActive ? 'is-active' : undefined)}
+              >
                 {item.label}
-              </a>
+              </NavLink>
             ))}
           </nav>
 
