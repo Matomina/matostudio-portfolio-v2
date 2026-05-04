@@ -1,5 +1,3 @@
-@'
-
 # MatoStudio Portfolio V2
 
 Portfolio professionnel de MatoStudio, conçu comme une vitrine premium pour présenter mes projets, mes compétences et mes offres de développement web.
@@ -112,6 +110,3 @@ npm run check
 ---
 
 ## Licence
-
-Projet personnel.
-'@ | Set-Content -Encoding UTF8 README.md
