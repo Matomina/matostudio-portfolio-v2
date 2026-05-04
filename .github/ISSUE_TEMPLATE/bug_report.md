@@ -1,9 +1,9 @@
 ﻿---
 name: Bug report
 about: Signaler un bug ou un comportement inattendu
-title: "fix: "
+title: 'fix: '
 labels: bug
-assignees: ""
+assignees: ''
 ---
 
 ## Description

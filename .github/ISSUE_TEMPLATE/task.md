@@ -1,9 +1,9 @@
 ﻿---
 name: Task
 about: Suivre une tâche technique ou documentaire
-title: "chore: "
+title: 'chore: '
 labels: task
-assignees: ""
+assignees: ''
 ---
 
 ## Objectif

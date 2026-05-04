@@ -1,9 +1,9 @@
 ﻿---
 name: Feature request
 about: Proposer une nouvelle fonctionnalité
-title: "feat: "
+title: 'feat: '
 labels: enhancement
-assignees: ""
+assignees: ''
 ---
 
 ## Objectif
