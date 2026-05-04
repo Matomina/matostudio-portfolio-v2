@@ -119,15 +119,24 @@ Une PR est validable uniquement si :
 - [x] Assets de marque MatoStudio intégrés
 - [x] Pages `HomePage`, `FreelancePage`, `JobPage` prévues
 
+### Déjà fait — Architecture front-end
+
+- [x] Router stabilisé
+- [x] Route `/` active
+- [x] Route `/freelance` active
+- [x] Route `/emploi` active
+- [x] Route `/legal` active
+- [x] Route `*` / 404 active
+- [x] Données initiales freelance et emploi séparées
+- [x] Navigation principale alignée sur les deux parcours
+
 ### À corriger / finaliser
 
-- [ ] Router à stabiliser
-- [ ] Route `/freelance` à activer
-- [ ] Route `/emploi` à activer
-- [ ] Page 404 à créer
-- [ ] Données freelance et emploi à séparer
 - [ ] Design system à stabiliser
-- [ ] Sections spécialisées à créer
+- [ ] Sections freelance spécialisées à créer
+- [ ] Sections emploi spécialisées à créer
+- [ ] Contenu définitif à enrichir
+- [ ] SEO et production à préparer
 
 ---
 
@@ -154,7 +163,7 @@ Statut : terminé.
 
 ### Phase 2 — Architecture front-end et séparation des deux portfolios
 
-Statut : prochaine phase prioritaire.
+Statut : terminé pour le routing split initial.
 
 Branche recommandée :
 
@@ -164,18 +173,18 @@ feature/portfolio-routing-split
 
 Tâches :
 
-- [ ] Stabiliser `src/app/router.tsx`
-- [ ] Créer la route `/`
-- [ ] Créer la route `/freelance`
-- [ ] Créer la route `/emploi`
-- [ ] Créer une route `*` pour la page 404
-- [ ] Transformer `HomePage` en page d’entrée / choix d’orientation
-- [ ] Construire la base de `FreelancePage`
-- [ ] Construire la base de `JobPage`
-- [ ] Séparer les données communes, freelance et emploi
-- [ ] Ajouter une navigation adaptée à chaque cible
-- [ ] Vérifier que `npm run check` passe
-- [ ] Ouvrir une PR vers `main`
+- [x] Stabiliser `src/app/router.tsx`
+- [x] Créer la route `/`
+- [x] Créer la route `/freelance`
+- [x] Créer la route `/emploi`
+- [x] Créer une route `*` pour la page 404
+- [x] Transformer `HomePage` en page d’entrée / choix d’orientation
+- [x] Construire la base de `FreelancePage`
+- [x] Construire la base de `JobPage`
+- [x] Séparer les données communes, freelance et emploi
+- [x] Ajouter une navigation adaptée à chaque cible
+- [x] Vérifier que `npm run check` passe
+- [x] Ouvrir une PR vers `main`
 
 Critères de validation :
 
@@ -293,8 +302,7 @@ Tâches :
 
 ## 5. Historique des grosses étapes
 
-| Date       | Phase                         | Statut     | Branche                         | PR      | Notes                                      |
-| ---------- | ----------------------------- | ---------- | ------------------------------- | ------- | ------------------------------------------ |
-| 2026-04-30 | Phase 1 — Socle professionnel | Terminé    | main                            | —       | Initialisation du projet et base technique |
-| 2026-05-04 | Gouvernance projet            | À intégrer | docs/roadmap-governance         | À créer | Roadmap officielle + méthode branches/PR   |
-| 2026-05-04 | Phase 2 — Routing split       | À démarrer | feature/portfolio-routing-split | À créer | Séparation réelle freelance / emploi       |
+| 2026-04-30 | Phase 1 — Socle professionnel | Terminé | main | — | Initialisation du projet et base technique |
+| 2026-05-04 | Gouvernance projet | Terminé | docs/roadmap-governance | Mergée | Roadmap officielle + méthode branches/PR |
+| 2026-05-04 | Phase 2 — Routing split | Terminé | feature/portfolio-routing-split | Mergée | Routes `/`, `/freelance`, `/emploi`, `/legal` et `*` intégrées |
+| 2026-05-04 | Mise à jour roadmap après routing split | En cours | docs/update-roadmap-after-routing-split | À créer | Synchronisation de la roadmap après merge de la Phase 2 |
