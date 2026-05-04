@@ -14,6 +14,7 @@ Statut global : socle professionnel terminé, architecture front-end à stabilis
 Objectif : convertir des prospects en clients.
 
 Positionnement :
+
 - identité premium MatoStudio ;
 - création de sites web modernes, professionnels et orientés conversion ;
 - mise en avant des services, projets, process, tarifs, réassurance et contact ;
@@ -30,6 +31,7 @@ Route cible :
 Objectif : convaincre des recruteurs, entreprises ou responsables techniques.
 
 Positionnement :
+
 - profil développeur web et web mobile ;
 - compétences techniques ;
 - projets GitHub ;
@@ -291,8 +293,8 @@ Tâches :
 
 ## 5. Historique des grosses étapes
 
-| Date | Phase | Statut | Branche | PR | Notes |
-| --- | --- | --- | --- | --- | --- |
-| 2026-04-30 | Phase 1 — Socle professionnel | Terminé | main | — | Initialisation du projet et base technique |
-| 2026-05-04 | Gouvernance projet | À intégrer | docs/roadmap-governance | À créer | Roadmap officielle + méthode branches/PR |
-| 2026-05-04 | Phase 2 — Routing split | À démarrer | feature/portfolio-routing-split | À créer | Séparation réelle freelance / emploi |
+| Date       | Phase                         | Statut     | Branche                         | PR      | Notes                                      |
+| ---------- | ----------------------------- | ---------- | ------------------------------- | ------- | ------------------------------------------ |
+| 2026-04-30 | Phase 1 — Socle professionnel | Terminé    | main                            | —       | Initialisation du projet et base technique |
+| 2026-05-04 | Gouvernance projet            | À intégrer | docs/roadmap-governance         | À créer | Roadmap officielle + méthode branches/PR   |
+| 2026-05-04 | Phase 2 — Routing split       | À démarrer | feature/portfolio-routing-split | À créer | Séparation réelle freelance / emploi       |
