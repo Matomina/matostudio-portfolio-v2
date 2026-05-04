@@ -1,22 +1,16 @@
+import { ROUTES } from '@/lib/constants/routes'
+
 export const navigationItems = [
   {
     label: 'Accueil',
-    href: '/',
+    href: ROUTES.home,
   },
   {
-    label: 'Projets',
-    href: '#projects',
+    label: 'Freelance',
+    href: ROUTES.freelance,
   },
   {
-    label: 'Services',
-    href: '#services',
-  },
-  {
-    label: 'À propos',
-    href: '#about',
-  },
-  {
-    label: 'Contact',
-    href: '#contact',
+    label: 'Emploi',
+    href: ROUTES.job,
   },
 ] as const
