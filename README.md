@@ -1,25 +1,25 @@
-﻿# MatoStudio Portfolio V2
+# MatoStudio Portfolio V2
 
-Portfolio professionnel de MatoStudio, conÃ§u comme une vitrine premium pour prÃ©senter mes projets, mes compÃ©tences et mes offres de dÃ©veloppement web.
+Portfolio professionnel de MatoStudio, conçu comme une vitrine premium pour présenter mes projets, mes compétences et mes offres de développement web.
 
 ---
 
-## PrÃ©sentation
+## Présentation
 
 Ce projet sert de base au portfolio freelance et professionnel de Matomina Nguayila.
 
 Objectifs :
 
-- prÃ©senter une identitÃ© premium MatoStudio
+- présenter une identité premium MatoStudio
 - valoriser des projets concrets
-- mettre en avant des compÃ©tences front-end et full stack
-- prÃ©parer une base maintenable, scalable et production-ready
+- mettre en avant des compétences front-end et full stack
+- préparer une base maintenable, scalable et production-ready
 
 ---
 
-## DÃ©mo
+## Démo
 
-Lien Ã  ajouter prochainement.
+Lien à ajouter prochainement.
 
 ---
 
@@ -75,7 +75,7 @@ make preview
 
 ## Configuration
 
-CrÃ©er un fichier `.env` Ã  partir du modÃ¨le :
+Créer un fichier `.env` à partir du modèle :
 
 ```bash
 cp .env.example .env
@@ -83,7 +83,7 @@ cp .env.example .env
 
 ---
 
-## QualitÃ©
+## Qualité
 
 Le projet utilise :
 
@@ -93,7 +93,7 @@ Le projet utilise :
 - build Vite
 - GitHub Actions CI
 
-Commande de vÃ©rification complÃ¨te :
+Commande de vérification complète :
 
 ```bash
 npm run check
@@ -104,7 +104,7 @@ npm run check
 ## Documentation
 
 - [Roadmap](docs/00-roadmap.md)
-- [StratÃ©gie de branches](docs/01-branch-strategy.md)
+- [Stratégie de branches](docs 01-branch-strategy.md)
 - [Contribution](docs/02-contributing.md)
 
 ---
