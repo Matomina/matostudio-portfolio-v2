@@ -2,9 +2,7 @@
 
 ## Objectif
 
-Ce document définit les règles de contribution pour maintenir une base de code propre, cohérente et professionnelle.
-
----
+Maintenir une base de code propre, cohérente et professionnelle.
 
 ## Règles générales
 
@@ -13,34 +11,29 @@ Ce document définit les règles de contribution pour maintenir une base de code
 - Éviter la duplication de code
 - Maintenir un code lisible et typé
 
----
-
 ## Workflow
 
-1. Créer une branche
+1. Créer une branche : `git checkout -b feature/nom-de-la-feature`
+2. Développer la fonctionnalité
+3. Vérifier le projet : `npm run check`
+4. Commit : `git commit -m "feat: description"`
+5. Push : `git push origin feature/nom-de-la-feature`
+6. Ouvrir une Pull Request
 
-```bash
-git checkout -b feature/nom-de-la-feature
-Développer la fonctionnalité
-Vérifier le projet
-npm run check
-Commit
-git commit -m "feat: description"
-Push
-git push origin feature/nom-de-la-feature
-Ouvrir une Pull Request
-Standards de code
-TypeScript strict obligatoire
-ESLint sans erreurs
-Prettier respecté
-Aucun warning critique
-Avant chaque push
+## Standards de code
 
-Toujours exécuter :
+- TypeScript strict obligatoire
+- ESLint sans erreurs
+- Prettier respecté
+- Aucun warning critique
 
-npm run check
-Objectif final
-Code propre
-Architecture claire
-Projet maintenable
-Qualité professionnelle
+## Avant chaque push
+
+Toujours exécuter : `npm run check`
+
+## Objectif final
+
+- Code propre
+- Architecture claire
+- Projet maintenable
+- Qualité professionnelle
