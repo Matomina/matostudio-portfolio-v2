@@ -1,4 +1,4 @@
-# MatoStudio Portfolio V2
+﻿# MatoStudio Portfolio V2
 
 Portfolio professionnel de MatoStudio, conçu comme une vitrine premium pour présenter mes projets, mes compétences et mes offres de développement web.
 
@@ -104,7 +104,7 @@ npm run check
 ## Documentation
 
 - [Roadmap](docs/00-roadmap.md)
-- [Stratégie de branches](docs 01-branch-strategy.md)
+- [Stratégie de branches](docs/01-branch-strategy.md)
 - [Contribution](docs/02-contributing.md)
 
 ---
