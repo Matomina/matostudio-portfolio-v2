@@ -16,10 +16,10 @@ const portfolioEntries = [
     ctaLabel: 'Entrer côté freelance',
   },
   {
-    title: jobPageContent.title,
-    eyebrow: jobPageContent.eyebrow,
-    description: jobPageContent.description,
-    href: jobPageContent.primaryCta.href,
+    title: jobPageContent.hero.title,
+    eyebrow: jobPageContent.hero.eyebrow,
+    description: jobPageContent.hero.description,
+    href: ROUTES.job,
     ctaLabel: 'Entrer côté emploi',
   },
 ] as const
