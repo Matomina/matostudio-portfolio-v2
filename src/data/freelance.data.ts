@@ -122,38 +122,43 @@ export const freelancePageContent = {
   },
   quoteSimulator: {
     eyebrow: 'Simulation de devis',
-    title: 'Estimez rapidement le budget de votre projet web',
+    title: 'Calculez une premiere estimation de votre projet web',
     description:
-      'Cette estimation aide a cadrer le niveau de projet avant un vrai devis. Le montant final dependra du contenu, des options, du delai et des integrations souhaitees.',
+      'Choisissez une base, ajoutez les options utiles et obtenez une estimation immediate. Le devis final reste ajuste apres cadrage precis du besoin.',
     base: [
       {
         name: 'Essentiel',
         price: '690 €',
+        amount: 690,
         description: 'Site 1 a 3 pages pour poser une presence web propre et credible.',
       },
       {
         name: 'Premium',
         price: '1 290 €',
+        amount: 1290,
         description: 'Site 4 a 6 pages avec parcours de conversion et sections de reassurance.',
       },
       {
         name: 'Sur mesure',
         price: 'Sur devis',
+        amount: null,
         description: 'Projet avance, refonte complete, besoin specifique ou integration particuliere.',
       },
     ],
     options: [
-      { label: 'Page supplementaire', price: '+120 € a +180 € / page' },
-      { label: 'Redaction ou optimisation des textes', price: '+150 € a +350 €' },
-      { label: 'SEO local avance', price: '+250 € a +600 €' },
-      { label: 'Formulaire avance ou logique devis', price: '+250 € a +700 €' },
-      { label: 'Animations premium et micro-interactions', price: '+180 € a +500 €' },
-      { label: 'Maintenance mensuelle', price: 'A partir de 49 € / mois' },
+      { label: 'Page supplementaire', price: '+150 €', amount: 150 },
+      { label: 'Redaction ou optimisation des textes', price: '+280 €', amount: 280 },
+      { label: 'SEO local avance', price: '+450 €', amount: 450 },
+      { label: 'Formulaire avance ou logique devis', price: '+480 €', amount: 480 },
+      { label: 'Animations premium et micro-interactions', price: '+320 €', amount: 320 },
+      { label: 'Maintenance premier mois', price: '+49 €', amount: 49 },
     ],
     result: {
-      label: 'Fourchette indicative',
+      label: 'Estimation immediate',
       value: '690 € — 2 500 €+',
-      note: 'Le bon cadrage se fait en fonction du nombre de pages, du niveau de design, des contenus, du SEO et des fonctionnalites attendues.',
+      note: 'Estimation indicative hors hebergement, nom de domaine et contenus non fournis. Le montant final est valide apres cadrage.',
+      customNote:
+        'Un projet sur mesure doit etre cadre avant estimation : fonctionnalites, nombre de pages, integrations, delai et niveau de design attendu.',
     },
   },
   process: {
