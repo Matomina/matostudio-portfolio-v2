@@ -262,13 +262,13 @@ chore/production-readiness
 
 ## 5. Historique des grosses etapes
 
-| Date | Etape | Statut | Branche | PR | Resume |
-| --- | --- | --- | --- | --- | --- |
-| 2026-04-30 | Phase 1 — Socle professionnel | Termine | main | — | Initialisation du projet et base technique |
-| 2026-05-04 | Gouvernance projet | Termine | docs/roadmap-governance | Merged | Roadmap officielle + methode branches/PR |
-| 2026-05-04 | Phase 2 — Routing split | Termine | feature/portfolio-routing-split | #3 | Routes `/`, `/freelance`, `/emploi`, `/legal` et `*` integrees |
-| 2026-05-04 | Roadmap apres routing split | Termine | docs/update-roadmap-after-routing-split | #4 | Roadmap synchronisee apres Phase 2 |
-| 2026-05-19 | Phase 3 — Design system foundation | Termine | chore/design-system-foundation | #5 | Tokens, globals, ButtonLink, Container, Card et SectionHeader |
+| Date       | Etape                              | Statut  | Branche                                 | PR     | Resume                                                         |
+| ---------- | ---------------------------------- | ------- | --------------------------------------- | ------ | -------------------------------------------------------------- |
+| 2026-04-30 | Phase 1 — Socle professionnel      | Termine | main                                    | —      | Initialisation du projet et base technique                     |
+| 2026-05-04 | Gouvernance projet                 | Termine | docs/roadmap-governance                 | Merged | Roadmap officielle + methode branches/PR                       |
+| 2026-05-04 | Phase 2 — Routing split            | Termine | feature/portfolio-routing-split         | #3     | Routes `/`, `/freelance`, `/emploi`, `/legal` et `*` integrees |
+| 2026-05-04 | Roadmap apres routing split        | Termine | docs/update-roadmap-after-routing-split | #4     | Roadmap synchronisee apres Phase 2                             |
+| 2026-05-19 | Phase 3 — Design system foundation | Termine | chore/design-system-foundation          | #5     | Tokens, globals, ButtonLink, Container, Card et SectionHeader  |
 
 ---
 

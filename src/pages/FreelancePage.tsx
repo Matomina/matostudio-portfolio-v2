@@ -8,17 +8,8 @@ import { SkipLink } from '@/components/ui/SkipLink'
 import { freelancePageContent } from '@/data/freelance.data'
 
 export function FreelancePage() {
-  const {
-    hero,
-    problem,
-    services,
-    offers,
-    process,
-    projects,
-    reassurance,
-    faq,
-    contact,
-  } = freelancePageContent
+  const { hero, problem, services, offers, process, projects, reassurance, faq, contact } =
+    freelancePageContent
 
   return (
     <>
@@ -44,7 +35,9 @@ export function FreelancePage() {
             </div>
 
             <Card className="freelance-hero__panel" padding="lg" variant="premium">
-              <p className="freelance-hero__panel-kicker">MatoStudio accompagne votre presence web</p>
+              <p className="freelance-hero__panel-kicker">
+                MatoStudio accompagne votre presence web
+              </p>
               <div className="freelance-hero__stats">
                 {hero.stats.map((stat) => (
                   <div className="freelance-stat" key={stat.label}>
@@ -220,7 +213,10 @@ export function FreelancePage() {
           </Container>
         </section>
 
-        <section className="freelance-section freelance-section--final" aria-labelledby="contact-title">
+        <section
+          className="freelance-section freelance-section--final"
+          aria-labelledby="contact-title"
+        >
           <Container>
             <Card className="freelance-contact" padding="lg" variant="premium">
               <p className="section-eyebrow">{contact.eyebrow}</p>

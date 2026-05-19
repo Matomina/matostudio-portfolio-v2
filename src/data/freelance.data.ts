@@ -28,15 +28,18 @@ export const freelancePageContent = {
     pains: [
       {
         title: 'Image peu professionnelle',
-        description: 'Un design date ou confus peut faire perdre la confiance avant meme le premier contact.',
+        description:
+          'Un design date ou confus peut faire perdre la confiance avant meme le premier contact.',
       },
       {
         title: 'Message pas assez clair',
-        description: 'Le visiteur doit comprendre rapidement votre activite, votre valeur et la prochaine action.',
+        description:
+          'Le visiteur doit comprendre rapidement votre activite, votre valeur et la prochaine action.',
       },
       {
         title: 'Manque de conversion',
-        description: 'Un bon site doit guider vers un appel, un devis, une reservation ou une prise de contact.',
+        description:
+          'Un bon site doit guider vers un appel, un devis, une reservation ou une prise de contact.',
       },
     ],
   },
@@ -48,22 +51,26 @@ export const freelancePageContent = {
     items: [
       {
         title: 'Site vitrine premium',
-        description: 'Creation ou refonte de site professionnel pour presenter votre activite avec credibilite.',
+        description:
+          'Creation ou refonte de site professionnel pour presenter votre activite avec credibilite.',
         deliverables: ['Design responsive', 'Pages essentielles', 'Structure SEO de base'],
       },
       {
         title: 'Landing page conversion',
-        description: 'Page ciblee pour une offre, une campagne, un service ou une demande de devis.',
+        description:
+          'Page ciblee pour une offre, une campagne, un service ou une demande de devis.',
         deliverables: ['Hero impactant', 'Arguments de vente', 'CTA visibles'],
       },
       {
         title: 'Refonte UX et design',
-        description: 'Amelioration d un site existant pour gagner en clarte, coherence et professionnalisme.',
+        description:
+          'Amelioration d un site existant pour gagner en clarte, coherence et professionnalisme.',
         deliverables: ['Audit rapide', 'Structure amelioree', 'Interface modernisee'],
       },
       {
         title: 'Accompagnement technique',
-        description: 'Conseil, corrections, integration et stabilisation pour garder un site fiable dans le temps.',
+        description:
+          'Conseil, corrections, integration et stabilisation pour garder un site fiable dans le temps.',
         deliverables: ['Correctifs cibles', 'Optimisation front', 'Documentation claire'],
       },
     ],
@@ -78,21 +85,37 @@ export const freelancePageContent = {
         name: 'Essentiel',
         price: 'A partir de 690 €',
         description: 'Pour lancer une presence professionnelle propre et efficace.',
-        features: ['1 a 3 pages', 'Design responsive', 'Structure claire', 'Formulaire ou contact direct'],
+        features: [
+          '1 a 3 pages',
+          'Design responsive',
+          'Structure claire',
+          'Formulaire ou contact direct',
+        ],
         highlighted: false,
       },
       {
         name: 'Premium',
         price: 'A partir de 1 290 €',
         description: 'Pour une vitrine plus complete, plus persuasive et plus differenciante.',
-        features: ['4 a 6 pages', 'Parcours conversion', 'Sections de reassurance', 'SEO technique de base'],
+        features: [
+          '4 a 6 pages',
+          'Parcours conversion',
+          'Sections de reassurance',
+          'SEO technique de base',
+        ],
         highlighted: true,
       },
       {
         name: 'Sur mesure',
         price: 'Sur devis',
-        description: 'Pour un besoin specifique, une refonte avancee ou une integration particuliere.',
-        features: ['Audit', 'Architecture adaptee', 'Fonctionnalites ciblees', 'Accompagnement evolutif'],
+        description:
+          'Pour un besoin specifique, une refonte avancee ou une integration particuliere.',
+        features: [
+          'Audit',
+          'Architecture adaptee',
+          'Fonctionnalites ciblees',
+          'Accompagnement evolutif',
+        ],
         highlighted: false,
       },
     ],
@@ -103,19 +126,23 @@ export const freelancePageContent = {
     steps: [
       {
         title: '01 — Cadrage',
-        description: 'On clarifie l objectif, la cible, les contenus, les contraintes et la priorite business.',
+        description:
+          'On clarifie l objectif, la cible, les contenus, les contraintes et la priorite business.',
       },
       {
         title: '02 — Structure',
-        description: 'Je prepare l arborescence, le parcours utilisateur et les sections importantes.',
+        description:
+          'Je prepare l arborescence, le parcours utilisateur et les sections importantes.',
       },
       {
         title: '03 — Design et integration',
-        description: 'Je construis une interface responsive, coherente avec votre image et votre offre.',
+        description:
+          'Je construis une interface responsive, coherente avec votre image et votre offre.',
       },
       {
         title: '04 — Verification et livraison',
-        description: 'On verifie le rendu, les performances, les liens, le responsive et les elements de contact.',
+        description:
+          'On verifie le rendu, les performances, les liens, le responsive et les elements de contact.',
       },
     ],
   },
@@ -126,19 +153,22 @@ export const freelancePageContent = {
       {
         title: 'AS Transports',
         category: 'Site vitrine service local',
-        description: 'Parcours oriente devis, reassurance, formulaire et presentation claire des prestations.',
+        description:
+          'Parcours oriente devis, reassurance, formulaire et presentation claire des prestations.',
         stack: ['React', 'Vite', 'SEO local', 'Responsive'],
       },
       {
         title: 'LAVEOO',
         category: 'Site vitrine premium',
-        description: 'Interface moderne pour renforcer la credibilite et la perception professionnelle.',
+        description:
+          'Interface moderne pour renforcer la credibilite et la perception professionnelle.',
         stack: ['React', 'Design system', 'Conversion', 'Performance'],
       },
       {
         title: 'MangaBook',
         category: 'Application web full stack',
-        description: 'Projet applicatif complet pour demontrer architecture, logique metier et experience utilisateur.',
+        description:
+          'Projet applicatif complet pour demontrer architecture, logique metier et experience utilisateur.',
         stack: ['Flask', 'PostgreSQL', 'Auth', 'Back-office'],
       },
     ],
@@ -159,7 +189,8 @@ export const freelancePageContent = {
     items: [
       {
         question: 'Combien de temps prend un site vitrine ?',
-        answer: 'Un site simple peut etre livre en quelques semaines selon la disponibilite des contenus et les validations.',
+        answer:
+          'Un site simple peut etre livre en quelques semaines selon la disponibilite des contenus et les validations.',
       },
       {
         question: 'Est-ce que le site sera responsive ?',
@@ -167,11 +198,13 @@ export const freelancePageContent = {
       },
       {
         question: 'Puis-je demander une refonte d un site existant ?',
-        answer: 'Oui. On peut repartir d un site existant, garder ce qui fonctionne et reconstruire ce qui bloque.',
+        answer:
+          'Oui. On peut repartir d un site existant, garder ce qui fonctionne et reconstruire ce qui bloque.',
       },
       {
         question: 'Le SEO est-il inclus ?',
-        answer: 'La structure SEO de base est prevue. Un travail SEO avance peut etre ajoute selon l objectif.',
+        answer:
+          'La structure SEO de base est prevue. Un travail SEO avance peut etre ajoute selon l objectif.',
       },
     ],
   },
