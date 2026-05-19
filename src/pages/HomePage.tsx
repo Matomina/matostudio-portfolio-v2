@@ -5,13 +5,14 @@ import { Container } from '@/components/ui/Container'
 import { SkipLink } from '@/components/ui/SkipLink'
 import { freelancePageContent } from '@/data/freelance.data'
 import { jobPageContent } from '@/data/job.data'
+import { ROUTES } from '@/lib/constants/routes'
 
 const portfolioEntries = [
   {
-    title: freelancePageContent.title,
-    eyebrow: freelancePageContent.eyebrow,
-    description: freelancePageContent.description,
-    href: freelancePageContent.primaryCta.href,
+    title: freelancePageContent.hero.title,
+    eyebrow: freelancePageContent.hero.eyebrow,
+    description: freelancePageContent.hero.description,
+    href: ROUTES.freelance,
     ctaLabel: 'Entrer côté freelance',
   },
   {
