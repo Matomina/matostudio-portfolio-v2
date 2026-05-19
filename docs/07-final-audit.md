@@ -4,34 +4,64 @@ Dernière mise à jour : 2026-05-19
 
 ## Objectif
 
-Vérifier l'état du repo après les phases 1 à 6 et préparer une mise en production propre.
+Vérifier l'état du repo après les phases principales et préparer une mise en production propre.
 
 ---
 
 ## Résumé exécutif
 
-Le projet `matostudio-portfolio-v2` dispose maintenant d'un socle complet pour présenter deux parcours distincts :
+Le projet `matostudio-portfolio-v2` dispose maintenant d'un socle complet pour deux parcours.
 
-- un parcours client freelance sur `/freelance` ;
-- un parcours recruteur / emploi sur `/emploi` ;
-- une page d'entrée commune sur `/` ;
-- une page légale sur `/legal` ;
-- une page 404 pour les routes inconnues.
+Parcours disponibles :
 
-Le repo est structuré avec React, Vite, TypeScript, ESLint, Prettier, CI GitHub, documentation projet, workflow par branches et PR, design system, contenus séparés et configuration de déploiement Vercel.
+- `/` : page d'entrée commune.
+- `/freelance` : parcours client freelance.
+- `/emploi` : parcours recruteur et emploi.
+- `/legal` : page légale.
+- `*` : page 404.
+
+Le repo est structuré avec React, Vite, TypeScript, ESLint, Prettier, CI GitHub,
+documentation projet, workflow par branches et configuration Vercel.
 
 ---
 
 ## État des phases
 
-| Phase | Statut | Résultat |
-| --- | --- | --- |
-| Phase 1 — Socle professionnel | Terminé | Projet initialisé, scripts, CI, tooling et base Git propres |
-| Phase 2 — Routing split | Terminé | Routes principales et séparation freelance / emploi |
-| Phase 3 — Design system | Terminé | Tokens, styles globaux et composants UI réutilisables |
-| Phase 4 — Portfolio freelance | Terminé | Parcours client complet orienté conversion |
-| Phase 5 — Portfolio emploi | Terminé | Parcours recruteur complet orienté profil développeur |
-| Phase 6 — Production readiness | En cours avancé | Sitemap, robots, Vercel config et préparation déploiement |
+### Phase 1 — Socle professionnel
+
+Statut : terminé.
+
+Résultat : projet initialisé avec scripts, CI, tooling et base Git propres.
+
+### Phase 2 — Routing split
+
+Statut : terminé.
+
+Résultat : routes principales et séparation des parcours freelance et emploi.
+
+### Phase 3 — Design system
+
+Statut : terminé.
+
+Résultat : tokens, styles globaux et composants UI réutilisables.
+
+### Phase 4 — Portfolio freelance
+
+Statut : terminé.
+
+Résultat : parcours client complet orienté conversion.
+
+### Phase 5 — Portfolio emploi
+
+Statut : terminé.
+
+Résultat : parcours recruteur complet orienté profil développeur.
+
+### Phase 6 — Production readiness
+
+Statut : en cours avancé.
+
+Résultat : sitemap, robots, Vercel config et préparation au déploiement.
 
 ---
 
@@ -39,27 +69,27 @@ Le repo est structuré avec React, Vite, TypeScript, ESLint, Prettier, CI GitHub
 
 ### Points validés
 
-- [x] Architecture React + Vite + TypeScript en place
-- [x] Routing principal stabilisé
-- [x] Composants layout séparés
-- [x] Composants UI réutilisables disponibles
-- [x] Données de contenu séparées dans `src/data`
-- [x] Styles centralisés dans `src/styles`
-- [x] Design system cohérent avec la charte MatoStudio
-- [x] CI GitHub active
-- [x] `npm run check` disponible comme commande de validation globale
-- [x] `vercel.json` ajouté pour le déploiement SPA
-- [x] `sitemap.xml` mis à jour avec les routes publiques
-- [x] `robots.txt` présent
+- [x] Architecture React + Vite + TypeScript en place.
+- [x] Routing principal stabilisé.
+- [x] Composants layout séparés.
+- [x] Composants UI réutilisables disponibles.
+- [x] Données de contenu séparées dans `src/data`.
+- [x] Styles centralisés dans `src/styles`.
+- [x] Design system cohérent avec la charte MatoStudio.
+- [x] CI GitHub active.
+- [x] Commande `npm run check` disponible.
+- [x] Fichier `vercel.json` ajouté.
+- [x] Fichier `sitemap.xml` mis à jour.
+- [x] Fichier `robots.txt` présent.
 
 ### Points à surveiller avant production définitive
 
-- [ ] Remplacer les liens temporaires si nécessaire (`LinkedIn`, `CV`, URL finale du domaine)
-- [ ] Ajouter une vraie image Open Graph si elle n'existe pas encore dans `public/social-preview`
-- [ ] Vérifier les favicons réellement présents dans `public/favicon`
-- [ ] Tester le rendu visuel sur mobile, tablette, desktop et grand écran
-- [ ] Vérifier les formulaires / liens mailto / liens GitHub / liens démo
-- [ ] Lancer un audit Lighthouse après déploiement preview
+- [ ] Remplacer les liens temporaires si nécessaire.
+- [ ] Ajouter une vraie image Open Graph si elle manque.
+- [ ] Vérifier les favicons réellement présents.
+- [ ] Tester le rendu sur mobile, tablette et desktop.
+- [ ] Vérifier les liens `mailto`, GitHub et démo.
+- [ ] Lancer un audit Lighthouse après déploiement preview.
 
 ---
 
@@ -67,17 +97,18 @@ Le repo est structuré avec React, Vite, TypeScript, ESLint, Prettier, CI GitHub
 
 ### Validé
 
-- [x] Langue HTML en français
-- [x] Meta description globale
-- [x] Canonical globale
-- [x] Open Graph global
-- [x] Twitter card globale
-- [x] Sitemap public
-- [x] Robots public
+- [x] Langue HTML en français.
+- [x] Meta description globale.
+- [x] Canonical globale.
+- [x] Open Graph global.
+- [x] Twitter card globale.
+- [x] Sitemap public.
+- [x] Robots public.
 
 ### À améliorer plus tard
 
-Le projet est une SPA. Les meta tags dynamiques par route peuvent être améliorés plus tard si nécessaire avec une stratégie SEO plus avancée : génération statique, prerendering ou outil dédié.
+Le projet est une SPA. Les meta tags dynamiques par route pourront être améliorés plus tard
+avec du prerendering, de la génération statique ou un outil SEO dédié.
 
 ---
 
@@ -85,18 +116,18 @@ Le projet est une SPA. Les meta tags dynamiques par route peuvent être amélior
 
 ### Validé
 
-- [x] Skip link présent
-- [x] Structure de titres par page
-- [x] Navigation simple
-- [x] Boutons et liens explicites
-- [x] Focus visible prévu dans les styles globaux
+- [x] Skip link présent.
+- [x] Structure de titres par page.
+- [x] Navigation simple.
+- [x] Boutons et liens explicites.
+- [x] Focus visible prévu dans les styles globaux.
 
 ### À vérifier manuellement
 
-- [ ] Navigation complète au clavier
-- [ ] Contrastes réels sur tous les écrans
-- [ ] Lecture mobile
-- [ ] Cohérence des titres `h1`, `h2`, `h3` après rendu final
+- [ ] Navigation complète au clavier.
+- [ ] Contrastes réels sur tous les écrans.
+- [ ] Lecture mobile.
+- [ ] Cohérence des titres après rendu final.
 
 ---
 
@@ -104,32 +135,32 @@ Le projet est une SPA. Les meta tags dynamiques par route peuvent être amélior
 
 ### Points positifs
 
-- [x] Build Vite rapide
-- [x] Assets versionnés dans le build
-- [x] Configuration cache longue durée pour `/assets` dans Vercel
-- [x] CSS dédié par parcours mais chargé globalement de manière simple
+- [x] Build Vite rapide.
+- [x] Assets versionnés dans le build.
+- [x] Cache longue durée prévu pour `/assets` dans Vercel.
+- [x] CSS dédié par parcours et organisation simple.
 
 ### Points à surveiller
 
-- [ ] Le logo `matostudio-logo` est lourd dans le build et pourra être optimisé
-- [ ] Vérifier le poids final après déploiement
-- [ ] Optimiser les images sociales / favicons si nécessaire
+- [ ] Le logo principal est encore lourd dans le build.
+- [ ] Vérifier le poids final après déploiement.
+- [ ] Optimiser les images sociales et favicons si nécessaire.
 
 ---
 
-## Audit GitHub / méthode Mato
+## Audit GitHub et méthode Mato
 
 ### Validé
 
-- [x] Travail par branches
-- [x] Pull requests par grosse étape
-- [x] Roadmap tenue à jour
-- [x] CI utilisée comme validation
-- [x] Documentation projet présente
+- [x] Travail par branches.
+- [x] Pull requests par grosse étape.
+- [x] Roadmap tenue à jour.
+- [x] CI utilisée comme validation.
+- [x] Documentation projet présente.
 
 ### Règle à conserver
 
-Aucune grosse modification ne doit être poussée sans :
+Aucune grosse modification ne doit être poussée sans validation complète.
 
 ```txt
 npm run format
@@ -144,4 +175,7 @@ merge sur main
 
 ## Conclusion
 
-Le repo est dans un état professionnel avancé. Il est prêt pour une phase de validation visuelle, de prévisualisation Vercel et d'ajustements finaux avant mise en ligne publique.
+Le repo est dans un état professionnel avancé.
+
+Il est prêt pour une validation visuelle, une preview Vercel et les derniers ajustements avant
+mise en ligne publique.
