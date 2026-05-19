@@ -1,6 +1,7 @@
 import { Container } from '@/components/ui/Container'
 import matostudioAgencyLogo from '@/assets/brand/matostudioagency-logo.png'
 import { siteConfig } from '@/data/site.config'
+import { ROUTES } from '@/lib/constants/routes'
 
 type SocialIconName = 'github' | 'linkedin' | 'instagram' | 'facebook' | 'tiktok'
 
@@ -17,6 +18,11 @@ const socials: SocialLink[] = [
   { label: 'Facebook', href: siteConfig.links.facebook, icon: 'facebook' },
   { label: 'TikTok', href: siteConfig.links.tiktok, icon: 'tiktok' },
 ]
+
+const footerLinks = [
+  { label: 'Mentions legales', href: ROUTES.legal },
+  { label: 'Politique de confidentialite', href: ROUTES.privacy },
+] as const
 
 function SocialIcon({ name }: { name: SocialIconName }) {
   const paths: Record<SocialIconName, string> = {
@@ -57,6 +63,14 @@ export function Footer() {
             elegantes et coherentes avec votre image.
           </p>
         </div>
+
+        <nav className="site-footer__legal-links" aria-label="Pages legales MatoStudio Agency">
+          {footerLinks.map((link) => (
+            <a key={link.href} href={link.href}>
+              {link.label}
+            </a>
+          ))}
+        </nav>
 
         <nav className="site-footer__socials" aria-label="Reseaux sociaux MatoStudio Agency">
           {socials.map(({ label, href, icon }) => (
