@@ -8,5 +8,8 @@ export const siteConfig = {
   links: {
     github: 'https://github.com/Matomina',
     linkedin: '',
+    instagram: '',
+    facebook: '',
+    tiktok: '',
   },
 } as const
