@@ -8,7 +8,8 @@ import { SkipLink } from '@/components/ui/SkipLink'
 import { jobPageContent } from '@/data/job.data'
 
 export function JobPage() {
-  const { hero, profile, skills, stack, projects, timeline, softSkills, contact } = jobPageContent
+  const { hero, profile, skills, stack, projects, timeline, softSkills, contact } =
+    jobPageContent
 
   return (
     <>
@@ -27,7 +28,12 @@ export function JobPage() {
                 <ButtonLink href={hero.primaryCta.href} size="lg">
                   {hero.primaryCta.label}
                 </ButtonLink>
-                <ButtonLink href={hero.secondaryCta.href} isExternal size="lg" variant="secondary">
+                <ButtonLink
+                  href={hero.secondaryCta.href}
+                  isExternal
+                  size="lg"
+                  variant="secondary"
+                >
                   {hero.secondaryCta.label}
                 </ButtonLink>
               </div>
@@ -90,7 +96,11 @@ export function JobPage() {
         <section className="job-section" aria-labelledby="stack-title">
           <Container>
             <Card className="job-stack-panel" padding="lg" variant="strong">
-              <SectionHeader eyebrow={stack.eyebrow} title={stack.title} className="job-section__header" />
+              <SectionHeader
+                eyebrow={stack.eyebrow}
+                title={stack.title}
+                className="job-section__header"
+              />
               <ul className="job-stack">
                 {stack.items.map((item) => (
                   <li key={item}>{item}</li>
@@ -120,7 +130,12 @@ export function JobPage() {
                     ))}
                   </ul>
                   <div className="job-card-actions">
-                    <ButtonLink href={project.links.github} isExternal size="sm" variant="secondary">
+                    <ButtonLink
+                      href={project.links.github}
+                      isExternal
+                      size="sm"
+                      variant="secondary"
+                    >
                       GitHub
                     </ButtonLink>
                     {project.links.demo ? (
