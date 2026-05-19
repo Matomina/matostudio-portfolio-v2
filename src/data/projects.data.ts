@@ -20,6 +20,7 @@ export const projects: readonly Project[] = [
       'Site vitrine orienté conversion pour une activité de transport, avec sections services, tarifs, réassurance, contact et paiement.',
     stack: ['React', 'Vite', 'JavaScript', 'CSS'],
     status: 'En cours',
+    demoUrl: 'https://astransport.net/',
   },
   {
     id: 'laveoo',
