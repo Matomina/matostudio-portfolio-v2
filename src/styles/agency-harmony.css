@@ -153,8 +153,7 @@ body {
   border-radius: var(--radius-xl);
   background:
     radial-gradient(circle at top right, rgba(215, 180, 106, 0.12), transparent 18rem),
-    var(--gradient-card),
-    rgba(255, 255, 255, 0.045);
+    var(--gradient-card), rgba(255, 255, 255, 0.045);
   box-shadow: var(--shadow-card);
   text-align: center;
   transition:

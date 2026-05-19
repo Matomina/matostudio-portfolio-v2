@@ -27,7 +27,12 @@ const portfolioEntries = [
   },
 ] as const
 
-const trustItems = ['Sites premium', 'React et TypeScript', 'UX mobile-first', 'Livraison professionnelle'] as const
+const trustItems = [
+  'Sites premium',
+  'React et TypeScript',
+  'UX mobile-first',
+  'Livraison professionnelle',
+] as const
 
 export function HomePage() {
   return (
@@ -40,11 +45,7 @@ export function HomePage() {
           <div className="home-hero__content">
             <p className="section-eyebrow">MatoStudio Agency</p>
 
-            <img
-              src={matostudioAgencyLogo}
-              alt="MatoStudio Agency"
-              className="home-hero__logo"
-            />
+            <img src={matostudioAgencyLogo} alt="MatoStudio Agency" className="home-hero__logo" />
 
             <h1 id="home-title">Une presence web premium, claire et pensee pour convertir.</h1>
 

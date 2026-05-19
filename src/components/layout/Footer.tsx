@@ -44,7 +44,11 @@ export function Footer() {
     <footer className="site-footer">
       <Container className="site-footer__inner">
         <div className="site-footer__brand-block">
-          <a href="#accueil" className="site-footer__brand" aria-label="Retour a l accueil MatoStudio Agency">
+          <a
+            href="#accueil"
+            className="site-footer__brand"
+            aria-label="Retour a l accueil MatoStudio Agency"
+          >
             <img src={matostudioAgencyLogo} alt="MatoStudio Agency" />
           </a>
 
