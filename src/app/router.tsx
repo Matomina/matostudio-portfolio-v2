@@ -6,6 +6,7 @@ import { HomePage } from '@/pages/HomePage'
 import { JobPage } from '@/pages/JobPage'
 import { LegalPage } from '@/pages/LegalPage'
 import { NotFoundPage } from '@/pages/NotFoundPage'
+import { PrivacyPage } from '@/pages/PrivacyPage'
 
 const router = createBrowserRouter([
   {
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
   {
     path: ROUTES.legal,
     element: <LegalPage />,
+  },
+  {
+    path: ROUTES.privacy,
+    element: <PrivacyPage />,
   },
   {
     path: '*',
