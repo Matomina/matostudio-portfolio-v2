@@ -1,0 +1,244 @@
+/* =========================================================
+   FREELANCE PORTFOLIO — MatoStudio
+========================================================= */
+
+.freelance-hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.freelance-hero::before {
+  content: '';
+  position: absolute;
+  inset: 8% auto auto 55%;
+  z-index: -1;
+  width: 420px;
+  height: 420px;
+  border-radius: var(--radius-full);
+  background: var(--color-gold-muted);
+  filter: var(--blur-glow);
+}
+
+.freelance-hero__layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.55fr);
+  gap: var(--space-10);
+  align-items: center;
+}
+
+.freelance-hero__content {
+  display: grid;
+  gap: var(--space-6);
+}
+
+.freelance-hero__description {
+  max-width: 760px;
+  color: var(--color-muted);
+  font-size: clamp(var(--text-base), 2vw, var(--text-xl));
+  line-height: var(--leading-relaxed);
+}
+
+.freelance-hero__panel {
+  display: grid;
+  gap: var(--space-6);
+}
+
+.freelance-hero__panel-kicker,
+.freelance-index {
+  color: var(--color-gold);
+  font-size: var(--text-xs);
+  font-weight: 900;
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+}
+
+.freelance-hero__stats {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.freelance-stat {
+  display: grid;
+  gap: var(--space-1);
+  padding-block: var(--space-4);
+  border-top: var(--border-width) solid var(--color-border);
+}
+
+.freelance-stat strong {
+  color: var(--color-text);
+  font-size: clamp(var(--text-2xl), 4vw, var(--text-4xl));
+  line-height: var(--leading-tight);
+}
+
+.freelance-stat span {
+  color: var(--color-muted);
+  font-weight: 800;
+}
+
+.freelance-section {
+  padding: var(--section-y) 0;
+}
+
+.freelance-section--final {
+  padding-bottom: var(--space-24);
+}
+
+.freelance-section__header {
+  margin-bottom: var(--space-10);
+}
+
+.freelance-grid {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.freelance-grid--three {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.freelance-grid--four {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.freelance-grid .card,
+.freelance-faq .card,
+.freelance-process .card {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.freelance-grid .card p,
+.freelance-faq .card p,
+.freelance-process .card p,
+.freelance-contact p {
+  color: var(--color-muted);
+  line-height: var(--leading-relaxed);
+}
+
+.freelance-list,
+.freelance-stack {
+  display: grid;
+  gap: var(--space-2);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.freelance-list li,
+.freelance-stack li {
+  color: var(--color-text);
+  font-size: var(--text-sm);
+  font-weight: 800;
+}
+
+.freelance-list li::before {
+  content: '•';
+  margin-right: var(--space-2);
+  color: var(--color-gold);
+}
+
+.freelance-stack {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.freelance-stack li {
+  width: fit-content;
+  padding: 7px 10px;
+  border-radius: var(--radius-full);
+  color: var(--color-gold);
+  background: var(--color-gold-soft);
+}
+
+.freelance-offer {
+  align-content: space-between;
+  min-height: 360px;
+}
+
+.freelance-process {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.freelance-process__step {
+  grid-template-columns: minmax(180px, 0.32fr) minmax(0, 1fr);
+  align-items: center;
+}
+
+.freelance-reassurance {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.freelance-proof {
+  display: grid;
+  gap: var(--space-3);
+  padding: var(--space-5);
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+}
+
+.freelance-proof span {
+  display: inline-grid;
+  width: 36px;
+  height: 36px;
+  place-items: center;
+  border-radius: var(--radius-full);
+  color: var(--color-black);
+  background: var(--color-gold);
+  font-weight: 900;
+}
+
+.freelance-proof strong {
+  line-height: var(--leading-snug);
+}
+
+.freelance-faq {
+  display: grid;
+  gap: var(--space-4);
+  max-width: var(--container-narrow);
+}
+
+.freelance-contact {
+  display: grid;
+  gap: var(--space-6);
+  max-width: 920px;
+}
+
+.freelance-contact strong {
+  color: var(--color-gold);
+  font-size: var(--text-lg);
+}
+
+@media (max-width: 1040px) {
+  .freelance-hero__layout,
+  .freelance-grid--four {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .freelance-grid--three {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .freelance-hero__layout,
+  .freelance-grid--three,
+  .freelance-grid--four,
+  .freelance-process__step {
+    grid-template-columns: 1fr;
+  }
+
+  .freelance-hero__content,
+  .freelance-hero__panel,
+  .freelance-contact,
+  .freelance-faq {
+    justify-items: center;
+    text-align: center;
+  }
+
+  .freelance-proof {
+    justify-items: center;
+  }
+}
