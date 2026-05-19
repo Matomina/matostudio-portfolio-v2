@@ -1,0 +1,14 @@
+/* =========================================================
+   QUALITY FIXES
+   Small targeted safeguards loaded after globals.css.
+========================================================= */
+
+.service-card {
+  border: var(--border-width) solid var(--color-border);
+  background: var(--color-surface);
+  transition:
+    transform var(--transition-smooth),
+    border-color var(--transition-base),
+    background var(--transition-base),
+    box-shadow var(--transition-smooth);
+}
