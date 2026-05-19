@@ -1,81 +1,42 @@
 # Roadmap — MatoStudio Portfolio V2
 
-Dernière mise à jour : 2026-05-04  
-Statut global : socle professionnel terminé, architecture front-end à stabiliser.
+Derniere mise a jour : 2026-05-19  
+Statut global : socle technique, gouvernance, routing split et design system termines. Prochaine phase : portfolio freelance MatoStudio.
 
 ---
 
 ## 1. Vision du projet
 
-`matostudio-portfolio-v2` est le socle officiel de deux portfolios distincts construits sur une même base React + Vite + TypeScript.
+`matostudio-portfolio-v2` est le socle officiel de deux portfolios distincts construits sur une meme base React + Vite + TypeScript.
 
-### Portfolio 1 — Freelance / MatoStudio
+- `/` : page d'entree commune pour orienter le visiteur.
+- `/freelance` : portfolio freelance MatoStudio, oriente clients et conversion.
+- `/emploi` : portfolio developpeur, oriente recruteurs et entreprises.
+- `/legal` : page legale.
+- `*` : page 404.
 
-Objectif : convertir des prospects en clients.
-
-Positionnement :
-
-- identité premium MatoStudio ;
-- création de sites web modernes, professionnels et orientés conversion ;
-- mise en avant des services, projets, process, tarifs, réassurance et contact ;
-- ton commercial, clair, rassurant et haut de gamme.
-
-Route cible :
-
-```txt
-/freelance
-```
-
-### Portfolio 2 — Emploi / Entreprise
-
-Objectif : convaincre des recruteurs, entreprises ou responsables techniques.
-
-Positionnement :
-
-- profil développeur web et web mobile ;
-- compétences techniques ;
-- projets GitHub ;
-- expériences ;
-- CV ;
-- LinkedIn ;
-- démarche professionnelle et capacité à travailler en équipe.
-
-Route cible :
-
-```txt
-/emploi
-```
-
-### Page d’entrée commune
-
-Objectif : présenter rapidement les deux orientations et envoyer le visiteur vers le bon parcours.
-
-Route cible :
-
-```txt
-/
-```
+Le projet doit rester professionnel, maintenable, responsive, accessible et evolutif. La base graphique MatoStudio repose sur une direction premium sombre, avec accent gold, cartes glassmorphism, typographie sobre, espacements propres et parcours orientes action.
 
 ---
 
-## 2. Méthode de travail officielle
+## 2. Methode de travail officielle
 
-Aucun travail important ne doit être fait directement sur `main`.
+Aucun travail important ne doit etre fait directement sur `main`.
 
-Chaque grosse étape suit ce cycle :
+Cycle officiel Methode Mato :
 
 ```txt
-Issue / tâche GitHub
-→ branche dédiée
-→ développement ou documentation
-→ npm run check
-→ Pull Request
-→ validation
-→ merge sur main
-→ mise à jour de la roadmap
+Issue / tache GitHub
+-> branche dediee
+-> developpement ou documentation
+-> npm run check
+-> Pull Request
+-> validation
+-> merge sur main
+-> mise a jour roadmap si grosse phase terminee
 ```
 
-### Convention de branches
+Conventions :
 
 ```txt
 feature/nom-de-la-fonctionnalite
@@ -85,58 +46,52 @@ fix/nom-du-correctif
 refactor/nom-du-refactor
 ```
 
-### Pull Requests
-
 Une PR est validable uniquement si :
 
 - [ ] le scope est clair ;
 - [ ] le code est propre ;
-- [ ] `npm run check` passe en local ;
+- [ ] `npm run check` passe ;
 - [ ] la CI GitHub passe ;
-- [ ] la documentation est mise à jour si nécessaire ;
-- [ ] la roadmap est mise à jour si une grosse étape est terminée.
+- [ ] la documentation est mise a jour si necessaire ;
+- [ ] la roadmap est mise a jour si une grosse phase est terminee.
 
 ---
 
-## 3. État actuel du projet
+## 3. Etat actuel du projet
 
-### Déjà fait
+### Termine
 
-- [x] Repo GitHub créé
-- [x] React + Vite + TypeScript initialisé
-- [x] README ajouté
-- [x] `.gitignore` validé
-- [x] `.gitattributes` ajouté
-- [x] `.env.example` ajouté
-- [x] ESLint configuré
-- [x] Prettier configuré
-- [x] TypeScript configuré
-- [x] Alias `@/` configuré
-- [x] Makefile ajouté
-- [x] GitHub Actions CI ajouté
-- [x] Templates d’issues ajoutés
-- [x] Structure `src/` amorcée
-- [x] Assets de marque MatoStudio intégrés
-- [x] Pages `HomePage`, `FreelancePage`, `JobPage` prévues
+- [x] Repo GitHub cree
+- [x] React + Vite + TypeScript initialise
+- [x] README ajoute
+- [x] `.gitignore` valide
+- [x] `.gitattributes` ajoute
+- [x] `.env.example` ajoute
+- [x] ESLint configure
+- [x] Prettier configure
+- [x] TypeScript configure
+- [x] Alias `@/` configure
+- [x] Makefile ajoute
+- [x] GitHub Actions CI ajoutee
+- [x] Templates d'issues ajoutes
+- [x] Template de Pull Request ajoute
+- [x] Structure `src/` amorcee
+- [x] Assets de marque MatoStudio integres
+- [x] Router stabilise
+- [x] Routes `/`, `/freelance`, `/emploi`, `/legal` et `*` actives
+- [x] Donnees initiales freelance et emploi separees
+- [x] Navigation principale alignee sur les deux parcours
+- [x] Design system foundation cree
+- [x] Tokens CSS renforces
+- [x] Styles globaux factorises
+- [x] Composants UI `ButtonLink`, `Container`, `Card`, `SectionHeader` disponibles
 
-### Déjà fait — Architecture front-end
+### A faire
 
-- [x] Router stabilisé
-- [x] Route `/` active
-- [x] Route `/freelance` active
-- [x] Route `/emploi` active
-- [x] Route `/legal` active
-- [x] Route `*` / 404 active
-- [x] Données initiales freelance et emploi séparées
-- [x] Navigation principale alignée sur les deux parcours
-
-### À corriger / finaliser
-
-- [ ] Design system à stabiliser
-- [ ] Sections freelance spécialisées à créer
-- [ ] Sections emploi spécialisées à créer
-- [ ] Contenu définitif à enrichir
-- [ ] SEO et production à préparer
+- [ ] Construire le portfolio freelance complet
+- [ ] Construire le portfolio emploi complet
+- [ ] Enrichir le contenu definitif
+- [ ] Finaliser SEO, accessibilite, performance et production
 
 ---
 
@@ -144,7 +99,7 @@ Une PR est validable uniquement si :
 
 ### Phase 1 — Socle professionnel
 
-Statut : terminé.
+Statut : termine.
 
 - [x] Initialiser React + Vite + TypeScript
 - [x] Configurer TypeScript strict
@@ -156,101 +111,109 @@ Statut : terminé.
 - [x] Ajouter README
 - [x] Ajouter Makefile
 - [x] Ajouter GitHub Actions CI
-- [x] Ajouter templates d’issues
-- [x] Vérifier `npm run check`
+- [x] Ajouter templates d'issues
+- [x] Verifier `npm run check`
 
 ---
 
-### Phase 2 — Architecture front-end et séparation des deux portfolios
+### Phase 2 — Architecture front-end et separation des deux portfolios
 
-Statut : terminé pour le routing split initial.
+Statut : termine.
 
-Branche recommandée :
+Branche :
 
 ```txt
 feature/portfolio-routing-split
 ```
 
-Tâches :
-
 - [x] Stabiliser `src/app/router.tsx`
-- [x] Créer la route `/`
-- [x] Créer la route `/freelance`
-- [x] Créer la route `/emploi`
-- [x] Créer une route `*` pour la page 404
-- [x] Transformer `HomePage` en page d’entrée / choix d’orientation
+- [x] Creer la route `/`
+- [x] Creer la route `/freelance`
+- [x] Creer la route `/emploi`
+- [x] Creer la route `/legal`
+- [x] Creer une route `*` pour la page 404
+- [x] Transformer `HomePage` en page d'entree / choix d'orientation
 - [x] Construire la base de `FreelancePage`
 - [x] Construire la base de `JobPage`
-- [x] Séparer les données communes, freelance et emploi
-- [x] Ajouter une navigation adaptée à chaque cible
-- [x] Vérifier que `npm run check` passe
-- [x] Ouvrir une PR vers `main`
-
-Critères de validation :
-
-- [ ] `/` affiche une page d’entrée claire
-- [ ] `/freelance` affiche une base de portfolio freelance
-- [ ] `/emploi` affiche une base de portfolio emploi
-- [ ] les routes sont typées et propres
-- [ ] aucune section métier n’est mélangée
-- [ ] la CI passe
+- [x] Separer les donnees communes, freelance et emploi
+- [x] Ajouter une navigation adaptee aux deux cibles
+- [x] Verifier que `npm run check` passe
+- [x] Ouvrir et merger une PR vers `main`
 
 ---
 
 ### Phase 3 — Design system MatoStudio
 
-Statut : à faire après la Phase 2.
+Statut : termine.
 
-Branche recommandée :
+Branche :
 
 ```txt
 chore/design-system-foundation
 ```
 
-Tâches :
+PR :
 
-- [ ] Définir les tokens couleurs
-- [ ] Définir les tokens typographiques
-- [ ] Définir les espacements
-- [ ] Définir les rayons, bordures, ombres et effets premium
-- [ ] Préparer les variantes dark / premium
-- [ ] Créer les composants UI de base
-- [ ] Créer les composants layout réutilisables
-- [ ] Préparer les animations globales
-- [ ] Vérifier l’accessibilité de base
+```txt
+#5 chore: build design system foundation
+```
+
+- [x] Definir les tokens couleurs
+- [x] Definir les tokens typographiques
+- [x] Definir les espacements
+- [x] Definir les rayons, bordures, ombres et effets premium
+- [x] Ajouter les gradients et surfaces MatoStudio
+- [x] Factoriser `globals.css`
+- [x] Renforcer `ButtonLink`
+- [x] Renforcer `Container`
+- [x] Ajouter `Card`
+- [x] Ajouter `SectionHeader`
+- [x] Verifier `npm run check`
+- [x] Merger la PR sur `main`
 
 ---
 
 ### Phase 4 — Portfolio freelance MatoStudio
 
-Statut : à faire.
+Statut : en cours.
 
-Branche recommandée :
+Branche cible :
 
 ```txt
 feature/freelance-portfolio
 ```
 
+Objectif : construire un parcours client premium, clair et oriente conversion.
+
 Sections cibles :
 
 - [ ] Hero premium
-- [ ] Problème client / promesse
+- [ ] Probleme client / promesse
 - [ ] Services
 - [ ] Offres ou tarifs
 - [ ] Process
-- [ ] Projets clients / projets représentatifs
-- [ ] Réassurance
+- [ ] Projets representatifs
+- [ ] Reassurance
 - [ ] FAQ
 - [ ] Contact
 - [ ] CTA final
+
+Criteres de validation :
+
+- [ ] `/freelance` presente un parcours client complet
+- [ ] le design respecte la charte MatoStudio
+- [ ] les donnees freelance sont separees proprement
+- [ ] le rendu est responsive
+- [ ] `npm run check` passe
+- [ ] la CI GitHub passe
 
 ---
 
 ### Phase 5 — Portfolio emploi / entreprise
 
-Statut : à faire.
+Statut : a faire apres Phase 4.
 
-Branche recommandée :
+Branche cible :
 
 ```txt
 feature/job-portfolio
@@ -258,13 +221,12 @@ feature/job-portfolio
 
 Sections cibles :
 
-- [ ] Hero profil développeur
-- [ ] Présentation personnelle
-- [ ] Compétences techniques
+- [ ] Hero profil developpeur
+- [ ] Presentation personnelle
+- [ ] Competences techniques
 - [ ] Stack
 - [ ] Projets GitHub
-- [ ] Expériences ou parcours
-- [ ] Formation / certification
+- [ ] Parcours / formation
 - [ ] Soft skills
 - [ ] CV
 - [ ] LinkedIn / GitHub
@@ -272,37 +234,50 @@ Sections cibles :
 
 ---
 
-### Phase 6 — SEO, accessibilité, performance et production
+### Phase 6 — SEO, accessibilite, performance et production
 
-Statut : à faire en fin de cycle.
+Statut : a faire en fin de cycle.
 
-Branche recommandée :
+Branche cible :
 
 ```txt
 chore/production-readiness
 ```
 
-Tâches :
-
 - [ ] SEO global
-- [ ] SEO spécifique freelance
-- [ ] SEO spécifique emploi
+- [ ] SEO specifique freelance
+- [ ] SEO specifique emploi
 - [ ] Open Graph
 - [ ] favicon
 - [ ] social preview
 - [ ] sitemap
 - [ ] robots.txt
-- [ ] pages légales si nécessaires
-- [ ] accessibilité clavier
+- [ ] pages legales si necessaires
+- [ ] accessibilite clavier
 - [ ] performance Lighthouse
 - [ ] responsive final
-- [ ] déploiement Vercel ou équivalent
+- [ ] deploiement Vercel ou equivalent
 
 ---
 
-## 5. Historique des grosses étapes
+## 5. Historique des grosses etapes
 
-| 2026-04-30 | Phase 1 — Socle professionnel | Terminé | main | — | Initialisation du projet et base technique |
-| 2026-05-04 | Gouvernance projet | Terminé | docs/roadmap-governance | Mergée | Roadmap officielle + méthode branches/PR |
-| 2026-05-04 | Phase 2 — Routing split | Terminé | feature/portfolio-routing-split | Mergée | Routes `/`, `/freelance`, `/emploi`, `/legal` et `*` intégrées |
-| 2026-05-04 | Mise à jour roadmap après routing split | En cours | docs/update-roadmap-after-routing-split | À créer | Synchronisation de la roadmap après merge de la Phase 2 |
+| Date | Etape | Statut | Branche | PR | Resume |
+| --- | --- | --- | --- | --- | --- |
+| 2026-04-30 | Phase 1 — Socle professionnel | Termine | main | — | Initialisation du projet et base technique |
+| 2026-05-04 | Gouvernance projet | Termine | docs/roadmap-governance | Merged | Roadmap officielle + methode branches/PR |
+| 2026-05-04 | Phase 2 — Routing split | Termine | feature/portfolio-routing-split | #3 | Routes `/`, `/freelance`, `/emploi`, `/legal` et `*` integrees |
+| 2026-05-04 | Roadmap apres routing split | Termine | docs/update-roadmap-after-routing-split | #4 | Roadmap synchronisee apres Phase 2 |
+| 2026-05-19 | Phase 3 — Design system foundation | Termine | chore/design-system-foundation | #5 | Tokens, globals, ButtonLink, Container, Card et SectionHeader |
+
+---
+
+## 6. Prochaine action
+
+Demarrer et finaliser la Phase 4 sur :
+
+```txt
+feature/freelance-portfolio
+```
+
+Priorite : livrer un parcours freelance premium, coherent, responsive, maintenable et pret a etre enrichi avec les projets clients reels.
