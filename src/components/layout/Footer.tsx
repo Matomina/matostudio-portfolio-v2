@@ -50,8 +50,8 @@ export function Footer() {
           </a>
 
           <p className="site-footer__description silver-text">
-            MatoStudio conçoit des sites web premium, rapides et orientés conversion pour donner
-            une présence digitale solide aux marques ambitieuses.
+            MatoStudio est une agence de développement web premium qui conçoit des sites rapides,
+            élégants et orientés conversion pour les marques ambitieuses.
           </p>
         </div>
 
