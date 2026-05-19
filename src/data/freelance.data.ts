@@ -79,6 +79,7 @@ export const freelancePageContent = {
         price: 'A partir de 690 €',
         description: 'Pour lancer une presence professionnelle propre et efficace.',
         features: ['1 a 3 pages', 'Design responsive', 'Structure claire', 'Formulaire ou contact direct'],
+        highlighted: false,
       },
       {
         name: 'Premium',
@@ -92,6 +93,7 @@ export const freelancePageContent = {
         price: 'Sur devis',
         description: 'Pour un besoin specifique, une refonte avancee ou une integration particuliere.',
         features: ['Audit', 'Architecture adaptee', 'Fonctionnalites ciblees', 'Accompagnement evolutif'],
+        highlighted: false,
       },
     ],
   },
