@@ -46,19 +46,49 @@ export const jobPageContent = {
     groups: [
       {
         title: 'Front-end',
-        items: ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'React', 'Vite', 'Responsive design'],
+        items: [
+          'HTML',
+          'CSS',
+          'JavaScript',
+          'TypeScript',
+          'React',
+          'Vite',
+          'Responsive design',
+        ],
       },
       {
         title: 'Back-end',
-        items: ['Python', 'Flask', 'FastAPI', 'SQL', 'PostgreSQL', 'API REST', 'Authentification'],
+        items: [
+          'Python',
+          'Flask',
+          'FastAPI',
+          'SQL',
+          'PostgreSQL',
+          'API REST',
+          'Authentification',
+        ],
       },
       {
         title: 'Qualité projet',
-        items: ['Git', 'GitHub', 'Pull Requests', 'CI', 'ESLint', 'Prettier', 'Documentation'],
+        items: [
+          'Git',
+          'GitHub',
+          'Pull Requests',
+          'CI',
+          'ESLint',
+          'Prettier',
+          'Documentation',
+        ],
       },
       {
         title: 'Produit & UX',
-        items: ['Arborescence', 'Design system', 'Accessibilité', 'SEO de base', 'Parcours utilisateur'],
+        items: [
+          'Arborescence',
+          'Design system',
+          'Accessibilité',
+          'SEO de base',
+          'Parcours utilisateur',
+        ],
       },
     ],
   },
