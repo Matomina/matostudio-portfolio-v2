@@ -14,6 +14,7 @@
 
   --agency-surface: linear-gradient(145deg, rgba(43, 46, 54, 0.96), rgba(17, 18, 23, 0.96));
   --agency-surface-hover: linear-gradient(145deg, rgba(56, 60, 70, 0.98), rgba(23, 25, 31, 0.98));
+  --agency-surface-luxe: linear-gradient(145deg, rgba(49, 52, 61, 0.97), rgba(13, 14, 18, 0.97));
 
   --agency-border: rgba(203, 211, 225, 0.18);
   --agency-border-silver: rgba(226, 232, 240, 0.52);
@@ -33,7 +34,7 @@
   --agency-card-gap: clamp(1.25rem, 3.5vw, 1.75rem);
   --agency-card-padding: clamp(1.5rem, 4.8vw, 2.35rem);
 
-  --agency-title-hero: clamp(2.2rem, 11vw, 4.85rem);
+  --agency-title-hero: clamp(2.2rem, 10vw, 4.4rem);
   --agency-title-section: clamp(1.7rem, 7vw, 3rem);
   --agency-title-card: clamp(1.18rem, 5vw, 1.55rem);
   --agency-text-body: clamp(0.98rem, 3.5vw, 1.08rem);
@@ -108,7 +109,7 @@ body:not(.legal-page) .section-header__description,
 body:not(.legal-page) .home-hero__description,
 body:not(.legal-page) .freelance-hero__description,
 body:not(.legal-page) .job-hero__description {
-  max-width: 720px;
+  max-width: 760px;
   margin-inline: auto;
   color: var(--agency-text-silver);
   font-size: var(--agency-text-lead);
@@ -120,7 +121,8 @@ body:not(.legal-page) .section-header__eyebrow,
 body:not(.legal-page) .eyebrow,
 body:not(.legal-page) .home-path-card__eyebrow,
 body:not(.legal-page) .freelance-index,
-body:not(.legal-page) .job-index {
+body:not(.legal-page) .job-index,
+.quote-simulator__label {
   color: var(--color-gold-300);
   border-color: rgba(242, 215, 139, 0.32);
   background: rgba(242, 215, 139, 0.1);
@@ -136,7 +138,9 @@ body:not(.legal-page) .section-heading,
 body:not(.legal-page) .home-about__header,
 body:not(.legal-page) .home-paths__header,
 body:not(.legal-page) .freelance-section__header,
-body:not(.legal-page) .job-section__header {
+body:not(.legal-page) .job-section__header,
+body:not(.legal-page) .freelance-hero__content,
+body:not(.legal-page) .job-hero__content {
   justify-items: center;
   gap: var(--space-4);
   margin-inline: auto;
@@ -192,7 +196,10 @@ body:not(.legal-page) .freelance-hero__panel,
 body:not(.legal-page) .job-hero__panel,
 body:not(.legal-page) .freelance-offer,
 body:not(.legal-page) .freelance-process__step,
-body:not(.legal-page) .job-timeline__step {
+body:not(.legal-page) .job-timeline__step,
+.quote-simulator,
+.quote-simulator__item,
+.quote-simulator__option {
   margin-top: 10px;
 }
 
@@ -216,7 +223,11 @@ body:not(.legal-page) .freelance-hero__panel,
 body:not(.legal-page) .job-hero__panel,
 body:not(.legal-page) .freelance-offer,
 body:not(.legal-page) .freelance-process__step,
-body:not(.legal-page) .job-timeline__step {
+body:not(.legal-page) .job-timeline__step,
+.quote-simulator,
+.quote-simulator__item,
+.quote-simulator__option,
+.quote-simulator__result {
   border: var(--border-width) solid var(--agency-border);
   background:
     radial-gradient(circle at top right, rgba(255, 255, 255, 0.06), transparent 18rem),
@@ -253,7 +264,9 @@ body:not(.legal-page) .about-pillar:hover,
 body:not(.legal-page) .contact-card:hover,
 body:not(.legal-page) .freelance-offer:hover,
 body:not(.legal-page) .freelance-process__step:hover,
-body:not(.legal-page) .job-timeline__step:hover {
+body:not(.legal-page) .job-timeline__step:hover,
+.quote-simulator__item:hover,
+.quote-simulator__option:hover {
   transform: translateY(-4px);
   border-color: var(--agency-border-silver);
   background:
@@ -452,19 +465,41 @@ body:not(.legal-page) .button-secondary {
   overflow: hidden;
 }
 
+.home-hero,
+.freelance-hero,
+.job-hero {
+  text-align: center;
+}
+
 .home-hero {
   min-height: calc(100svh - var(--header-height));
   display: grid;
   align-content: center;
   gap: var(--space-10);
   padding-block: var(--space-12) var(--space-20);
-  text-align: center;
 }
 
-.home-hero__content {
+.freelance-hero,
+.job-hero {
+  display: grid;
+  align-content: center;
+  min-height: calc(100svh - var(--header-height));
+  padding-block: var(--space-12) var(--space-20);
+}
+
+.home-hero__content,
+.freelance-hero__content,
+.job-hero__content {
   display: grid;
   justify-items: center;
   gap: var(--space-5);
+}
+
+.freelance-hero__layout,
+.job-hero__layout {
+  display: grid;
+  justify-items: center;
+  gap: var(--space-8);
 }
 
 .home-hero__logo {
@@ -473,18 +508,23 @@ body:not(.legal-page) .button-secondary {
   filter: drop-shadow(0 24px 70px rgba(242, 215, 139, 0.18));
 }
 
-.home-hero h1 {
+.home-hero h1,
+.freelance-hero h1,
+.job-hero h1 {
   max-width: 920px;
 }
 
-.home-hero__actions {
+.home-hero__actions,
+.hero-actions {
   width: 100%;
   display: grid;
+  justify-content: center;
   gap: var(--space-3);
   margin-top: var(--space-2);
 }
 
 .home-hero__actions .button,
+.hero-actions .button,
 .home-path-card .button {
   width: 100%;
 }
@@ -519,17 +559,105 @@ body:not(.legal-page) .button-secondary {
 }
 
 /* =========================================================
-   7. RESPONSIVE
+   7. QUOTE SIMULATOR
+========================================================= */
+
+.quote-simulator-section {
+  position: relative;
+}
+
+.quote-simulator {
+  display: grid;
+  gap: var(--space-6);
+  padding: clamp(1.5rem, 5vw, 2.8rem);
+  border-radius: var(--radius-2xl);
+  background:
+    radial-gradient(circle at 18% 0%, rgba(242, 215, 139, 0.11), transparent 22rem),
+    radial-gradient(circle at 100% 18%, rgba(255, 255, 255, 0.07), transparent 20rem),
+    var(--agency-surface-luxe);
+}
+
+.quote-simulator__grid {
+  display: grid;
+  gap: var(--space-5);
+}
+
+.quote-simulator__column,
+.quote-simulator__cards,
+.quote-simulator__options {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.quote-simulator__label {
+  width: fit-content;
+  margin-inline: auto;
+  padding: 0.5rem 0.85rem;
+  border: var(--border-width) solid rgba(242, 215, 139, 0.32);
+  border-radius: var(--radius-full);
+  font-size: var(--text-xs);
+  font-weight: 900;
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+}
+
+.quote-simulator__item,
+.quote-simulator__option,
+.quote-simulator__result {
+  border-radius: var(--radius-xl);
+  padding: clamp(1rem, 4vw, 1.45rem);
+}
+
+.quote-simulator__item,
+.quote-simulator__option {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.quote-simulator__item strong,
+.quote-simulator__option strong,
+.quote-simulator__result strong {
+  color: var(--color-gold-300);
+  font-size: clamp(1.1rem, 5vw, 1.65rem);
+  text-shadow: var(--agency-glow-gold);
+}
+
+.quote-simulator__option span,
+.quote-simulator__result p {
+  color: var(--agency-text-luxury);
+  font-weight: 850;
+}
+
+.quote-simulator__result {
+  display: grid;
+  justify-items: center;
+  gap: var(--space-2);
+  border-color: var(--agency-border-gold);
+  background:
+    radial-gradient(circle at 50% 0%, rgba(242, 215, 139, 0.16), transparent 16rem),
+    var(--agency-surface-hover);
+  text-align: center;
+}
+
+.quote-simulator__result span {
+  max-width: 740px;
+  color: var(--agency-text-silver);
+}
+
+/* =========================================================
+   8. RESPONSIVE
 ========================================================= */
 
 @media (min-width: 560px) {
-  .home-hero__actions {
+  .home-hero__actions,
+  .hero-actions {
     width: auto;
     grid-template-columns: repeat(2, minmax(0, auto));
     justify-content: center;
   }
 
   .home-hero__actions .button,
+  .hero-actions .button,
   .home-path-card .button {
     width: auto;
   }
@@ -545,24 +673,28 @@ body:not(.legal-page) .button-secondary {
   body:not(.legal-page) .home-about__header,
   body:not(.legal-page) .home-paths__header,
   body:not(.legal-page) .freelance-section__header,
-  body:not(.legal-page) .job-section__header {
-    justify-items: start;
-    text-align: left;
+  body:not(.legal-page) .job-section__header,
+  body:not(.legal-page) .freelance-hero__content,
+  body:not(.legal-page) .job-hero__content {
+    justify-items: center;
+    text-align: center;
   }
 
   body:not(.legal-page) .section-header__description,
   body:not(.legal-page) .home-hero__description,
   body:not(.legal-page) .freelance-hero__description,
   body:not(.legal-page) .job-hero__description {
-    margin-inline: 0;
+    margin-inline: auto;
   }
 
   body:not(.legal-page) .section-header::before,
   body:not(.legal-page) .section-heading::before {
-    margin-inline: 0;
+    margin-inline: auto;
   }
 
-  .home-hero {
+  .home-hero,
+  .freelance-hero,
+  .job-hero {
     min-height: 76vh;
     padding-block: var(--space-16) var(--space-24);
   }
@@ -581,6 +713,22 @@ body:not(.legal-page) .button-secondary {
 
   .home-paths__grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .freelance-hero__layout,
+  .job-hero__layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .quote-simulator__grid {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: start;
+  }
+
+  .quote-simulator__item,
+  .quote-simulator__option {
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
   }
 
   .home-path-card,
