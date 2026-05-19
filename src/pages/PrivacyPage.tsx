@@ -60,8 +60,9 @@ export function PrivacyPage() {
             <article className="legal-card legal-card--highlight">
               <h2>Contact</h2>
               <p>
-                Pour toute demande relative aux données personnelles, vous pouvez contacter
-                MatoStudio à l’adresse suivante : <a href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a>.
+                Pour toute demande relative aux données personnelles, vous pouvez contacter MatoStudio à
+                l’adresse suivante :{' '}
+                <a href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a>.
               </p>
             </article>
           </section>
