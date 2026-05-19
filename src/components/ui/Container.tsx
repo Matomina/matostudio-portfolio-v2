@@ -1,8 +1,31 @@
-type ContainerProps = {
-  children: React.ReactNode
-  className?: string
+import type { HTMLAttributes, ReactNode } from 'react'
+
+type ContainerSize = 'default' | 'narrow' | 'wide'
+
+type ContainerProps = HTMLAttributes<HTMLDivElement> & {
+  children: ReactNode
+  size?: ContainerSize
 }
 
-export function Container({ children, className = '' }: ContainerProps) {
-  return <div className={`container ${className}`.trim()}>{children}</div>
+const sizeClassNames: Record<ContainerSize, string> = {
+  default: '',
+  narrow: 'container-narrow',
+  wide: 'container-wide',
+}
+
+export function Container({
+  children,
+  className = '',
+  size = 'default',
+  ...props
+}: ContainerProps) {
+  const classNames = ['container', sizeClassNames[size], className]
+    .filter(Boolean)
+    .join(' ')
+
+  return (
+    <div className={classNames} {...props}>
+      {children}
+    </div>
+  )
 }
