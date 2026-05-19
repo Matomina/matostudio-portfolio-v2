@@ -65,10 +65,6 @@ body:not(.legal-page) main::before {
     radial-gradient(circle at 50% 28%, rgba(215, 180, 106, 0.1), transparent 24rem);
 }
 
-/* =========================================================
-   1. TYPOGRAPHY SYSTEM
-========================================================= */
-
 body:not(.legal-page) h1,
 body:not(.legal-page) h2,
 body:not(.legal-page) h3 {
@@ -122,16 +118,13 @@ body:not(.legal-page) .eyebrow,
 body:not(.legal-page) .home-path-card__eyebrow,
 body:not(.legal-page) .freelance-index,
 body:not(.legal-page) .job-index,
-.quote-simulator__label {
+.quote-estimator__badge,
+.quote-estimator__step-kicker {
   color: var(--color-gold-300);
   border-color: rgba(242, 215, 139, 0.32);
   background: rgba(242, 215, 139, 0.1);
   text-shadow: var(--agency-glow-gold);
 }
-
-/* =========================================================
-   2. GLOBAL LAYOUT RHYTHM
-========================================================= */
 
 body:not(.legal-page) .section-header,
 body:not(.legal-page) .section-heading,
@@ -179,7 +172,6 @@ body:not(.legal-page) .about-highlights {
   gap: var(--agency-card-gap);
 }
 
-/* Every visual container keeps at least 10px breathing room. */
 body:not(.legal-page) .home-hero__panel,
 body:not(.legal-page) .home-path-card,
 body:not(.legal-page) .agency-card,
@@ -197,16 +189,12 @@ body:not(.legal-page) .job-hero__panel,
 body:not(.legal-page) .freelance-offer,
 body:not(.legal-page) .freelance-process__step,
 body:not(.legal-page) .job-timeline__step,
-.quote-simulator,
-.quote-simulator__item,
-.quote-simulator__option {
+.quote-estimator,
+.quote-estimator__choice,
+.quote-estimator__summary-card {
   margin-top: 10px;
 }
 
-/* =========================================================
-   3. PREMIUM CONTAINER SYSTEM
-========================================================= */
-
 body:not(.legal-page) .home-hero__panel,
 body:not(.legal-page) .home-path-card,
 body:not(.legal-page) .agency-card,
@@ -224,10 +212,9 @@ body:not(.legal-page) .job-hero__panel,
 body:not(.legal-page) .freelance-offer,
 body:not(.legal-page) .freelance-process__step,
 body:not(.legal-page) .job-timeline__step,
-.quote-simulator,
-.quote-simulator__item,
-.quote-simulator__option,
-.quote-simulator__result {
+.quote-estimator,
+.quote-estimator__choice,
+.quote-estimator__summary-card {
   border: var(--border-width) solid var(--agency-border);
   background:
     radial-gradient(circle at top right, rgba(255, 255, 255, 0.06), transparent 18rem),
@@ -265,8 +252,7 @@ body:not(.legal-page) .contact-card:hover,
 body:not(.legal-page) .freelance-offer:hover,
 body:not(.legal-page) .freelance-process__step:hover,
 body:not(.legal-page) .job-timeline__step:hover,
-.quote-simulator__item:hover,
-.quote-simulator__option:hover {
+.quote-estimator__choice:hover {
   transform: translateY(-4px);
   border-color: var(--agency-border-silver);
   background:
@@ -275,10 +261,6 @@ body:not(.legal-page) .job-timeline__step:hover,
     var(--agency-surface-hover);
   box-shadow: var(--agency-shadow-card-hover);
 }
-
-/* =========================================================
-   4. BUTTONS — keep structure, enhance premium gold hover
-========================================================= */
 
 body:not(.legal-page) .button {
   text-shadow: none;
@@ -303,10 +285,6 @@ body:not(.legal-page) .button-secondary {
     linear-gradient(145deg, rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.025)),
     rgba(255, 255, 255, 0.04);
 }
-
-/* =========================================================
-   5. HEADER / FOOTER
-========================================================= */
 
 .site-header {
   border-bottom-color: rgba(255, 255, 255, 0.11);
@@ -456,10 +434,6 @@ body:not(.legal-page) .button-secondary {
   text-align: center;
 }
 
-/* =========================================================
-   6. HOME PAGE
-========================================================= */
-
 .home-page {
   position: relative;
   overflow: hidden;
@@ -558,15 +532,11 @@ body:not(.legal-page) .button-secondary {
   text-align: center;
 }
 
-/* =========================================================
-   7. QUOTE SIMULATOR
-========================================================= */
-
-.quote-simulator-section {
+.quote-estimator-section {
   position: relative;
 }
 
-.quote-simulator {
+.quote-estimator {
   display: grid;
   gap: var(--space-6);
   padding: clamp(1.5rem, 5vw, 2.8rem);
@@ -577,19 +547,36 @@ body:not(.legal-page) .button-secondary {
     var(--agency-surface-luxe);
 }
 
-.quote-simulator__grid {
+.quote-estimator__progress {
   display: grid;
-  gap: var(--space-5);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-2);
 }
 
-.quote-simulator__column,
-.quote-simulator__cards,
-.quote-simulator__options {
-  display: grid;
-  gap: var(--space-3);
+.quote-estimator__progress-step {
+  height: 5px;
+  border-radius: var(--radius-full);
+  background: rgba(255, 255, 255, 0.08);
 }
 
-.quote-simulator__label {
+.quote-estimator__progress-step.is-active {
+  background: linear-gradient(90deg, var(--color-gold-300), rgba(255, 255, 255, 0.85));
+  box-shadow: var(--agency-glow-gold);
+}
+
+.quote-estimator__body {
+  display: grid;
+  gap: var(--space-6);
+}
+
+.quote-estimator__step {
+  display: grid;
+  gap: var(--space-4);
+  text-align: center;
+}
+
+.quote-estimator__step-kicker,
+.quote-estimator__badge {
   width: fit-content;
   margin-inline: auto;
   padding: 0.5rem 0.85rem;
@@ -601,52 +588,114 @@ body:not(.legal-page) .button-secondary {
   text-transform: uppercase;
 }
 
-.quote-simulator__item,
-.quote-simulator__option,
-.quote-simulator__result {
-  border-radius: var(--radius-xl);
-  padding: clamp(1rem, 4vw, 1.45rem);
-}
-
-.quote-simulator__item,
-.quote-simulator__option {
+.quote-estimator__choices {
   display: grid;
   gap: var(--space-3);
 }
 
-.quote-simulator__item strong,
-.quote-simulator__option strong,
-.quote-simulator__result strong {
+.quote-estimator__choice {
+  display: grid;
+  gap: var(--space-3);
+  width: 100%;
+  padding: clamp(1rem, 4vw, 1.45rem);
+  border-radius: var(--radius-xl);
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.quote-estimator__choice.is-selected {
+  border-color: var(--agency-border-gold);
+  background:
+    radial-gradient(circle at top right, rgba(242, 215, 139, 0.14), transparent 18rem),
+    var(--agency-surface-hover);
+  box-shadow: var(--agency-glow-gold), var(--agency-shadow-card);
+}
+
+.quote-estimator__choice:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.quote-estimator__choice strong,
+.quote-estimator__summary-card strong,
+.quote-estimator__total strong {
   color: var(--color-gold-300);
-  font-size: clamp(1.1rem, 5vw, 1.65rem);
   text-shadow: var(--agency-glow-gold);
 }
 
-.quote-simulator__option span,
-.quote-simulator__result p {
-  color: var(--agency-text-luxury);
-  font-weight: 850;
+.quote-estimator__choice small,
+.quote-estimator__summary-card span,
+.quote-estimator__total span {
+  color: var(--agency-text-muted);
+  line-height: 1.6;
 }
 
-.quote-simulator__result {
+.quote-estimator__navigation {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-3);
+}
+
+.quote-estimator__navigation button,
+.quote-estimator__contact {
+  min-height: 46px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: var(--border-width) solid var(--agency-border-gold);
+  border-radius: var(--radius-full);
+  padding: 0.75rem 1.2rem;
+  color: #16130a;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.86), transparent 42%),
+    linear-gradient(135deg, var(--color-gold-300), var(--color-gold-500) 72%, #6d4a19);
+  font-weight: 900;
+  box-shadow: 0 18px 48px rgba(215, 180, 106, 0.22);
+}
+
+.quote-estimator__navigation button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.quote-estimator__navigation button:first-child {
+  color: var(--agency-text-luxury);
+  background: rgba(255, 255, 255, 0.055);
+  box-shadow: none;
+}
+
+.quote-estimator__summary {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.quote-estimator__summary-grid {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.quote-estimator__summary-card,
+.quote-estimator__total {
+  border-radius: var(--radius-xl);
+  padding: clamp(1rem, 4vw, 1.45rem);
+}
+
+.quote-estimator__total {
   display: grid;
   justify-items: center;
   gap: var(--space-2);
-  border-color: var(--agency-border-gold);
+  border: var(--border-width) solid var(--agency-border-gold);
   background:
     radial-gradient(circle at 50% 0%, rgba(242, 215, 139, 0.16), transparent 16rem),
     var(--agency-surface-hover);
   text-align: center;
 }
 
-.quote-simulator__result span {
-  max-width: 740px;
-  color: var(--agency-text-silver);
+.quote-estimator__total strong {
+  font-size: clamp(1.9rem, 10vw, 3.4rem);
 }
-
-/* =========================================================
-   8. RESPONSIVE
-========================================================= */
 
 @media (min-width: 560px) {
   .home-hero__actions,
@@ -720,15 +769,9 @@ body:not(.legal-page) .button-secondary {
     grid-template-columns: minmax(0, 1fr);
   }
 
-  .quote-simulator__grid {
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-    align-items: start;
-  }
-
-  .quote-simulator__item,
-  .quote-simulator__option {
-    grid-template-columns: minmax(0, 1fr) auto;
-    align-items: center;
+  .quote-estimator__choices,
+  .quote-estimator__summary-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .home-path-card,
