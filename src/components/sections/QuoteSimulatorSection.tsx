@@ -22,6 +22,7 @@ type QuoteSimulatorContent = {
     label: string
     value: string
     note: string
+    customNote: string
   }
 }
 
