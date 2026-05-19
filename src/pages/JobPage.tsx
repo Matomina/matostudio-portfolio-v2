@@ -8,8 +8,7 @@ import { SkipLink } from '@/components/ui/SkipLink'
 import { jobPageContent } from '@/data/job.data'
 
 export function JobPage() {
-  const { hero, profile, skills, stack, projects, timeline, softSkills, contact } =
-    jobPageContent
+  const { hero, profile, skills, stack, projects, timeline, softSkills, contact } = jobPageContent
 
   return (
     <>
@@ -28,12 +27,7 @@ export function JobPage() {
                 <ButtonLink href={hero.primaryCta.href} size="lg">
                   {hero.primaryCta.label}
                 </ButtonLink>
-                <ButtonLink
-                  href={hero.secondaryCta.href}
-                  isExternal
-                  size="lg"
-                  variant="secondary"
-                >
+                <ButtonLink href={hero.secondaryCta.href} isExternal size="lg" variant="secondary">
                   {hero.secondaryCta.label}
                 </ButtonLink>
               </div>
