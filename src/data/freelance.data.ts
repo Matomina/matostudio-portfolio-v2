@@ -120,6 +120,42 @@ export const freelancePageContent = {
       },
     ],
   },
+  quoteSimulator: {
+    eyebrow: 'Simulation de devis',
+    title: 'Estimez rapidement le budget de votre projet web',
+    description:
+      'Cette estimation aide a cadrer le niveau de projet avant un vrai devis. Le montant final dependra du contenu, des options, du delai et des integrations souhaitees.',
+    base: [
+      {
+        name: 'Essentiel',
+        price: '690 €',
+        description: 'Site 1 a 3 pages pour poser une presence web propre et credible.',
+      },
+      {
+        name: 'Premium',
+        price: '1 290 €',
+        description: 'Site 4 a 6 pages avec parcours de conversion et sections de reassurance.',
+      },
+      {
+        name: 'Sur mesure',
+        price: 'Sur devis',
+        description: 'Projet avance, refonte complete, besoin specifique ou integration particuliere.',
+      },
+    ],
+    options: [
+      { label: 'Page supplementaire', price: '+120 € a +180 € / page' },
+      { label: 'Redaction ou optimisation des textes', price: '+150 € a +350 €' },
+      { label: 'SEO local avance', price: '+250 € a +600 €' },
+      { label: 'Formulaire avance ou logique devis', price: '+250 € a +700 €' },
+      { label: 'Animations premium et micro-interactions', price: '+180 € a +500 €' },
+      { label: 'Maintenance mensuelle', price: 'A partir de 49 € / mois' },
+    ],
+    result: {
+      label: 'Fourchette indicative',
+      value: '690 € — 2 500 €+',
+      note: 'Le bon cadrage se fait en fonction du nombre de pages, du niveau de design, des contenus, du SEO et des fonctionnalites attendues.',
+    },
+  },
   process: {
     eyebrow: 'Process',
     title: 'Une methode lisible pour avancer sans confusion',
