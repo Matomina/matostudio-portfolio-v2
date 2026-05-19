@@ -228,7 +228,7 @@ h3 {
   top: 0;
   z-index: var(--z-header);
   border-bottom: var(--border-width) solid var(--color-border);
-  background: rgba(7, 11, 20, 0.76);
+  background: var(--agency-header-bg, rgba(16, 17, 22, 0.82));
   backdrop-filter: var(--blur-header);
 }
 
@@ -922,7 +922,7 @@ h3 {
     visibility: hidden;
     transform: translateY(-12px);
     border-bottom: var(--border-width) solid var(--color-border);
-    background: rgba(7, 11, 20, 0.96);
+    background: var(--agency-mobile-menu-bg, rgba(16, 17, 22, 0.98));
     backdrop-filter: var(--blur-header);
     transition:
       opacity var(--transition-base),

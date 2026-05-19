@@ -7,8 +7,10 @@ import { Container } from '@/components/ui/Container'
 import { SectionHeader } from '@/components/ui/SectionHeader'
 import { SkipLink } from '@/components/ui/SkipLink'
 import { freelancePageContent } from '@/data/freelance.data'
+import { useLanguage } from '@/hooks/useLanguage'
 
 export function FreelancePage() {
+<<<<<<< HEAD
   const {
     hero,
     problem,
@@ -21,6 +23,12 @@ export function FreelancePage() {
     faq,
     contact,
   } = freelancePageContent
+=======
+  const { copy } = useLanguage()
+  const heroCopy = copy.freelancePage
+  const { hero, problem, services, offers, process, projects, reassurance, faq, contact } =
+    freelancePageContent
+>>>>>>> 6a3994f (feat: advance premium visual system and agency pages)
 
   return (
     <>
@@ -31,16 +39,16 @@ export function FreelancePage() {
         <section className="freelance-hero page-shell" aria-labelledby="freelance-title">
           <Container className="freelance-hero__layout" size="wide">
             <div className="freelance-hero__content">
-              <p className="section-eyebrow">{hero.eyebrow}</p>
-              <h1 id="freelance-title">{hero.title}</h1>
-              <p className="freelance-hero__description">{hero.description}</p>
+              <p className="section-eyebrow">{heroCopy.heroEyebrow}</p>
+              <h1 id="freelance-title">{heroCopy.heroTitle}</h1>
+code src/pages/FreelancePage.tsx src/styles/agency-harmony.csscode src/pages/FreelancePage.tsx src/styles/agency-harmony.csscode src/pages/FreelancePage.tsx src/styles/agency-harmony.csscode src/pages/FreelancePage.tsx src/styles/agency-harmony.css              <p className="freelance-hero__description">{heroCopy.heroDescription}</p>
 
               <div className="hero-actions">
                 <ButtonLink href={hero.primaryCta.href} size="lg">
-                  {hero.primaryCta.label}
+                  {heroCopy.primaryCta}
                 </ButtonLink>
                 <ButtonLink href={hero.secondaryCta.href} variant="secondary" size="lg">
-                  {hero.secondaryCta.label}
+                  {heroCopy.secondaryCta}
                 </ButtonLink>
               </div>
             </div>

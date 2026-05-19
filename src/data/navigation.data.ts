@@ -2,15 +2,19 @@ import { ROUTES } from '@/lib/constants/routes'
 
 export const navigationItems = [
   {
-    label: 'Accueil',
+    id: 'home',
     href: ROUTES.home,
   },
   {
-    label: 'Freelance',
+    id: 'quote',
+    href: ROUTES.quote,
+  },
+  {
+    id: 'freelance',
     href: ROUTES.freelance,
   },
   {
-    label: 'Emploi',
+    id: 'job',
     href: ROUTES.job,
   },
 ] as const

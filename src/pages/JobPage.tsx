@@ -6,8 +6,11 @@ import { Container } from '@/components/ui/Container'
 import { SectionHeader } from '@/components/ui/SectionHeader'
 import { SkipLink } from '@/components/ui/SkipLink'
 import { jobPageContent } from '@/data/job.data'
+import { useLanguage } from '@/hooks/useLanguage'
 
 export function JobPage() {
+  const { copy } = useLanguage()
+  const heroCopy = copy.jobPage
   const { hero, profile, skills, stack, projects, timeline, softSkills, contact } = jobPageContent
 
   return (
@@ -19,16 +22,16 @@ export function JobPage() {
         <section className="job-hero page-shell" aria-labelledby="job-title">
           <Container className="job-hero__layout" size="wide">
             <div className="job-hero__content">
-              <p className="section-eyebrow">{hero.eyebrow}</p>
-              <h1 id="job-title">{hero.title}</h1>
-              <p className="job-hero__description">{hero.description}</p>
+              <p className="section-eyebrow">{heroCopy.heroEyebrow}</p>
+              <h1 id="job-title">{heroCopy.heroTitle}</h1>
+              <p className="job-hero__description">{heroCopy.heroDescription}</p>
 
               <div className="hero-actions">
                 <ButtonLink href={hero.primaryCta.href} size="lg">
-                  {hero.primaryCta.label}
+                  {heroCopy.primaryCta}
                 </ButtonLink>
                 <ButtonLink href={hero.secondaryCta.href} isExternal size="lg" variant="secondary">
-                  {hero.secondaryCta.label}
+                  {heroCopy.secondaryCta}
                 </ButtonLink>
               </div>
             </div>

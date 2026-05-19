@@ -1,7 +1,12 @@
+import { motion, useReducedMotion } from 'framer-motion'
+
 import { Container } from '@/components/ui/Container'
 import matostudioAgencyLogo from '@/assets/brand/matostudioagency-logo.png'
 import { siteConfig } from '@/data/site.config'
+import { useLanguage } from '@/hooks/useLanguage'
 import { ROUTES } from '@/lib/constants/routes'
+
+import type { FooterLinkId } from '@/types/language.types'
 
 type SocialIconName = 'github' | 'linkedin' | 'instagram' | 'facebook' | 'tiktok'
 
@@ -20,8 +25,11 @@ const socials: SocialLink[] = [
 ]
 
 const footerLinks = [
-  { label: 'Mentions legales', href: ROUTES.legal },
-  { label: 'Politique de confidentialite', href: ROUTES.privacy },
+  { id: 'contact', href: ROUTES.contact },
+  { id: 'quote', href: ROUTES.quote },
+  { id: 'payment', href: ROUTES.payment },
+  { id: 'legal', href: ROUTES.legal },
+  { id: 'privacy', href: ROUTES.privacy },
 ] as const
 
 function SocialIcon({ name }: { name: SocialIconName }) {
@@ -46,33 +54,35 @@ function SocialIcon({ name }: { name: SocialIconName }) {
 }
 
 export function Footer() {
+  const shouldReduceMotion = useReducedMotion()
+  const { copy } = useLanguage()
+
   return (
-    <footer className="site-footer">
+    <motion.footer
+      className="site-footer"
+      initial={shouldReduceMotion ? false : { opacity: 0, y: 18 }}
+      whileInView={shouldReduceMotion ? undefined : { opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.18 }}
+      transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
+    >
       <Container className="site-footer__inner">
         <div className="site-footer__brand-block">
-          <a
-            href="#accueil"
-            className="site-footer__brand"
-            aria-label="Retour a l accueil MatoStudio Agency"
-          >
+          <a href="#accueil" className="site-footer__brand" aria-label={copy.footer.brandAria}>
             <img src={matostudioAgencyLogo} alt="MatoStudio Agency" />
           </a>
 
-          <p className="site-footer__description silver-text">
-            Une agence de developpement web premium pour creer des experiences digitales rapides,
-            elegantes et coherentes avec votre image.
-          </p>
+          <p className="site-footer__description silver-text">{copy.footer.description}</p>
         </div>
 
-        <nav className="site-footer__legal-links" aria-label="Pages legales MatoStudio Agency">
+        <nav className="site-footer__legal-links" aria-label={copy.footer.linksAria}>
           {footerLinks.map((link) => (
             <a key={link.href} href={link.href}>
-              {link.label}
+              {copy.footer.links[link.id as FooterLinkId]}
             </a>
           ))}
         </nav>
 
-        <nav className="site-footer__socials" aria-label="Reseaux sociaux MatoStudio Agency">
+        <nav className="site-footer__socials" aria-label={copy.footer.socialsAria}>
           {socials.map(({ label, href, icon }) => (
             <a
               key={label}
@@ -81,6 +91,7 @@ export function Footer() {
               rel={href ? 'noreferrer' : undefined}
               aria-label={label}
               aria-disabled={!href}
+              tabIndex={href ? undefined : -1}
               className={!href ? 'is-disabled' : undefined}
             >
               <SocialIcon name={icon} />
@@ -91,9 +102,9 @@ export function Footer() {
 
       <Container className="site-footer__copyright">
         <p>
-          © {new Date().getFullYear()} {siteConfig.name}. Tous droits reserves.
+          © {new Date().getFullYear()} {siteConfig.name}. {copy.footer.copyright}
         </p>
       </Container>
-    </footer>
+    </motion.footer>
   )
 }

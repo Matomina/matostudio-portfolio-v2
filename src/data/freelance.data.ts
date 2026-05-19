@@ -8,7 +8,7 @@ export const freelancePageContent = {
       'Je conçois des sites modernes, rapides et credibles pour aider les professionnels a presenter leur activite, rassurer leurs clients et transformer plus de visiteurs en demandes de contact.',
     primaryCta: {
       label: 'Demander un devis',
-      href: 'mailto:matomina.nguayila@gmail.com?subject=Demande%20de%20devis%20MatoStudio',
+      href: ROUTES.quote,
     },
     secondaryCta: {
       label: 'Voir les services',
@@ -257,11 +257,11 @@ export const freelancePageContent = {
     email: 'matomina.nguayila@gmail.com',
     primaryCta: {
       label: 'Demander un devis',
-      href: 'mailto:matomina.nguayila@gmail.com?subject=Projet%20web%20MatoStudio',
+      href: ROUTES.contact,
     },
     secondaryCta: {
-      label: 'Voir le profil emploi',
-      href: ROUTES.job,
+      label: 'Simuler un budget',
+      href: ROUTES.quote,
     },
   },
 } as const

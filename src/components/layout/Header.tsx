@@ -1,10 +1,12 @@
 import { useEffect, useState } from 'react'
-import { Menu, X } from 'lucide-react'
+import { Languages, Menu, Moon, Sun, X } from 'lucide-react'
 import { NavLink, Link as RouterLink } from 'react-router-dom'
 
 import matostudioLogo from '@/assets/brand/matostudioagency-logo.png'
 import { navigationItems } from '@/data/navigation.data'
 import { siteConfig } from '@/data/site.config'
+import { useLanguage } from '@/hooks/useLanguage'
+import { useTheme } from '@/hooks/useTheme'
 import { ROUTES } from '@/lib/constants/routes'
 
 import { ButtonLink } from '@/components/ui/ButtonLink'
@@ -12,6 +14,9 @@ import { Container } from '@/components/ui/Container'
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const { language, copy, toggleLanguage } = useLanguage()
+  const { theme, toggleTheme } = useTheme()
+  const isDarkTheme = theme === 'dark'
 
   function closeMobileMenu() {
     setIsMenuOpen(false)
@@ -28,11 +33,15 @@ export function Header() {
   return (
     <header className="site-header">
       <Container className="site-header__inner">
-        <RouterLink to={ROUTES.home} className="site-header__brand" aria-label="Retour à l’accueil">
+        <RouterLink
+          to={ROUTES.home}
+          className="site-header__brand"
+          aria-label={copy.header.homeAria}
+        >
           <img src={matostudioLogo} alt={siteConfig.name} />
         </RouterLink>
 
-        <nav className="site-header__nav" aria-label="Navigation principale">
+        <nav className="site-header__nav" aria-label={copy.header.navAria}>
           {navigationItems.map((item) => (
             <NavLink
               to={item.href}
@@ -40,23 +49,44 @@ export function Header() {
               end={item.href === ROUTES.home}
               className={({ isActive }) => (isActive ? 'is-active' : undefined)}
             >
-              {item.label}
+              {copy.navigation[item.id]}
             </NavLink>
           ))}
         </nav>
 
-        <ButtonLink
-          href={`mailto:${siteConfig.email}`}
-          variant="primary"
-          className="site-header__cta"
-        >
-          Me contacter
-        </ButtonLink>
+        <div className="site-header__actions" aria-label="Préférences et contact">
+          <button
+            className="site-header__tool-button"
+            type="button"
+            aria-label={isDarkTheme ? copy.header.themeToLight : copy.header.themeToDark}
+            onClick={toggleTheme}
+          >
+            {isDarkTheme ? (
+              <Sun size={18} aria-hidden="true" />
+            ) : (
+              <Moon size={18} aria-hidden="true" />
+            )}
+          </button>
+
+          <button
+            className="site-header__language-button"
+            type="button"
+            aria-label={copy.header.languageToggle}
+            onClick={toggleLanguage}
+          >
+            <Languages size={17} aria-hidden="true" />
+            {language === 'fr' ? 'EN' : 'FR'}
+          </button>
+
+          <ButtonLink href={ROUTES.contact} variant="primary" className="site-header__cta">
+            {copy.header.contact}
+          </ButtonLink>
+        </div>
 
         <button
           className="site-header__menu-button"
           type="button"
-          aria-label={isMenuOpen ? 'Fermer le menu' : 'Ouvrir le menu'}
+          aria-label={isMenuOpen ? copy.header.menuClose : copy.header.menuOpen}
           aria-expanded={isMenuOpen}
           aria-controls="mobile-navigation"
           onClick={() => setIsMenuOpen((current) => !current)}
@@ -71,7 +101,7 @@ export function Header() {
         aria-hidden={!isMenuOpen}
       >
         <Container className="mobile-menu__inner">
-          <nav className="mobile-menu__nav" aria-label="Navigation mobile">
+          <nav className="mobile-menu__nav" aria-label={copy.header.mobileNavAria}>
             {navigationItems.map((item) => (
               <NavLink
                 to={item.href}
@@ -80,18 +110,44 @@ export function Header() {
                 onClick={closeMobileMenu}
                 className={({ isActive }) => (isActive ? 'is-active' : undefined)}
               >
-                {item.label}
+                {copy.navigation[item.id]}
               </NavLink>
             ))}
           </nav>
 
+          <div className="mobile-menu__tools" aria-label="Préférences">
+            <button
+              className="site-header__tool-button"
+              type="button"
+              aria-label={isDarkTheme ? copy.header.themeToLight : copy.header.themeToDark}
+              onClick={toggleTheme}
+            >
+              {isDarkTheme ? (
+                <Sun size={18} aria-hidden="true" />
+              ) : (
+                <Moon size={18} aria-hidden="true" />
+              )}
+              <span>{isDarkTheme ? 'Light' : 'Dark'}</span>
+            </button>
+
+            <button
+              className="site-header__language-button"
+              type="button"
+              aria-label={copy.header.languageToggle}
+              onClick={toggleLanguage}
+            >
+              <Languages size={17} aria-hidden="true" />
+              {language === 'fr' ? 'EN' : 'FR'}
+            </button>
+          </div>
+
           <ButtonLink
-            href={`mailto:${siteConfig.email}`}
+            href={ROUTES.contact}
             variant="primary"
             className="mobile-menu__cta"
             onClick={closeMobileMenu}
           >
-            Me contacter
+            {copy.header.contact}
           </ButtonLink>
         </Container>
       </div>
