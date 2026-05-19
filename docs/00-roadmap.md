@@ -1,7 +1,7 @@
 # Roadmap — MatoStudio Portfolio V2
 
 Derniere mise a jour : 2026-05-19  
-Statut global : socle technique, gouvernance, routing split et design system termines. Prochaine phase : portfolio freelance MatoStudio.
+Statut global : socle technique, gouvernance, routing split, design system et portfolio freelance termines. Prochaine phase : portfolio emploi / entreprise.
 
 ---
 
@@ -85,12 +85,12 @@ Une PR est validable uniquement si :
 - [x] Tokens CSS renforces
 - [x] Styles globaux factorises
 - [x] Composants UI `ButtonLink`, `Container`, `Card`, `SectionHeader` disponibles
+- [x] Portfolio freelance complet construit et merge
 
 ### A faire
 
-- [ ] Construire le portfolio freelance complet
 - [ ] Construire le portfolio emploi complet
-- [ ] Enrichir le contenu definitif
+- [ ] Enrichir le contenu definitif si necessaire
 - [ ] Finaliser SEO, accessibilite, performance et production
 
 ---
@@ -175,49 +175,48 @@ PR :
 
 ### Phase 4 — Portfolio freelance MatoStudio
 
-Statut : en cours.
+Statut : termine.
 
-Branche cible :
+Branche :
 
 ```txt
 feature/freelance-portfolio
 ```
 
-Objectif : construire un parcours client premium, clair et oriente conversion.
+PR :
 
-Sections cibles :
+```txt
+#7 feat: build freelance portfolio page
+```
 
-- [ ] Hero premium
-- [ ] Probleme client / promesse
-- [ ] Services
-- [ ] Offres ou tarifs
-- [ ] Process
-- [ ] Projets representatifs
-- [ ] Reassurance
-- [ ] FAQ
-- [ ] Contact
-- [ ] CTA final
-
-Criteres de validation :
-
-- [ ] `/freelance` presente un parcours client complet
-- [ ] le design respecte la charte MatoStudio
-- [ ] les donnees freelance sont separees proprement
-- [ ] le rendu est responsive
-- [ ] `npm run check` passe
-- [ ] la CI GitHub passe
+- [x] Hero premium
+- [x] Probleme client / promesse
+- [x] Services
+- [x] Offres ou tarifs
+- [x] Process
+- [x] Projets representatifs
+- [x] Reassurance
+- [x] FAQ
+- [x] Contact
+- [x] CTA final
+- [x] Donnees freelance structurees dans `src/data/freelance.data.ts`
+- [x] Styles dedies dans `src/styles/freelance.css`
+- [x] Verification CI GitHub
+- [x] Merge sur `main`
 
 ---
 
 ### Phase 5 — Portfolio emploi / entreprise
 
-Statut : a faire apres Phase 4.
+Statut : en cours.
 
 Branche cible :
 
 ```txt
 feature/job-portfolio
 ```
+
+Objectif : construire un parcours recruteur premium, clair, credible et oriente profil developpeur.
 
 Sections cibles :
 
@@ -231,6 +230,15 @@ Sections cibles :
 - [ ] CV
 - [ ] LinkedIn / GitHub
 - [ ] Contact professionnel
+
+Criteres de validation :
+
+- [ ] `/emploi` presente un parcours recruteur complet
+- [ ] le design respecte la charte MatoStudio
+- [ ] les donnees emploi sont separees proprement
+- [ ] le rendu est responsive
+- [ ] `npm run check` passe
+- [ ] la CI GitHub passe
 
 ---
 
@@ -262,22 +270,23 @@ chore/production-readiness
 
 ## 5. Historique des grosses etapes
 
-| Date       | Etape                              | Statut  | Branche                                 | PR     | Resume                                                         |
-| ---------- | ---------------------------------- | ------- | --------------------------------------- | ------ | -------------------------------------------------------------- |
-| 2026-04-30 | Phase 1 — Socle professionnel      | Termine | main                                    | —      | Initialisation du projet et base technique                     |
-| 2026-05-04 | Gouvernance projet                 | Termine | docs/roadmap-governance                 | Merged | Roadmap officielle + methode branches/PR                       |
-| 2026-05-04 | Phase 2 — Routing split            | Termine | feature/portfolio-routing-split         | #3     | Routes `/`, `/freelance`, `/emploi`, `/legal` et `*` integrees |
-| 2026-05-04 | Roadmap apres routing split        | Termine | docs/update-roadmap-after-routing-split | #4     | Roadmap synchronisee apres Phase 2                             |
-| 2026-05-19 | Phase 3 — Design system foundation | Termine | chore/design-system-foundation          | #5     | Tokens, globals, ButtonLink, Container, Card et SectionHeader  |
+| Date | Etape | Statut | Branche | PR | Resume |
+| --- | --- | --- | --- | --- | --- |
+| 2026-04-30 | Phase 1 — Socle professionnel | Termine | main | — | Initialisation du projet et base technique |
+| 2026-05-04 | Gouvernance projet | Termine | docs/roadmap-governance | Merged | Roadmap officielle + methode branches/PR |
+| 2026-05-04 | Phase 2 — Routing split | Termine | feature/portfolio-routing-split | #3 | Routes `/`, `/freelance`, `/emploi`, `/legal` et `*` integrees |
+| 2026-05-04 | Roadmap apres routing split | Termine | docs/update-roadmap-after-routing-split | #4 | Roadmap synchronisee apres Phase 2 |
+| 2026-05-19 | Phase 3 — Design system foundation | Termine | chore/design-system-foundation | #5 | Tokens, globals, ButtonLink, Container, Card et SectionHeader |
+| 2026-05-19 | Phase 4 — Portfolio freelance | Termine | feature/freelance-portfolio | #7 | Parcours client complet `/freelance`, donnees et styles dedies |
 
 ---
 
 ## 6. Prochaine action
 
-Demarrer et finaliser la Phase 4 sur :
+Demarrer et finaliser la Phase 5 sur :
 
 ```txt
-feature/freelance-portfolio
+feature/job-portfolio
 ```
 
-Priorite : livrer un parcours freelance premium, coherent, responsive, maintenable et pret a etre enrichi avec les projets clients reels.
+Priorite : livrer un parcours emploi premium, coherent, responsive, maintenable et convaincant pour recruteurs et entreprises.
