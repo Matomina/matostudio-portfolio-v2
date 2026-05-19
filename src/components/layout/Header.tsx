@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { Menu, X } from 'lucide-react'
 import { NavLink, Link as RouterLink } from 'react-router-dom'
 
-import matostudioLogo from '@/assets/brand/matostudio-logo.png'
+import matostudioLogo from '@/assets/brand/matostudioagency-logo.png'
 import { navigationItems } from '@/data/navigation.data'
 import { siteConfig } from '@/data/site.config'
 import { ROUTES } from '@/lib/constants/routes'
