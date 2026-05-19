@@ -7,6 +7,7 @@ import '@/styles/reset.css'
 import '@/styles/tokens.css'
 import '@/styles/globals.css'
 import '@/styles/freelance.css'
+import '@/styles/job.css'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
