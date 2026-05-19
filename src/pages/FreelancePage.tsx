@@ -1,5 +1,6 @@
 import { Footer } from '@/components/layout/Footer'
 import { Header } from '@/components/layout/Header'
+import { QuoteSimulatorSection } from '@/components/sections/QuoteSimulatorSection'
 import { ButtonLink } from '@/components/ui/ButtonLink'
 import { Card } from '@/components/ui/Card'
 import { Container } from '@/components/ui/Container'
@@ -149,42 +150,7 @@ export function FreelancePage() {
               className="freelance-section__header"
             />
 
-            <Card className="quote-simulator" padding="lg" variant="premium">
-              <div className="quote-simulator__grid">
-                <div className="quote-simulator__column">
-                  <p className="quote-simulator__label">Base projet</p>
-                  <div className="quote-simulator__cards">
-                    {quoteSimulator.base.map((item) => (
-                      <article className="quote-simulator__item" key={item.name}>
-                        <div>
-                          <h3>{item.name}</h3>
-                          <p>{item.description}</p>
-                        </div>
-                        <strong>{item.price}</strong>
-                      </article>
-                    ))}
-                  </div>
-                </div>
-
-                <div className="quote-simulator__column">
-                  <p className="quote-simulator__label">Options possibles</p>
-                  <div className="quote-simulator__options">
-                    {quoteSimulator.options.map((option) => (
-                      <div className="quote-simulator__option" key={option.label}>
-                        <span>{option.label}</span>
-                        <strong>{option.price}</strong>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-
-              <div className="quote-simulator__result">
-                <p>{quoteSimulator.result.label}</p>
-                <strong>{quoteSimulator.result.value}</strong>
-                <span>{quoteSimulator.result.note}</span>
-              </div>
-            </Card>
+            <QuoteSimulatorSection content={quoteSimulator} />
           </Container>
         </section>
 
