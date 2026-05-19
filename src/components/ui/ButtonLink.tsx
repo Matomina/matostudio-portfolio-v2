@@ -31,12 +31,7 @@ export function ButtonLink({
   target,
   ...props
 }: ButtonLinkProps) {
-  const classNames = [
-    'button',
-    variantClassNames[variant],
-    sizeClassNames[size],
-    className,
-  ]
+  const classNames = ['button', variantClassNames[variant], sizeClassNames[size], className]
     .filter(Boolean)
     .join(' ')
 

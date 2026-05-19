@@ -19,9 +19,7 @@ export function Container({
   size = 'default',
   ...props
 }: ContainerProps) {
-  const classNames = ['container', sizeClassNames[size], className]
-    .filter(Boolean)
-    .join(' ')
+  const classNames = ['container', sizeClassNames[size], className].filter(Boolean).join(' ')
 
   return (
     <div className={classNames} {...props}>

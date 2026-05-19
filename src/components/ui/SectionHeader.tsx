@@ -5,12 +5,7 @@ type SectionHeaderProps = {
   className?: string
 }
 
-export function SectionHeader({
-  eyebrow,
-  title,
-  description,
-  className = '',
-}: SectionHeaderProps) {
+export function SectionHeader({ eyebrow, title, description, className = '' }: SectionHeaderProps) {
   const classNames = ['section-header', className].filter(Boolean).join(' ')
 
   return (
