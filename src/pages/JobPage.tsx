@@ -28,12 +28,7 @@ export function JobPage() {
                 <ButtonLink href={hero.primaryCta.href} size="lg">
                   {hero.primaryCta.label}
                 </ButtonLink>
-                <ButtonLink
-                  href={hero.secondaryCta.href}
-                  isExternal
-                  size="lg"
-                  variant="secondary"
-                >
+                <ButtonLink href={hero.secondaryCta.href} isExternal size="lg" variant="secondary">
                   {hero.secondaryCta.label}
                 </ButtonLink>
               </div>
