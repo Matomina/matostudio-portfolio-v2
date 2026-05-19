@@ -2,10 +2,10 @@
 
 Dernière mise à jour : 2026-05-19
 
-Statut global : socle technique, gouvernance, routing split, design system et portfolio freelance
-terminés.
+Statut global : socle technique, gouvernance, routing split, design system, portfolio freelance
+et portfolio emploi terminés.
 
-Prochaine phase : portfolio emploi / entreprise.
+Prochaine phase : production readiness.
 
 ---
 
@@ -93,12 +93,13 @@ Une PR est validable uniquement si :
 - [x] Styles globaux factorisés
 - [x] Composants UI `ButtonLink`, `Container`, `Card`, `SectionHeader` disponibles
 - [x] Portfolio freelance complet construit et mergé
+- [x] Portfolio emploi complet construit et mergé
 
 ### À faire
 
-- [ ] Construire le portfolio emploi complet
-- [ ] Enrichir le contenu définitif si nécessaire
 - [ ] Finaliser SEO, accessibilité, performance et production
+- [ ] Préparer le déploiement production
+- [ ] Réaliser l'audit final du repo
 
 ---
 
@@ -187,38 +188,30 @@ PR : `#7 feat: build freelance portfolio page`
 
 ### Phase 5 — Portfolio emploi / entreprise
 
-Statut : en cours.
+Statut : terminé.
 
-Branche cible : `feature/job-portfolio`
+Branche : `feature/job-portfolio`
 
-Objectif : construire un parcours recruteur premium, clair, crédible et orienté profil
-développeur.
+PR : `#9 feat: build job portfolio page`
 
-Sections cibles :
-
-- [ ] Hero profil développeur
-- [ ] Présentation personnelle
-- [ ] Compétences techniques
-- [ ] Stack
-- [ ] Projets GitHub
-- [ ] Parcours / formation
-- [ ] Soft skills
-- [ ] CV
-- [ ] LinkedIn / GitHub
-- [ ] Contact professionnel
-
-Critères de validation :
-
-- [ ] `/emploi` présente un parcours recruteur complet
-- [ ] le design respecte la charte MatoStudio
-- [ ] les données emploi sont séparées proprement
-- [ ] le rendu est responsive
-- [ ] `npm run check` passe
-- [ ] la CI GitHub passe
+- [x] Hero profil développeur
+- [x] Présentation personnelle
+- [x] Compétences techniques
+- [x] Stack
+- [x] Projets GitHub
+- [x] Parcours / formation
+- [x] Soft skills
+- [x] CV / liens professionnels préparés
+- [x] LinkedIn / GitHub préparés
+- [x] Contact professionnel
+- [x] Données emploi structurées dans `src/data/job.data.ts`
+- [x] Styles dédiés dans `src/styles/job.css`
+- [x] Vérification CI GitHub
+- [x] Merge sur `main`
 
 ### Phase 6 — SEO, accessibilité, performance et production
 
-Statut : à faire en fin de cycle.
+Statut : prochaine phase.
 
 Branche cible : `chore/production-readiness`
 
@@ -246,16 +239,17 @@ Branche cible : `chore/production-readiness`
 - 2026-05-04 — Roadmap après routing split : PR #4 mergée.
 - 2026-05-19 — Phase 3 — Design system foundation : PR #5 mergée.
 - 2026-05-19 — Phase 4 — Portfolio freelance : PR #7 mergée.
+- 2026-05-19 — Phase 5 — Portfolio emploi : PR #9 mergée.
 
 ---
 
 ## 6. Prochaine action
 
-Finaliser la Phase 5 sur :
+Démarrer la Phase 6 sur :
 
 ```txt
-feature/job-portfolio
+chore/production-readiness
 ```
 
-Priorité : livrer un parcours emploi premium, cohérent, responsive, maintenable et convaincant
-pour recruteurs et entreprises.
+Priorité : stabiliser SEO, accessibilité, performance, configuration production et préparation au
+déploiement.
