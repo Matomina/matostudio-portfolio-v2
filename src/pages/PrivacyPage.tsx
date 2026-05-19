@@ -49,7 +49,10 @@ export function PrivacyPage() {
             </p>
           </section>
 
-          <section className="legal-content" aria-label="Détails de la politique de confidentialité">
+          <section
+            className="legal-content"
+            aria-label="Détails de la politique de confidentialité"
+          >
             {privacySections.map((section) => (
               <article className="legal-card" key={section.title}>
                 <h2>{section.title}</h2>
@@ -60,8 +63,8 @@ export function PrivacyPage() {
             <article className="legal-card legal-card--highlight">
               <h2>Contact</h2>
               <p>
-                Pour toute demande relative aux données personnelles, vous pouvez contacter MatoStudio à
-                l’adresse suivante :{' '}
+                Pour toute demande relative aux données personnelles, vous pouvez contacter
+                MatoStudio à l’adresse suivante :{' '}
                 <a href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a>.
               </p>
             </article>
