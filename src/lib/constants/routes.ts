@@ -1,5 +1,8 @@
 export const ROUTES = {
   home: '/',
+  contact: '/contact',
+  quote: '/devis',
+  payment: '/paiement',
   freelance: '/freelance',
   job: '/emploi',
   legal: '/mentions-legales',

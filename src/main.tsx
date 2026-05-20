@@ -5,8 +5,12 @@ import App from '@/app/App'
 
 import '@/styles/reset.css'
 import '@/styles/tokens.css'
+import '@/styles/themes.css'
 import '@/styles/globals.css'
+import '@/styles/freelance.css'
+import '@/styles/job.css'
 import '@/styles/agency-harmony.css'
+import '@/styles/header-controls.css'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>

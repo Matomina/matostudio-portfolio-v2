@@ -8,7 +8,7 @@ export const freelancePageContent = {
       'Je conçois des sites modernes, rapides et credibles pour aider les professionnels a presenter leur activite, rassurer leurs clients et transformer plus de visiteurs en demandes de contact.',
     primaryCta: {
       label: 'Demander un devis',
-      href: 'mailto:matomina.nguayila@gmail.com?subject=Demande%20de%20devis%20MatoStudio',
+      href: ROUTES.quote,
     },
     secondaryCta: {
       label: 'Voir les services',
@@ -120,6 +120,48 @@ export const freelancePageContent = {
       },
     ],
   },
+  quoteSimulator: {
+    eyebrow: 'Simulation de devis',
+    title: 'Calculez une premiere estimation de votre projet web',
+    description:
+      'Choisissez une base, ajoutez les options utiles et obtenez une estimation immediate. Le devis final reste ajuste apres cadrage precis du besoin.',
+    base: [
+      {
+        name: 'Essentiel',
+        price: '690 €',
+        amount: 690,
+        description: 'Site 1 a 3 pages pour poser une presence web propre et credible.',
+      },
+      {
+        name: 'Premium',
+        price: '1 290 €',
+        amount: 1290,
+        description: 'Site 4 a 6 pages avec parcours de conversion et sections de reassurance.',
+      },
+      {
+        name: 'Sur mesure',
+        price: 'Sur devis',
+        amount: null,
+        description:
+          'Projet avance, refonte complete, besoin specifique ou integration particuliere.',
+      },
+    ],
+    options: [
+      { label: 'Page supplementaire', price: '+150 €', amount: 150 },
+      { label: 'Redaction ou optimisation des textes', price: '+280 €', amount: 280 },
+      { label: 'SEO local avance', price: '+450 €', amount: 450 },
+      { label: 'Formulaire avance ou logique devis', price: '+480 €', amount: 480 },
+      { label: 'Animations premium et micro-interactions', price: '+320 €', amount: 320 },
+      { label: 'Maintenance premier mois', price: '+49 €', amount: 49 },
+    ],
+    result: {
+      label: 'Estimation immediate',
+      value: '690 € — 2 500 €+',
+      note: 'Estimation indicative hors hebergement, nom de domaine et contenus non fournis. Le montant final est valide apres cadrage.',
+      customNote:
+        'Un projet sur mesure doit etre cadre avant estimation : fonctionnalites, nombre de pages, integrations, delai et niveau de design attendu.',
+    },
+  },
   process: {
     eyebrow: 'Process',
     title: 'Une methode lisible pour avancer sans confusion',
@@ -216,11 +258,11 @@ export const freelancePageContent = {
     email: 'matomina.nguayila@gmail.com',
     primaryCta: {
       label: 'Demander un devis',
-      href: 'mailto:matomina.nguayila@gmail.com?subject=Projet%20web%20MatoStudio',
+      href: ROUTES.contact,
     },
     secondaryCta: {
-      label: 'Voir le profil emploi',
-      href: ROUTES.job,
+      label: 'Simuler un budget',
+      href: ROUTES.quote,
     },
   },
 } as const

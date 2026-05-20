@@ -38,6 +38,16 @@
     <link rel="apple-touch-icon" href="/matostudio-favicon.png" />
     <link rel="canonical" href="https://matostudio.fr" />
 
+    <script>
+      ;(() => {
+        const theme = localStorage.getItem('matostudio-theme') === 'light' ? 'light' : 'dark'
+        const language = localStorage.getItem('matostudio-language') === 'en' ? 'en' : 'fr'
+        document.documentElement.dataset.theme = theme
+        document.documentElement.style.colorScheme = theme
+        document.documentElement.lang = language
+      })()
+    </script>
+
     <script type="module" src="/src/main.tsx"></script>
   </head>
 
