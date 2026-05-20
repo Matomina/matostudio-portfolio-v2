@@ -137,14 +137,16 @@ const fr: TranslationCopy = {
       {
         title: 'Projet client et freelance',
         eyebrow: 'Portfolio freelance',
-        description: 'Un parcours pensé pour présenter les offres et générer des demandes qualifiées.',
+        description:
+          'Un parcours pensé pour présenter vos offres avec clarté, renforcer votre crédibilité et transformer les visiteurs en demandes de projet qualifiées.',
         hrefId: 'freelance',
         ctaLabel: 'Voir l’offre freelance',
       },
       {
         title: 'Profil développeur et emploi',
         eyebrow: 'Portfolio emploi',
-        description: 'Un espace pour valoriser les compétences, les projets techniques et le sérieux professionnel.',
+        description:
+          'Un espace dédié pour valoriser vos compétences, vos projets techniques et votre sérieux professionnel auprès des recruteurs et des équipes.',
         hrefId: 'job',
         ctaLabel: 'Voir le profil emploi',
       },
@@ -265,7 +267,12 @@ const en: TranslationCopy = {
   navigation: { home: 'Home', quote: 'Quote', freelance: 'Agency', job: 'Career' },
   header: { ...fr.header, contact: 'Contact', languageToggle: 'Change language' },
   common: { page: 'page', pages: 'pages', included: 'included', base: 'Base', none: 'No option' },
-  home: { ...fr.home, title: 'A premium web presence, clear and designed to convert.', clientCta: 'I am a client', recruiterCta: 'I am a recruiter' },
+  home: {
+    ...fr.home,
+    title: 'A premium web presence, clear and designed to convert.',
+    clientCta: 'I am a client',
+    recruiterCta: 'I am a recruiter',
+  },
   contactPage: { ...fr.contactPage, heroTitle: 'Let’s talk about your next premium website.', submit: 'Send my request', preparedStatus: 'Your email is ready. Review it, then send it from your mailbox.' },
   quotePage: { ...fr.quotePage, heroTitle: 'Simulate a first budget range for your web project.', contactCta: 'Contact the agency' },
   paymentPage: { ...fr.paymentPage, heroTitle: 'A visual foundation ready for future secure payment.' },
