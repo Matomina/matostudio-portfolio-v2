@@ -1,0 +1,30 @@
+.site-footer__socials {
+  width: 100%;
+  flex-wrap: nowrap;
+  gap: 0.75rem;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.site-footer__socials::-webkit-scrollbar {
+  display: none;
+}
+
+.site-footer__socials a {
+  min-width: 44px;
+  flex: 0 0 44px;
+}
+
+@media (max-width: 380px) {
+  .site-footer__socials a {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    flex-basis: 40px;
+  }
+
+  .site-footer__social-svg {
+    width: 16px;
+    height: 16px;
+  }
+}
