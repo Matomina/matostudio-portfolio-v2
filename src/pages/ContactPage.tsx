@@ -16,6 +16,45 @@ import { siteConfig } from '@/data/site.config'
 import { useLanguage } from '@/hooks/useLanguage'
 import { ROUTES } from '@/lib/constants/routes'
 
+function readFormValue(formData: FormData, name: string) {
+  const value = formData.get(name)
+
+  return typeof value === 'string' ? value.trim() : ''
+}
+
+function buildMailtoUrl(form: HTMLFormElement, recipient: string) {
+  const formData = new FormData(form)
+  const name = readFormValue(formData, 'name')
+  const email = readFormValue(formData, 'email')
+  const phone = readFormValue(formData, 'phone') || 'Non renseigné'
+  const projectType = readFormValue(formData, 'projectType')
+  const budget = readFormValue(formData, 'budget')
+  const timeline = readFormValue(formData, 'timeline')
+  const message = readFormValue(formData, 'message')
+
+  const subject = `Nouvelle demande MatoStudio - ${name}`
+  const body = [
+    'Bonjour MatoStudio,',
+    '',
+    'Je souhaite vous contacter pour un projet web.',
+    '',
+    `Nom : ${name}`,
+    `Email : ${email}`,
+    `Téléphone : ${phone}`,
+    `Type de projet : ${projectType}`,
+    `Budget estimé : ${budget}`,
+    `Délai souhaité : ${timeline}`,
+    '',
+    'Message :',
+    message,
+    '',
+    'Merci,',
+    name,
+  ].join('\n')
+
+  return `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
+}
+
 export function ContactPage() {
   const [isPrepared, setIsPrepared] = useState(false)
   const { copy } = useLanguage()
@@ -24,6 +63,7 @@ export function ContactPage() {
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault()
     setIsPrepared(true)
+    window.location.href = buildMailtoUrl(event.currentTarget, siteConfig.email)
   }
 
   return (
