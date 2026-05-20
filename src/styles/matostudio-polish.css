@@ -3,37 +3,23 @@
   --mato-bg-deep: #0f1014;
   --mato-bg: #17191f;
   --mato-bg-soft: #252832;
-  --mato-silver: #dfe4ec;
-  --mato-silver-soft: #c5ccd8;
+  --mato-silver: #dfe3ea;
+  --mato-silver-soft: #d5dae3;
+  --mato-silver-muted: #aeb6c4;
   --mato-gold: #f2d78b;
   --mato-gold-strong: #d7b46a;
-  --mato-border: rgba(226, 232, 240, 0.18);
+  --mato-border: rgba(223, 227, 234, 0.18);
   --mato-border-gold: rgba(242, 215, 139, 0.55);
   --mato-glow-gold: 0 0 30px rgba(242, 215, 139, 0.22);
-  --mato-glow-silver: 0 0 24px rgba(226, 232, 240, 0.14);
+  --mato-glow-silver: 0 0 24px rgba(223, 227, 234, 0.14);
   --mato-shadow-card: 0 24px 76px rgba(0, 0, 0, 0.44);
   --mato-shadow-hover: 0 30px 90px rgba(0, 0, 0, 0.52), 0 0 34px rgba(242, 215, 139, 0.16);
   --mato-gradient-page:
     radial-gradient(circle at 18% 12%, rgba(242, 215, 139, 0.12), transparent 30rem),
-    radial-gradient(circle at 82% 18%, rgba(226, 232, 240, 0.09), transparent 32rem),
+    radial-gradient(circle at 82% 18%, rgba(223, 227, 234, 0.09), transparent 32rem),
     linear-gradient(135deg, var(--mato-bg-deep) 0%, var(--mato-bg) 45%, var(--mato-bg-soft) 100%);
-  --mato-gradient-silver: linear-gradient(
-    115deg,
-    #ffffff 0%,
-    #e8ecf2 24%,
-    #aeb8c7 54%,
-    #ffffff 76%,
-    #c8ceda 100%
-  );
-  --mato-gradient-gold: linear-gradient(
-    135deg,
-    #fff4c7 0%,
-    var(--mato-gold) 38%,
-    var(--mato-gold-strong) 72%,
-    #8f6923 100%
-  );
   --mato-gradient-card:
-    radial-gradient(circle at 18% 0%, rgba(255, 255, 255, 0.08), transparent 20rem),
+    radial-gradient(circle at 18% 0%, rgba(223, 227, 234, 0.08), transparent 20rem),
     radial-gradient(circle at 85% 18%, rgba(242, 215, 139, 0.08), transparent 18rem),
     linear-gradient(145deg, rgba(48, 52, 62, 0.97), rgba(16, 18, 23, 0.98));
   --agency-header-bg: rgba(15, 16, 20, 0.9);
@@ -52,92 +38,65 @@ body:not(.legal-page) main,
   background: var(--mato-gradient-page) !important;
 }
 
-body {
-  color: var(--mato-silver);
-}
-
+body,
+body:not(.legal-page),
+body:not(.legal-page) main,
 body:not(.legal-page) section,
 body:not(.legal-page) article,
-body:not(.legal-page) .page-shell,
-body:not(.legal-page) .section-header,
-body:not(.legal-page) .section-heading,
-body:not(.legal-page) .premium-hero__content,
-body:not(.legal-page) .premium-centered-header,
-body:not(.legal-page) .home-hero,
-body:not(.legal-page) .freelance-hero,
-body:not(.legal-page) .job-hero,
-body:not(.legal-page) .site-footer__inner,
-body:not(.legal-page) .site-footer__brand-block,
-body:not(.legal-page) .site-footer__copyright {
-  text-align: center;
-}
-
-body:not(.legal-page) .section-header,
-body:not(.legal-page) .section-heading,
-body:not(.legal-page) .premium-hero__content,
-body:not(.legal-page) .premium-centered-header,
-body:not(.legal-page) .home-hero__content,
-body:not(.legal-page) .freelance-hero__content,
-body:not(.legal-page) .job-hero__content {
-  justify-items: center;
-  margin-inline: auto;
-}
-
-body:not(.legal-page) .section-header::before,
-body:not(.legal-page) .section-heading::before {
-  margin-inline: auto;
-  background: linear-gradient(90deg, transparent, var(--mato-gold), #ffffff, transparent);
-  box-shadow: var(--mato-glow-gold);
+body:not(.legal-page) p,
+body:not(.legal-page) li,
+body:not(.legal-page) dd,
+body:not(.legal-page) dt,
+body:not(.legal-page) span,
+body:not(.legal-page) small,
+body:not(.legal-page) strong,
+body:not(.legal-page) b,
+body:not(.legal-page) label,
+body:not(.legal-page) legend,
+body:not(.legal-page) input,
+body:not(.legal-page) textarea,
+body:not(.legal-page) select,
+body:not(.legal-page) .site-header__nav a,
+body:not(.legal-page) .mobile-menu__nav a,
+body:not(.legal-page) .site-footer__legal-links a,
+body:not(.legal-page) .contact-direct a {
+  color: var(--mato-silver-soft) !important;
 }
 
 body:not(.legal-page) h1,
 body:not(.legal-page) h2,
 body:not(.legal-page) h3,
+body:not(.legal-page) h4,
+body:not(.legal-page) h5,
+body:not(.legal-page) h6,
 body:not(.legal-page) .section-header__title,
 body:not(.legal-page) .silver-text,
-body:not(.legal-page) .site-footer__description,
 body:not(.legal-page) .site-footer__copyright p {
-  color: transparent !important;
-  background: var(--mato-gradient-silver);
-  background-clip: text;
-  -webkit-background-clip: text;
+  color: var(--mato-silver) !important;
   text-shadow: var(--mato-glow-silver);
 }
 
-body:not(.legal-page) p,
-body:not(.legal-page) li,
-body:not(.legal-page) dd,
-body:not(.legal-page) dt,
-body:not(.legal-page) small {
-  color: var(--mato-silver-soft);
-}
-
-body:not(.legal-page) .section-header__description,
-body:not(.legal-page) .home-hero__description,
-body:not(.legal-page) .freelance-hero__description,
-body:not(.legal-page) .job-hero__description,
-body:not(.legal-page) .premium-hero__content > p:not(.section-eyebrow),
-body:not(.legal-page) .project-card__description {
-  max-width: 760px;
-  margin-inline: auto;
-}
-
-body:not(.legal-page) .eyebrow,
 body:not(.legal-page) .section-eyebrow,
 body:not(.legal-page) .section-header__eyebrow,
+body:not(.legal-page) .eyebrow,
 body:not(.legal-page) .home-path-card__eyebrow,
 body:not(.legal-page) .freelance-index,
 body:not(.legal-page) .job-index,
 body:not(.legal-page) .quote-estimator__badge,
 body:not(.legal-page) .quote-estimator__step-kicker {
-  margin-inline: auto;
-  color: #fff4c7;
+  color: #fff4c7 !important;
   border-color: var(--mato-border-gold);
   background: rgba(242, 215, 139, 0.11);
   box-shadow:
     inset 0 0 22px rgba(242, 215, 139, 0.08),
     var(--mato-glow-gold);
-  text-shadow: var(--mato-glow-gold);
+}
+
+body:not(.legal-page) .button-primary,
+body:not(.legal-page) .quote-control--primary,
+body:not(.legal-page) .button-primary span,
+body:not(.legal-page) .quote-control--primary span {
+  color: #111216 !important;
 }
 
 body:not(.legal-page) .home-hero__panel,
@@ -236,29 +195,6 @@ body:not(.legal-page) .quote-control {
   text-wrap: balance;
 }
 
-body:not(.legal-page) .button-primary,
-body:not(.legal-page) .quote-control--primary {
-  color: #111216 !important;
-  border-color: rgba(255, 244, 199, 0.55);
-  background: var(--mato-gradient-gold) !important;
-  box-shadow: 0 16px 44px rgba(242, 215, 139, 0.26);
-}
-
-body:not(.legal-page) .button-secondary,
-body:not(.legal-page) .button-ghost,
-body:not(.legal-page) .quote-control:not(.quote-control--primary) {
-  color: var(--mato-silver) !important;
-  border-color: var(--mato-border);
-  background: rgba(255, 255, 255, 0.055) !important;
-}
-
-body:not(.legal-page) .button > svg,
-body:not(.legal-page) .button__icon,
-body:not(.legal-page) .button__label {
-  position: relative;
-  z-index: 1;
-}
-
 .form-field,
 .form-field span,
 .form-field input,
@@ -287,8 +223,8 @@ body:not(.legal-page) .button__label {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  color: var(--mato-silver) !important;
-  background: rgba(255, 255, 255, 0.055);
+  color: var(--mato-silver-soft) !important;
+  background: rgba(223, 227, 234, 0.055);
 }
 
 .site-footer__socials a:hover {
@@ -302,17 +238,6 @@ body:not(.legal-page) .button__label {
 .site-footer__social-svg {
   width: clamp(15px, 3.6vw, 19px) !important;
   height: clamp(15px, 3.6vw, 19px) !important;
-}
-
-@media (min-width: 760px) {
-  body:not(.legal-page) .home-hero__actions .button,
-  body:not(.legal-page) .hero-actions .button,
-  body:not(.legal-page) .premium-hero__actions .button,
-  body:not(.legal-page) .premium-form__footer .button,
-  body:not(.legal-page) .quote-simulator__controls .button {
-    width: auto;
-    min-width: min(100%, 220px);
-  }
 }
 
 @media (max-width: 760px) {
