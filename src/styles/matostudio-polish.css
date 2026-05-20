@@ -14,17 +14,67 @@
   --agency-gold-100: #fff0bd;
   --agency-gold-300: var(--color-gold-300);
   --agency-gold-500: var(--color-gold-500);
-  --agency-silver-gradient: linear-gradient(115deg, var(--agency-silver-50) 0%, var(--agency-silver-200) 28%, var(--agency-silver-300) 52%, var(--agency-silver-50) 76%, var(--agency-silver-200) 100%);
-  --agency-gold-gradient: linear-gradient(135deg, var(--agency-gold-100) 0%, var(--agency-gold-300) 40%, var(--agency-gold-500) 100%);
-  --agency-page-background: radial-gradient(circle at 18% 12%, rgba(242, 215, 139, 0.09), transparent 28rem), radial-gradient(circle at 82% 18%, rgba(240, 242, 245, 0.07), transparent 30rem), radial-gradient(circle at 50% 82%, rgba(185, 192, 204, 0.08), transparent 34rem), linear-gradient(135deg, #111216 0%, #1a1c22 44%, #24262d 100%);
-  --agency-main-glow: radial-gradient(circle at 50% 8%, rgba(242, 215, 139, 0.12), transparent 24rem), radial-gradient(circle at 50% 42%, rgba(240, 242, 245, 0.055), transparent 34rem);
+  --agency-silver-gradient: linear-gradient(
+    115deg,
+    var(--agency-silver-50) 0%,
+    var(--agency-silver-200) 28%,
+    var(--agency-silver-300) 52%,
+    var(--agency-silver-50) 76%,
+    var(--agency-silver-200) 100%
+  );
+  --agency-gold-gradient: linear-gradient(
+    135deg,
+    var(--agency-gold-100) 0%,
+    var(--agency-gold-300) 40%,
+    var(--agency-gold-500) 100%
+  );
+  --agency-page-background:
+    radial-gradient(
+      circle at 18% 12%,
+      rgba(242, 215, 139, 0.09),
+      transparent 28rem
+    ),
+    radial-gradient(
+      circle at 82% 18%,
+      rgba(240, 242, 245, 0.07),
+      transparent 30rem
+    ),
+    radial-gradient(
+      circle at 50% 82%,
+      rgba(185, 192, 204, 0.08),
+      transparent 34rem
+    ),
+    linear-gradient(135deg, #111216 0%, #1a1c22 44%, #24262d 100%);
+  --agency-main-glow:
+    radial-gradient(
+      circle at 50% 8%,
+      rgba(242, 215, 139, 0.12),
+      transparent 24rem
+    ),
+    radial-gradient(
+      circle at 50% 42%,
+      rgba(240, 242, 245, 0.055),
+      transparent 34rem
+    );
   --agency-header-bg: rgba(17, 18, 22, 0.88);
-  --agency-footer-bg: radial-gradient(circle at 18% 0%, rgba(242, 215, 139, 0.12), transparent 26rem), radial-gradient(circle at 78% 38%, rgba(240, 242, 245, 0.08), transparent 30rem), linear-gradient(180deg, rgba(38, 40, 47, 0.95), rgba(18, 19, 24, 0.98));
+  --agency-footer-bg:
+    radial-gradient(
+      circle at 18% 0%,
+      rgba(242, 215, 139, 0.12),
+      transparent 26rem
+    ),
+    radial-gradient(
+      circle at 78% 38%,
+      rgba(240, 242, 245, 0.08),
+      transparent 30rem
+    ),
+    linear-gradient(180deg, rgba(38, 40, 47, 0.95), rgba(18, 19, 24, 0.98));
   --agency-mobile-menu-bg: rgba(17, 18, 22, 0.98);
   --agency-border-gold: rgba(242, 215, 139, 0.56);
   --agency-glow-silver: 0 0 24px rgba(240, 242, 245, 0.12);
   --agency-glow-gold: 0 0 28px rgba(242, 215, 139, 0.22);
-  --agency-shadow-card-hover: 0 28px 84px rgba(0, 0, 0, 0.48), 0 0 30px rgba(242, 215, 139, 0.12);
+  --agency-shadow-card-hover:
+    0 28px 84px rgba(0, 0, 0, 0.48), 0 0 30px rgba(242, 215, 139, 0.12);
 }
 
 html,
@@ -40,7 +90,9 @@ body {
 
 body:not(.legal-page) main,
 .conversion-page {
-  background: linear-gradient(180deg, rgba(240, 242, 245, 0.025), transparent 18rem), var(--agency-page-background);
+  background:
+    linear-gradient(180deg, rgba(240, 242, 245, 0.025), transparent 18rem),
+    var(--agency-page-background);
 }
 
 body:not(.legal-page) .container,
@@ -138,8 +190,21 @@ body:not(.legal-page) .quote-estimator,
 body:not(.legal-page) .quote-estimator__choice,
 body:not(.legal-page) .quote-estimator__summary-card {
   border-color: rgba(240, 242, 245, 0.17);
-  background: radial-gradient(circle at 18% 0%, rgba(240, 242, 245, 0.075), transparent 20rem), radial-gradient(circle at 85% 18%, rgba(242, 215, 139, 0.055), transparent 18rem), linear-gradient(145deg, rgba(46, 49, 58, 0.96), rgba(17, 18, 23, 0.96));
-  box-shadow: 0 22px 70px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.045);
+  background:
+    radial-gradient(
+      circle at 18% 0%,
+      rgba(240, 242, 245, 0.075),
+      transparent 20rem
+    ),
+    radial-gradient(
+      circle at 85% 18%,
+      rgba(242, 215, 139, 0.055),
+      transparent 18rem
+    ),
+    linear-gradient(145deg, rgba(46, 49, 58, 0.96), rgba(17, 18, 23, 0.96));
+  box-shadow:
+    0 22px 70px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.045);
 }
 
 body:not(.legal-page) .home-path-card:hover,
@@ -161,7 +226,18 @@ body:not(.legal-page) .quote-option:hover,
 body:not(.legal-page) .quote-page-presets button:hover,
 body:not(.legal-page) .quote-page-presets button.is-selected {
   border-color: var(--agency-border-gold);
-  background: radial-gradient(circle at 18% 0%, rgba(240, 242, 245, 0.09), transparent 20rem), radial-gradient(circle at 85% 18%, rgba(242, 215, 139, 0.13), transparent 18rem), linear-gradient(145deg, rgba(58, 61, 70, 0.98), rgba(22, 24, 30, 0.98));
+  background:
+    radial-gradient(
+      circle at 18% 0%,
+      rgba(240, 242, 245, 0.09),
+      transparent 20rem
+    ),
+    radial-gradient(
+      circle at 85% 18%,
+      rgba(242, 215, 139, 0.13),
+      transparent 18rem
+    ),
+    linear-gradient(145deg, rgba(58, 61, 70, 0.98), rgba(22, 24, 30, 0.98));
   box-shadow: var(--agency-shadow-card-hover);
 }
 
@@ -195,12 +271,16 @@ body:not(.legal-page) .quote-control {
 
 body:not(.legal-page) .button::before,
 body:not(.legal-page) .quote-control::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: -55%;
   z-index: -1;
   opacity: 0;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.36), transparent 42%);
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.36),
+    transparent 42%
+  );
   transition: opacity var(--transition-base);
 }
 
@@ -223,14 +303,22 @@ body:not(.legal-page) .button-ghost:hover,
 body:not(.legal-page) .quote-control:hover {
   transform: translateY(-2px);
   border-color: var(--agency-border-gold);
-  box-shadow: 0 18px 48px rgba(242, 215, 139, 0.24), 0 0 28px rgba(242, 215, 139, 0.16);
+  box-shadow:
+    0 18px 48px rgba(242, 215, 139, 0.24),
+    0 0 28px rgba(242, 215, 139, 0.16);
 }
 
 body:not(.legal-page) .button-secondary,
 body:not(.legal-page) .button-ghost,
 body:not(.legal-page) .quote-control:not(.quote-control--primary) {
   color: var(--agency-silver-100);
-  background: radial-gradient(circle at 20% 0%, rgba(240, 242, 245, 0.09), transparent 12rem), rgba(255, 255, 255, 0.045);
+  background:
+    radial-gradient(
+      circle at 20% 0%,
+      rgba(240, 242, 245, 0.09),
+      transparent 12rem
+    ),
+    rgba(255, 255, 255, 0.045);
 }
 
 body:not(.legal-page) .button > svg,
@@ -265,7 +353,13 @@ body:not(.legal-page) .button__label {
   min-width: 0;
   flex: 0 1 clamp(38px, 8.2vw, 46px);
   color: var(--agency-silver-200);
-  background: radial-gradient(circle at 28% 18%, rgba(240, 242, 245, 0.12), transparent 55%), rgba(255, 255, 255, 0.045);
+  background:
+    radial-gradient(
+      circle at 28% 18%,
+      rgba(240, 242, 245, 0.12),
+      transparent 55%
+    ),
+    rgba(255, 255, 255, 0.045);
 }
 
 .site-footer__social-svg {
