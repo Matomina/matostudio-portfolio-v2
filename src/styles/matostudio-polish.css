@@ -3,17 +3,20 @@
   --mato-bg-deep: #0f1014;
   --mato-bg: #17191f;
   --mato-bg-soft: #252832;
-  --mato-silver: #e4e8ef;
-  --mato-silver-soft: #d5dae3;
-  --mato-silver-muted: #aeb6c4;
-  --mato-silver-highlight: #f7f9fc;
+  --mato-silver: #cfd5df;
+  --mato-silver-soft: #c0c7d2;
+  --mato-silver-muted: #8f99a8;
+  --mato-silver-highlight: #ffffff;
+  --mato-silver-shadow: #737d8d;
   --mato-gold: #f2d78b;
   --mato-gold-strong: #d7b46a;
   --mato-border: rgba(223, 227, 234, 0.18);
   --mato-border-gold: rgba(242, 215, 139, 0.55);
   --mato-glow-gold: 0 0 30px rgba(242, 215, 139, 0.22);
-  --mato-glow-silver: 0 0 18px rgba(247, 249, 252, 0.18), 0 0 34px rgba(174, 182, 196, 0.12);
-  --mato-title-glow: 0 0 18px rgba(247, 249, 252, 0.2), 0 0 42px rgba(223, 227, 234, 0.16);
+  --mato-glow-silver: 0 1px 0 rgba(255, 255, 255, 0.32), 0 0 16px rgba(207, 213, 223, 0.16);
+  --mato-title-glow:
+    0 1px 0 rgba(255, 255, 255, 0.34), 0 2px 12px rgba(143, 153, 168, 0.22),
+    0 0 38px rgba(223, 227, 234, 0.14);
   --mato-shadow-card: 0 24px 76px rgba(0, 0, 0, 0.44);
   --mato-shadow-hover: 0 30px 90px rgba(0, 0, 0, 0.52), 0 0 34px rgba(242, 215, 139, 0.16);
   --mato-gradient-page:
@@ -25,12 +28,14 @@
     radial-gradient(circle at 85% 18%, rgba(242, 215, 139, 0.08), transparent 18rem),
     linear-gradient(145deg, rgba(48, 52, 62, 0.97), rgba(16, 18, 23, 0.98));
   --mato-gradient-silver-text: linear-gradient(
-    115deg,
-    var(--mato-silver-highlight) 0%,
-    var(--mato-silver) 30%,
-    var(--mato-silver-muted) 58%,
-    var(--mato-silver-highlight) 82%,
-    var(--mato-silver-soft) 100%
+    112deg,
+    #8b95a5 0%,
+    #c2c9d3 18%,
+    #ffffff 34%,
+    #a6afbd 52%,
+    #f7f9fc 68%,
+    #b0bac8 84%,
+    #e5e9ef 100%
   );
   --agency-header-bg: rgba(15, 16, 20, 0.9);
   --agency-footer-bg:
@@ -85,8 +90,12 @@ body:not(.legal-page) .silver-text,
 body:not(.legal-page) .site-footer__copyright p {
   color: transparent !important;
   background: var(--mato-gradient-silver-text);
+  background-size: 180% 100%;
+  background-position: 45% 50%;
   background-clip: text;
   -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 1px 0 rgba(255, 255, 255, 0.18)) drop-shadow(0 0 10px rgba(180, 190, 204, 0.16));
   text-shadow: var(--mato-title-glow);
 }
 
