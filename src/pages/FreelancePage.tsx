@@ -9,9 +9,19 @@ import { SkipLink } from '@/components/ui/SkipLink'
 import { freelancePageContent } from '@/data/freelance.data'
 import { useLanguage } from '@/hooks/useLanguage'
 
+function getFreelanceTitleParts(title: string) {
+  const [brand, subtitle] = title.split('—').map((part) => part.trim())
+
+  return {
+    brand: brand || 'MatoStudio',
+    subtitle: subtitle || title.replace('MatoStudio', '').trim(),
+  }
+}
+
 export function FreelancePage() {
   const { copy } = useLanguage()
   const heroCopy = copy.freelancePage
+  const titleParts = getFreelanceTitleParts(heroCopy.heroTitle)
   const { hero, problem, services, offers, process, projects, reassurance, faq, contact } =
     freelancePageContent
 
@@ -25,7 +35,10 @@ export function FreelancePage() {
           <Container className="freelance-hero__layout" size="wide">
             <div className="freelance-hero__content">
               <p className="section-eyebrow">{heroCopy.heroEyebrow}</p>
-              <h1 id="freelance-title">{heroCopy.heroTitle}</h1>
+              <h1 id="freelance-title" className="freelance-hero__title">
+                <span className="freelance-hero__title-brand">{titleParts.brand}</span>
+                <span className="freelance-hero__title-subtitle">{titleParts.subtitle}</span>
+              </h1>
               <p className="freelance-hero__description">{heroCopy.heroDescription}</p>
               <div className="hero-actions">
                 <ButtonLink href={hero.primaryCta.href} size="lg">
