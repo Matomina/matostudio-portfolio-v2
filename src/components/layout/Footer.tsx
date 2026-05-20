@@ -114,9 +114,9 @@ export function Footer() {
       </Container>
 
       <Container className="site-footer__copyright">
-        <p>
+        <a href={ROUTES.home} className="site-footer__copyright-link" aria-label="Retour à l’accueil">
           © {new Date().getFullYear()} {siteConfig.name}. {copy.footer.copyright}
-        </p>
+        </a>
       </Container>
     </motion.footer>
   )
