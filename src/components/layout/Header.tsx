@@ -12,13 +12,20 @@ import { ROUTES } from '@/lib/constants/routes'
 import { ButtonLink } from '@/components/ui/ButtonLink'
 import { Container } from '@/components/ui/Container'
 
+const nextLanguageLabels = {
+  fr: 'EN',
+  en: '中文',
+  zh: 'RU',
+  ru: 'FR',
+} as const
+
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const { language, copy, toggleLanguage } = useLanguage()
   const { theme, toggleTheme } = useTheme()
   const isDarkTheme = theme === 'dark'
   const nextThemeLabel = isDarkTheme ? 'Light' : 'Dark'
-  const nextLanguageLabel = language === 'fr' ? 'EN' : 'FR'
+  const nextLanguageLabel = nextLanguageLabels[language]
 
   function closeMobileMenu() {
     setIsMenuOpen(false)
@@ -76,7 +83,7 @@ export function Header() {
             className="site-header__language-button"
             type="button"
             aria-label={copy.header.languageToggle}
-            aria-pressed={language === 'en'}
+            aria-pressed={language !== 'fr'}
             onClick={toggleLanguage}
           >
             <Languages size={17} aria-hidden="true" />
@@ -140,7 +147,7 @@ export function Header() {
               className="site-header__language-button"
               type="button"
               aria-label={copy.header.languageToggle}
-              aria-pressed={language === 'en'}
+              aria-pressed={language !== 'fr'}
               onClick={toggleLanguage}
             >
               <Languages size={17} aria-hidden="true" />
