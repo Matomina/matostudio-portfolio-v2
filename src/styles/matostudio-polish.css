@@ -20,12 +20,30 @@
   --mato-glow-gold: 0 0 30px rgba(242, 215, 139, 0.22);
   --mato-glow-silver: 0 0 24px rgba(226, 232, 240, 0.14);
   --mato-shadow-card: 0 24px 76px rgba(0, 0, 0, 0.44);
-  --mato-shadow-hover: 0 30px 90px rgba(0, 0, 0, 0.52), 0 0 34px rgba(242, 215, 139, 0.16);
+  --mato-shadow-hover:
+    0 30px 90px rgba(0, 0, 0, 0.52), 0 0 34px rgba(242, 215, 139, 0.16);
   --mato-gradient-page:
-    radial-gradient(circle at 18% 12%, rgba(242, 215, 139, 0.12), transparent 30rem),
-    radial-gradient(circle at 82% 18%, rgba(226, 232, 240, 0.09), transparent 32rem),
-    radial-gradient(circle at 50% 92%, rgba(185, 192, 204, 0.08), transparent 36rem),
-    linear-gradient(135deg, var(--mato-bg-deep) 0%, var(--mato-bg) 45%, var(--mato-bg-soft) 100%);
+    radial-gradient(
+      circle at 18% 12%,
+      rgba(242, 215, 139, 0.12),
+      transparent 30rem
+    ),
+    radial-gradient(
+      circle at 82% 18%,
+      rgba(226, 232, 240, 0.09),
+      transparent 32rem
+    ),
+    radial-gradient(
+      circle at 50% 92%,
+      rgba(185, 192, 204, 0.08),
+      transparent 36rem
+    ),
+    linear-gradient(
+      135deg,
+      var(--mato-bg-deep) 0%,
+      var(--mato-bg) 45%,
+      var(--mato-bg-soft) 100%
+    );
   --mato-gradient-silver: linear-gradient(
     115deg,
     #ffffff 0%,
@@ -42,13 +60,29 @@
     var(--mato-gold-dark) 100%
   );
   --mato-gradient-card:
-    radial-gradient(circle at 18% 0%, rgba(255, 255, 255, 0.08), transparent 20rem),
-    radial-gradient(circle at 85% 18%, rgba(242, 215, 139, 0.08), transparent 18rem),
+    radial-gradient(
+      circle at 18% 0%,
+      rgba(255, 255, 255, 0.08),
+      transparent 20rem
+    ),
+    radial-gradient(
+      circle at 85% 18%,
+      rgba(242, 215, 139, 0.08),
+      transparent 18rem
+    ),
     linear-gradient(145deg, rgba(48, 52, 62, 0.97), rgba(16, 18, 23, 0.98));
   --agency-header-bg: rgba(15, 16, 20, 0.9);
   --agency-footer-bg:
-    radial-gradient(circle at 18% 0%, rgba(242, 215, 139, 0.15), transparent 26rem),
-    radial-gradient(circle at 78% 38%, rgba(226, 232, 240, 0.1), transparent 30rem),
+    radial-gradient(
+      circle at 18% 0%,
+      rgba(242, 215, 139, 0.15),
+      transparent 26rem
+    ),
+    radial-gradient(
+      circle at 78% 38%,
+      rgba(226, 232, 240, 0.1),
+      transparent 30rem
+    ),
     linear-gradient(180deg, rgba(39, 42, 50, 0.96), rgba(15, 16, 20, 0.99));
   --agency-mobile-menu-bg: rgba(15, 16, 20, 0.98);
   --agency-border-gold: var(--mato-border-gold);
@@ -78,7 +112,11 @@ body:not(.legal-page) main::after {
   pointer-events: none;
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.035), transparent 18rem),
-    radial-gradient(circle at 50% 20%, rgba(242, 215, 139, 0.06), transparent 28rem);
+    radial-gradient(
+      circle at 50% 20%,
+      rgba(242, 215, 139, 0.06),
+      transparent 28rem
+    );
 }
 
 body:not(.legal-page) section,
@@ -111,7 +149,13 @@ body:not(.legal-page) .job-hero__content {
 body:not(.legal-page) .section-header::before,
 body:not(.legal-page) .section-heading::before {
   margin-inline: auto;
-  background: linear-gradient(90deg, transparent, var(--mato-gold), #ffffff, transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--mato-gold),
+    #ffffff,
+    transparent
+  );
   box-shadow: var(--mato-glow-gold);
 }
 
@@ -160,7 +204,9 @@ body:not(.legal-page) .quote-estimator__step-kicker {
   color: #fff4c7;
   border-color: var(--mato-border-gold);
   background: rgba(242, 215, 139, 0.11);
-  box-shadow: inset 0 0 22px rgba(242, 215, 139, 0.08), var(--mato-glow-gold);
+  box-shadow:
+    inset 0 0 22px rgba(242, 215, 139, 0.08),
+    var(--mato-glow-gold);
   text-shadow: var(--mato-glow-gold);
 }
 
@@ -267,7 +313,11 @@ body:not(.legal-page) .quote-control::before {
   inset: -70%;
   z-index: -1;
   opacity: 0;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.38), transparent 42%);
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.38),
+    transparent 42%
+  );
   transition: opacity var(--transition-base);
 }
 
