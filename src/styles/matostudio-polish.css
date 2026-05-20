@@ -1,21 +1,13 @@
-/* =========================================================
-   MATOSTUDIO PREMIUM VISUAL SYSTEM
-   Final harmonization layer loaded after all page styles.
-   Purpose: one visible silver/gold charter across every page.
-========================================================= */
-
+/* MatoStudio premium visual system. Loaded last on purpose. */
 :root {
   --mato-bg-deep: #0f1014;
   --mato-bg: #17191f;
-  --mato-bg-soft: #24272f;
+  --mato-bg-soft: #252832;
   --mato-silver: #dfe4ec;
   --mato-silver-soft: #c5ccd8;
-  --mato-silver-muted: #9ca5b4;
   --mato-gold: #f2d78b;
   --mato-gold-strong: #d7b46a;
-  --mato-gold-dark: #8f6923;
   --mato-border: rgba(226, 232, 240, 0.18);
-  --mato-border-strong: rgba(226, 232, 240, 0.28);
   --mato-border-gold: rgba(242, 215, 139, 0.55);
   --mato-glow-gold: 0 0 30px rgba(242, 215, 139, 0.22);
   --mato-glow-silver: 0 0 24px rgba(226, 232, 240, 0.14);
@@ -32,11 +24,6 @@
       circle at 82% 18%,
       rgba(226, 232, 240, 0.09),
       transparent 32rem
-    ),
-    radial-gradient(
-      circle at 50% 92%,
-      rgba(185, 192, 204, 0.08),
-      transparent 36rem
     ),
     linear-gradient(
       135deg,
@@ -56,8 +43,8 @@
     135deg,
     #fff4c7 0%,
     var(--mato-gold) 38%,
-    var(--mato-gold-strong) 68%,
-    var(--mato-gold-dark) 100%
+    var(--mato-gold-strong) 72%,
+    #8f6923 100%
   );
   --mato-gradient-card:
     radial-gradient(
@@ -78,11 +65,6 @@
       rgba(242, 215, 139, 0.15),
       transparent 26rem
     ),
-    radial-gradient(
-      circle at 78% 38%,
-      rgba(226, 232, 240, 0.1),
-      transparent 30rem
-    ),
     linear-gradient(180deg, rgba(39, 42, 50, 0.96), rgba(15, 16, 20, 0.99));
   --agency-mobile-menu-bg: rgba(15, 16, 20, 0.98);
   --agency-border-gold: var(--mato-border-gold);
@@ -98,25 +80,6 @@ body:not(.legal-page) main,
 
 body {
   color: var(--mato-silver);
-}
-
-body:not(.legal-page) main {
-  position: relative;
-}
-
-body:not(.legal-page) main::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  pointer-events: none;
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.035), transparent 18rem),
-    radial-gradient(
-      circle at 50% 20%,
-      rgba(242, 215, 139, 0.06),
-      transparent 28rem
-    );
 }
 
 body:not(.legal-page) section,
@@ -189,7 +152,6 @@ body:not(.legal-page) .premium-hero__content > p:not(.section-eyebrow),
 body:not(.legal-page) .project-card__description {
   max-width: 760px;
   margin-inline: auto;
-  color: var(--mato-silver-soft);
 }
 
 body:not(.legal-page) .eyebrow,
@@ -306,26 +268,6 @@ body:not(.legal-page) .quote-control {
   text-wrap: balance;
 }
 
-body:not(.legal-page) .button::before,
-body:not(.legal-page) .quote-control::before {
-  content: "";
-  position: absolute;
-  inset: -70%;
-  z-index: -1;
-  opacity: 0;
-  background: radial-gradient(
-    circle,
-    rgba(255, 255, 255, 0.38),
-    transparent 42%
-  );
-  transition: opacity var(--transition-base);
-}
-
-body:not(.legal-page) .button:hover::before,
-body:not(.legal-page) .quote-control:hover::before {
-  opacity: 1;
-}
-
 body:not(.legal-page) .button-primary,
 body:not(.legal-page) .quote-control--primary {
   color: #111216 !important;
@@ -338,7 +280,7 @@ body:not(.legal-page) .button-secondary,
 body:not(.legal-page) .button-ghost,
 body:not(.legal-page) .quote-control:not(.quote-control--primary) {
   color: var(--mato-silver) !important;
-  border-color: var(--mato-border-strong);
+  border-color: var(--mato-border);
   background: rgba(255, 255, 255, 0.055) !important;
 }
 
@@ -347,11 +289,6 @@ body:not(.legal-page) .button__icon,
 body:not(.legal-page) .button__label {
   position: relative;
   z-index: 1;
-}
-
-body:not(.legal-page) .button__label {
-  min-width: 0;
-  text-align: center;
 }
 
 .form-field,
