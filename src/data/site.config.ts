@@ -7,7 +7,7 @@ export const siteConfig = {
   phone: '+33758530169',
   links: {
     github: 'https://github.com/Matomina',
-    linkedin: '',
+    linkedin: 'https://www.linkedin.com/in/matomina-nguayila',
     instagram: '',
     facebook: '',
     tiktok: '',
