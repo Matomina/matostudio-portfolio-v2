@@ -1,6 +1,6 @@
 import type { QuoteDeadlineId, QuoteOptionId, QuoteProjectTypeId } from '@/types/agency.types'
 
-export type Language = 'fr' | 'en'
+export type Language = 'fr' | 'en' | 'zh' | 'ru'
 
 export type NavigationItemId = 'home' | 'quote' | 'freelance' | 'job'
 export type FooterLinkId = 'contact' | 'quote' | 'payment' | 'legal' | 'privacy'
