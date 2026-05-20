@@ -1,5 +1,6 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
+import { SeoManager } from '@/components/seo/SeoManager'
 import { ROUTES } from '@/lib/constants/routes'
 import { ContactPage } from '@/pages/ContactPage'
 import { FreelancePage } from '@/pages/FreelancePage'
@@ -11,42 +12,51 @@ import { PaymentPage } from '@/pages/PaymentPage'
 import { PrivacyPage } from '@/pages/PrivacyPage'
 import { QuotePage } from '@/pages/QuotePage'
 
+function withSeo(element: JSX.Element) {
+  return (
+    <>
+      <SeoManager />
+      {element}
+    </>
+  )
+}
+
 const router = createBrowserRouter([
   {
     path: ROUTES.home,
-    element: <HomePage />,
+    element: withSeo(<HomePage />),
   },
   {
     path: ROUTES.contact,
-    element: <ContactPage />,
+    element: withSeo(<ContactPage />),
   },
   {
     path: ROUTES.quote,
-    element: <QuotePage />,
+    element: withSeo(<QuotePage />),
   },
   {
     path: ROUTES.payment,
-    element: <PaymentPage />,
+    element: withSeo(<PaymentPage />),
   },
   {
     path: ROUTES.freelance,
-    element: <FreelancePage />,
+    element: withSeo(<FreelancePage />),
   },
   {
     path: ROUTES.job,
-    element: <JobPage />,
+    element: withSeo(<JobPage />),
   },
   {
     path: ROUTES.legal,
-    element: <LegalPage />,
+    element: withSeo(<LegalPage />),
   },
   {
     path: ROUTES.privacy,
-    element: <PrivacyPage />,
+    element: withSeo(<PrivacyPage />),
   },
   {
     path: '*',
-    element: <NotFoundPage />,
+    element: withSeo(<NotFoundPage />),
   },
 ])
 
