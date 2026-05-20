@@ -9,8 +9,8 @@
   --color-ink-850: #202227;
   --color-ink-800: #292b31;
 
-  --color-white: #ffffff;
-  --color-platinum: #edf0f5;
+  --color-white: #dfe3ea;
+  --color-platinum: #d9dee8;
   --color-silver-100: #dfe3ea;
   --color-silver-200: #d5dae3;
   --color-silver-300: #aeb6c4;
@@ -37,12 +37,12 @@
   --color-card: rgba(255, 255, 255, 0.06);
   --color-card-hover: rgba(255, 255, 255, 0.085);
 
-  --color-border: rgba(255, 255, 255, 0.12);
-  --color-border-strong: rgba(255, 255, 255, 0.2);
+  --color-border: rgba(223, 227, 234, 0.12);
+  --color-border-strong: rgba(223, 227, 234, 0.2);
   --color-border-gold: rgba(215, 180, 106, 0.42);
 
-  --color-text: var(--color-platinum);
-  --color-text-soft: var(--color-silver-100);
+  --color-text: var(--color-silver-100);
+  --color-text-soft: var(--color-silver-200);
   --color-muted: var(--color-silver-300);
   --color-muted-strong: var(--color-silver-200);
 
