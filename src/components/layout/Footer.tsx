@@ -24,10 +24,13 @@ const socials: SocialLink[] = [
   { label: 'TikTok', href: siteConfig.links.tiktok, icon: 'tiktok' },
 ]
 
-const footerLinks = [
+const mainFooterLinks = [
   { id: 'contact', href: ROUTES.contact },
   { id: 'quote', href: ROUTES.quote },
   { id: 'payment', href: ROUTES.payment },
+] as const
+
+const legalFooterLinks = [
   { id: 'legal', href: ROUTES.legal },
   { id: 'privacy', href: ROUTES.privacy },
 ] as const
@@ -75,11 +78,21 @@ export function Footer() {
         </div>
 
         <nav className="site-footer__legal-links" aria-label={copy.footer.linksAria}>
-          {footerLinks.map((link) => (
-            <a key={link.href} href={link.href}>
-              {copy.footer.links[link.id as FooterLinkId]}
-            </a>
-          ))}
+          <div className="site-footer__links-row site-footer__links-row--main">
+            {mainFooterLinks.map((link) => (
+              <a key={link.href} href={link.href}>
+                {copy.footer.links[link.id as FooterLinkId]}
+              </a>
+            ))}
+          </div>
+
+          <div className="site-footer__links-row site-footer__links-row--legal">
+            {legalFooterLinks.map((link) => (
+              <a key={link.href} href={link.href}>
+                {copy.footer.links[link.id as FooterLinkId]}
+              </a>
+            ))}
+          </div>
         </nav>
 
         <nav className="site-footer__socials" aria-label={copy.footer.socialsAria}>
