@@ -1,3 +1,4 @@
+import type { ReactElement } from 'react'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 import { SeoManager } from '@/components/seo/SeoManager'
@@ -12,7 +13,7 @@ import { PaymentPage } from '@/pages/PaymentPage'
 import { PrivacyPage } from '@/pages/PrivacyPage'
 import { QuotePage } from '@/pages/QuotePage'
 
-function withSeo(element: JSX.Element) {
+function withSeo(element: ReactElement) {
   return (
     <>
       <SeoManager />
