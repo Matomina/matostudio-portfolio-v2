@@ -59,6 +59,7 @@ function SocialIcon({ name }: { name: SocialIconName }) {
 export function Footer() {
   const shouldReduceMotion = useReducedMotion()
   const { copy } = useLanguage()
+  const homeTopHref = `${ROUTES.home}#accueil`
 
   return (
     <motion.footer
@@ -70,7 +71,7 @@ export function Footer() {
     >
       <Container className="site-footer__inner">
         <div className="site-footer__brand-block">
-          <a href="#accueil" className="site-footer__brand" aria-label={copy.footer.brandAria}>
+          <a href={homeTopHref} className="site-footer__brand" aria-label={copy.footer.brandAria}>
             <img src={matostudioAgencyLogo} alt="MatoStudio Agency" />
           </a>
 
@@ -114,7 +115,7 @@ export function Footer() {
       </Container>
 
       <Container className="site-footer__copyright">
-        <a href={ROUTES.home} className="site-footer__copyright-link" aria-label="Retour à l’accueil">
+        <a href={homeTopHref} className="site-footer__copyright-link" aria-label="Retour en haut de l’accueil">
           © {new Date().getFullYear()} {siteConfig.name}. {copy.footer.copyright}
         </a>
       </Container>
