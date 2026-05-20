@@ -17,6 +17,8 @@ export function Header() {
   const { language, copy, toggleLanguage } = useLanguage()
   const { theme, toggleTheme } = useTheme()
   const isDarkTheme = theme === 'dark'
+  const nextThemeLabel = isDarkTheme ? 'Light' : 'Dark'
+  const nextLanguageLabel = language === 'fr' ? 'EN' : 'FR'
 
   function closeMobileMenu() {
     setIsMenuOpen(false)
@@ -59,6 +61,7 @@ export function Header() {
             className="site-header__tool-button"
             type="button"
             aria-label={isDarkTheme ? copy.header.themeToLight : copy.header.themeToDark}
+            aria-pressed={!isDarkTheme}
             onClick={toggleTheme}
           >
             {isDarkTheme ? (
@@ -66,16 +69,18 @@ export function Header() {
             ) : (
               <Moon size={18} aria-hidden="true" />
             )}
+            <span>{nextThemeLabel}</span>
           </button>
 
           <button
             className="site-header__language-button"
             type="button"
             aria-label={copy.header.languageToggle}
+            aria-pressed={language === 'en'}
             onClick={toggleLanguage}
           >
             <Languages size={17} aria-hidden="true" />
-            {language === 'fr' ? 'EN' : 'FR'}
+            <span>{nextLanguageLabel}</span>
           </button>
 
           <ButtonLink href={ROUTES.contact} variant="primary" className="site-header__cta">
@@ -120,6 +125,7 @@ export function Header() {
               className="site-header__tool-button"
               type="button"
               aria-label={isDarkTheme ? copy.header.themeToLight : copy.header.themeToDark}
+              aria-pressed={!isDarkTheme}
               onClick={toggleTheme}
             >
               {isDarkTheme ? (
@@ -127,17 +133,18 @@ export function Header() {
               ) : (
                 <Moon size={18} aria-hidden="true" />
               )}
-              <span>{isDarkTheme ? 'Light' : 'Dark'}</span>
+              <span>{nextThemeLabel}</span>
             </button>
 
             <button
               className="site-header__language-button"
               type="button"
               aria-label={copy.header.languageToggle}
+              aria-pressed={language === 'en'}
               onClick={toggleLanguage}
             >
               <Languages size={17} aria-hidden="true" />
-              {language === 'fr' ? 'EN' : 'FR'}
+              <span>{nextLanguageLabel}</span>
             </button>
           </div>
 
