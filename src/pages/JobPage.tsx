@@ -1,3 +1,5 @@
+import { Github, Linkedin, Mail } from 'lucide-react'
+
 import { Footer } from '@/components/layout/Footer'
 import { Header } from '@/components/layout/Header'
 import { ButtonLink } from '@/components/ui/ButtonLink'
@@ -203,20 +205,28 @@ export function JobPage() {
 
         <section className="job-section job-section--final" aria-labelledby="contact-title">
           <Container>
-            <Card className="job-contact" padding="lg" variant="premium">
+            <Card className="job-contact job-contact--premium" padding="lg" variant="premium">
               <p className="section-eyebrow">{contact.eyebrow}</p>
               <h2 id="contact-title">{contact.title}</h2>
               <p>{contact.description}</p>
-              <strong>{contact.email}</strong>
 
-              <div className="hero-actions">
-                <ButtonLink href={contact.primaryCta.href} size="lg">
+              <div className="job-contact__socials" aria-label="Réseaux et contact">
+                <a href={contact.primaryCta.href} aria-label="Envoyer un email">
+                  <Mail size={20} aria-hidden="true" />
+                </a>
+                <a href={contact.github} target="_blank" rel="noreferrer" aria-label="GitHub">
+                  <Github size={20} aria-hidden="true" />
+                </a>
+                <a href={contact.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn">
+                  <Linkedin size={20} aria-hidden="true" />
+                </a>
+              </div>
+
+              <div className="job-contact__actions">
+                <ButtonLink href={contact.primaryCta.href} size="lg" variant="secondary">
                   {contact.primaryCta.label}
                 </ButtonLink>
-                <ButtonLink href={contact.github} isExternal size="lg" variant="secondary">
-                  GitHub
-                </ButtonLink>
-                <ButtonLink href={contact.secondaryCta.href} size="lg" variant="ghost">
+                <ButtonLink href={contact.secondaryCta.href} size="lg" variant="secondary">
                   {contact.secondaryCta.label}
                 </ButtonLink>
               </div>
