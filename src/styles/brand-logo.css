@@ -1,54 +1,88 @@
 /* =========================================================
    BRAND LOGO — MatoStudio Agency
-   Keeps the original asset unchanged and only optimizes display sizes.
+   The asset is intentionally preserved. These rules compensate for
+   the transparent/empty space inside the image so the visible logo feels primary.
 ========================================================= */
 
+.site-header__brand {
+  width: clamp(180px, 22vw, 280px);
+  height: 82px;
+  overflow: visible;
+}
+
 .site-header__brand img {
-  width: clamp(190px, 22vw, 270px);
-  max-height: 82px;
-  object-fit: contain;
-  filter: drop-shadow(0 12px 28px rgba(242, 215, 139, 0.24));
+  width: 100% !important;
+  max-width: none !important;
+  height: 100% !important;
+  max-height: none !important;
+  object-fit: contain !important;
+  transform: scale(1.22);
+  transform-origin: center;
+  filter: drop-shadow(0 14px 34px rgba(242, 215, 139, 0.28));
 }
 
 .home-hero__logo {
-  width: min(92vw, 560px);
-  max-height: 360px;
-  object-fit: contain;
-  filter: drop-shadow(0 28px 78px rgba(242, 215, 139, 0.24));
+  width: min(94vw, 720px) !important;
+  max-width: 720px !important;
+  max-height: none !important;
+  object-fit: contain !important;
+  transform: scale(1.18);
+  transform-origin: center;
+  filter: drop-shadow(0 34px 88px rgba(242, 215, 139, 0.3));
+}
+
+.site-footer__brand {
+  width: min(90vw, 460px);
+  overflow: visible;
 }
 
 .site-footer__brand img {
-  width: min(88vw, 380px);
-  max-height: 240px;
-  object-fit: contain;
-  filter: drop-shadow(0 26px 72px rgba(242, 215, 139, 0.22));
+  width: 100% !important;
+  max-width: none !important;
+  height: auto !important;
+  max-height: none !important;
+  object-fit: contain !important;
+  transform: scale(1.14);
+  transform-origin: center;
+  filter: drop-shadow(0 30px 82px rgba(242, 215, 139, 0.28));
 }
 
 @media (max-width: 980px) {
+  .site-header__brand {
+    width: clamp(160px, 32vw, 230px);
+    height: 74px;
+  }
+
   .site-header__brand img {
-    width: clamp(165px, 34vw, 230px);
-    max-height: 72px;
+    transform: scale(1.18);
   }
 
   .home-hero__logo {
-    width: min(92vw, 480px);
-    max-height: 320px;
+    width: min(94vw, 600px) !important;
+    transform: scale(1.14);
   }
 }
 
 @media (max-width: 760px) {
-  .site-header__brand img {
+  .site-header__brand {
     width: min(56vw, 190px);
-    max-height: 64px;
+    height: 64px;
+  }
+
+  .site-header__brand img {
+    transform: scale(1.16);
   }
 
   .home-hero__logo {
-    width: min(92vw, 390px);
-    max-height: 280px;
+    width: min(94vw, 440px) !important;
+    transform: scale(1.12);
+  }
+
+  .site-footer__brand {
+    width: min(88vw, 340px);
   }
 
   .site-footer__brand img {
-    width: min(86vw, 310px);
-    max-height: 210px;
+    transform: scale(1.1);
   }
 }
