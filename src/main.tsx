@@ -13,6 +13,7 @@ import '@/styles/agency-harmony.css'
 import '@/styles/header-controls.css'
 import './styles/footer-socials.css'
 import './styles/accessibility-responsive.css'
+import './styles/matostudio-polish.css'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
