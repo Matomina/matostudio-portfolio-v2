@@ -43,7 +43,7 @@ export function Header() {
     <header className="site-header">
       <Container className="site-header__inner">
         <RouterLink
-          to={ROUTES.home}
+          to={`${ROUTES.home}#accueil`}
           className="site-header__brand"
           aria-label={copy.header.homeAria}
         >
