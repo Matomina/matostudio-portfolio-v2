@@ -107,7 +107,7 @@ export const jobPageContent = {
         stack: ['React', 'Vite', 'Render', 'SEO local'],
         links: {
           github: 'https://github.com/Matomina',
-          demo: '',
+          demo: 'https://www.astransports.net',
         },
       },
       {
@@ -130,7 +130,7 @@ export const jobPageContent = {
       {
         title: 'Formation développeur web et web mobile',
         description:
-          'Préparation du titre professionnel avec projets, dossier, maquettes, architecture et démonstrations techniques.',
+          'Préparation du titre professionnel avec projets, dossier, maquettes, architecture et démonstrations techniques. Certification obtenue.',
       },
       {
         title: 'Projets personnels et clients',
