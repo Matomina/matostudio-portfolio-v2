@@ -41,10 +41,13 @@ const steps = ['Base', 'Options', 'Résumé'] as const
 export function QuoteSimulatorSection({ content }: QuoteSimulatorSectionProps) {
   const firstPricedOffer = content.base.find((item) => typeof item.amount === 'number')
   const [currentStep, setCurrentStep] = useState(0)
-  const [selectedBaseName, setSelectedBaseName] = useState(firstPricedOffer?.name ?? content.base[0]?.name)
+  const [selectedBaseName, setSelectedBaseName] = useState(
+    firstPricedOffer?.name ?? content.base[0]?.name,
+  )
   const [selectedOptions, setSelectedOptions] = useState<string[]>([])
 
-  const selectedBase = content.base.find((item) => item.name === selectedBaseName) ?? content.base[0]
+  const selectedBase =
+    content.base.find((item) => item.name === selectedBaseName) ?? content.base[0]
   const isCustomQuote = selectedBase?.amount === null
 
   const selectedOptionItems = useMemo(
@@ -58,7 +61,7 @@ export function QuoteSimulatorSection({ content }: QuoteSimulatorSectionProps) {
     }
 
     const optionsTotal = selectedOptionItems.reduce((sum, option) => sum + option.amount, 0)
-    return selectedBase.amount + optionsTotal
+    return (selectedBase.amount ?? 0) + optionsTotal
   }, [isCustomQuote, selectedBase, selectedOptionItems])
 
   const toggleOption = (label: string) => {
@@ -104,7 +107,11 @@ export function QuoteSimulatorSection({ content }: QuoteSimulatorSectionProps) {
           <div className="quote-estimator__step">
             <p className="quote-estimator__step-kicker">Etape 1 sur 3</p>
             <h3>Choisissez la base de votre projet</h3>
-            <div className="quote-estimator__choices" role="radiogroup" aria-label="Base du projet web">
+            <div
+              className="quote-estimator__choices"
+              role="radiogroup"
+              aria-label="Base du projet web"
+            >
               {content.base.map((item) => {
                 const isSelected = item.name === selectedBaseName
 
@@ -187,7 +194,9 @@ export function QuoteSimulatorSection({ content }: QuoteSimulatorSectionProps) {
               <div className="quote-estimator__summary-card">
                 <span>Type de devis</span>
                 <strong>{isCustomQuote ? 'Sur mesure' : 'Indicatif'}</strong>
-                <span>{isCustomQuote ? 'Cadrage necessaire' : 'Budget estime automatiquement'}</span>
+                <span>
+                  {isCustomQuote ? 'Cadrage necessaire' : 'Budget estime automatiquement'}
+                </span>
               </div>
             </div>
 

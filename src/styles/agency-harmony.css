@@ -8,7 +8,6 @@
 ========================================================= */
 
 :root {
-<<<<<<< HEAD
   --agency-bg: #18191d;
   --agency-bg-deep: #101116;
   --agency-bg-soft: #202227;
@@ -30,26 +29,16 @@
   --agency-shadow-card: 0 22px 70px rgba(0, 0, 0, 0.38);
   --agency-shadow-card-hover: 0 26px 82px rgba(0, 0, 0, 0.46), 0 0 34px rgba(229, 233, 240, 0.08);
 
-=======
->>>>>>> 6a3994f (feat: advance premium visual system and agency pages)
   --agency-section-space: clamp(4.5rem, 10vw, 7rem);
   --agency-section-gap: clamp(2.25rem, 5vw, 3.5rem);
   --agency-card-gap: clamp(1.25rem, 3.5vw, 1.75rem);
   --agency-card-padding: clamp(1.5rem, 4.8vw, 2.35rem);
 
-<<<<<<< HEAD
   --agency-title-hero: clamp(2.2rem, 10vw, 4.4rem);
   --agency-title-section: clamp(1.7rem, 7vw, 3rem);
   --agency-title-card: clamp(1.18rem, 5vw, 1.55rem);
   --agency-text-body: clamp(0.98rem, 3.5vw, 1.08rem);
   --agency-text-lead: clamp(1.03rem, 4vw, 1.18rem);
-=======
-  --agency-title-hero: 2.45rem;
-  --agency-title-section: 1.85rem;
-  --agency-title-card: 1.25rem;
-  --agency-text-body: 1rem;
-  --agency-text-lead: 1.08rem;
->>>>>>> 6a3994f (feat: advance premium visual system and agency pages)
 }
 
 body {
@@ -652,108 +641,6 @@ body:not(.legal-page) .button-secondary {
   text-align: center;
 }
 
-<<<<<<< HEAD
-.quote-estimator-section {
-  position: relative;
-}
-
-.quote-estimator {
-  display: grid;
-  gap: var(--space-6);
-  padding: clamp(1.5rem, 5vw, 2.8rem);
-  border-radius: var(--radius-2xl);
-  background:
-    radial-gradient(circle at 18% 0%, rgba(242, 215, 139, 0.11), transparent 22rem),
-    radial-gradient(circle at 100% 18%, rgba(255, 255, 255, 0.07), transparent 20rem),
-    var(--agency-surface-luxe);
-}
-
-.quote-estimator__progress {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: var(--space-2);
-}
-
-.quote-estimator__progress-step {
-  height: 5px;
-  border-radius: var(--radius-full);
-  background: rgba(255, 255, 255, 0.08);
-}
-
-.quote-estimator__progress-step.is-active {
-  background: linear-gradient(90deg, var(--color-gold-300), rgba(255, 255, 255, 0.85));
-  box-shadow: var(--agency-glow-gold);
-}
-
-.quote-estimator__body {
-  display: grid;
-  gap: var(--space-6);
-}
-
-.quote-estimator__step {
-  display: grid;
-  gap: var(--space-4);
-  text-align: center;
-}
-
-.quote-estimator__step-kicker,
-.quote-estimator__badge {
-  width: fit-content;
-  margin-inline: auto;
-  padding: 0.5rem 0.85rem;
-  border: var(--border-width) solid rgba(242, 215, 139, 0.32);
-  border-radius: var(--radius-full);
-  font-size: var(--text-xs);
-  font-weight: 900;
-  letter-spacing: var(--tracking-wide);
-  text-transform: uppercase;
-}
-
-.quote-estimator__choices {
-  display: grid;
-  gap: var(--space-3);
-}
-
-.quote-estimator__choice {
-  display: grid;
-  gap: var(--space-3);
-  width: 100%;
-  padding: clamp(1rem, 4vw, 1.45rem);
-  border-radius: var(--radius-xl);
-  color: inherit;
-  text-align: left;
-  cursor: pointer;
-}
-
-.quote-estimator__choice.is-selected {
-  border-color: var(--agency-border-gold);
-  background:
-    radial-gradient(circle at top right, rgba(242, 215, 139, 0.14), transparent 18rem),
-    var(--agency-surface-hover);
-  box-shadow: var(--agency-glow-gold), var(--agency-shadow-card);
-}
-
-.quote-estimator__choice:disabled {
-  opacity: 0.45;
-  cursor: not-allowed;
-}
-
-.quote-estimator__choice strong,
-.quote-estimator__summary-card strong,
-.quote-estimator__total strong {
-  color: var(--color-gold-300);
-  text-shadow: var(--agency-glow-gold);
-}
-
-.quote-estimator__choice small,
-.quote-estimator__summary-card span,
-.quote-estimator__total span {
-  color: var(--agency-text-muted);
-  line-height: 1.6;
-}
-
-.quote-estimator__navigation {
-=======
 /* =========================================================
    7. CONVERSION PAGES — contact, quote, payment
 ========================================================= */
@@ -798,44 +685,10 @@ body:not(.legal-page) .button-secondary {
 }
 
 .premium-hero__trust {
->>>>>>> 6a3994f (feat: advance premium visual system and agency pages)
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: var(--space-3);
-<<<<<<< HEAD
-}
-
-.quote-estimator__navigation button,
-.quote-estimator__contact {
-  min-height: 46px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border: var(--border-width) solid var(--agency-border-gold);
-  border-radius: var(--radius-full);
-  padding: 0.75rem 1.2rem;
-  color: #16130a;
-  background:
-    linear-gradient(135deg, rgba(255, 255, 255, 0.86), transparent 42%),
-    linear-gradient(135deg, var(--color-gold-300), var(--color-gold-500) 72%, #6d4a19);
-  font-weight: 900;
-  box-shadow: 0 18px 48px rgba(215, 180, 106, 0.22);
-}
-
-.quote-estimator__navigation button:disabled {
-  opacity: 0.45;
-  cursor: not-allowed;
-}
-
-.quote-estimator__navigation button:first-child {
-  color: var(--agency-text-luxury);
-  background: rgba(255, 255, 255, 0.055);
-  box-shadow: none;
-}
-
-.quote-estimator__summary {
-=======
   margin-top: var(--space-2);
 }
 
@@ -911,14 +764,10 @@ body:not(.legal-page) .button-secondary {
 .premium-side-panel__card,
 .premium-card,
 .payment-security-grid article {
->>>>>>> 6a3994f (feat: advance premium visual system and agency pages)
   display: grid;
   gap: var(--space-4);
 }
 
-<<<<<<< HEAD
-.quote-estimator__summary-grid {
-=======
 .premium-form__header {
   justify-items: center;
   text-align: center;
@@ -1019,33 +868,10 @@ body:not(.legal-page) .button-secondary {
 }
 
 .contact-direct {
->>>>>>> 6a3994f (feat: advance premium visual system and agency pages)
   display: grid;
   gap: var(--space-3);
 }
 
-<<<<<<< HEAD
-.quote-estimator__summary-card,
-.quote-estimator__total {
-  border-radius: var(--radius-xl);
-  padding: clamp(1rem, 4vw, 1.45rem);
-}
-
-.quote-estimator__total {
-  display: grid;
-  justify-items: center;
-  gap: var(--space-2);
-  border: var(--border-width) solid var(--agency-border-gold);
-  background:
-    radial-gradient(circle at 50% 0%, rgba(242, 215, 139, 0.16), transparent 16rem),
-    var(--agency-surface-hover);
-  text-align: center;
-}
-
-.quote-estimator__total strong {
-  font-size: clamp(1.9rem, 10vw, 3.4rem);
-}
-=======
 .contact-direct a {
   display: inline-flex;
   align-items: center;
@@ -1465,8 +1291,6 @@ body:not(.legal-page) .button-secondary {
 /* =========================================================
    8. RESPONSIVE
 ========================================================= */
->>>>>>> 6a3994f (feat: advance premium visual system and agency pages)
-
 @media (min-width: 560px) {
   .home-hero__actions,
   .hero-actions {
@@ -1558,16 +1382,6 @@ body:not(.legal-page) .button-secondary {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-<<<<<<< HEAD
-  .freelance-hero__layout,
-  .job-hero__layout {
-    grid-template-columns: minmax(0, 1fr);
-  }
-
-  .quote-estimator__choices,
-  .quote-estimator__summary-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-=======
   .contact-page__layout {
     grid-template-columns: minmax(0, 1.35fr) minmax(300px, 0.65fr);
   }
@@ -1629,7 +1443,6 @@ body:not(.legal-page) .button-secondary {
 
   .payment-security-panel > div:first-child {
     text-align: left;
->>>>>>> 6a3994f (feat: advance premium visual system and agency pages)
   }
 
   .home-path-card,

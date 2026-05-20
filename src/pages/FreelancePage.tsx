@@ -1,6 +1,6 @@
 import { Footer } from '@/components/layout/Footer'
 import { Header } from '@/components/layout/Header'
-import { QuoteSimulatorSection } from '@/components/sections/QuoteSimulatorSection'
+import { QuoteSimulator } from '@/components/sections/QuoteSimulator'
 import { ButtonLink } from '@/components/ui/ButtonLink'
 import { Card } from '@/components/ui/Card'
 import { Container } from '@/components/ui/Container'
@@ -10,25 +10,10 @@ import { freelancePageContent } from '@/data/freelance.data'
 import { useLanguage } from '@/hooks/useLanguage'
 
 export function FreelancePage() {
-<<<<<<< HEAD
-  const {
-    hero,
-    problem,
-    services,
-    offers,
-    quoteSimulator,
-    process,
-    projects,
-    reassurance,
-    faq,
-    contact,
-  } = freelancePageContent
-=======
   const { copy } = useLanguage()
   const heroCopy = copy.freelancePage
   const { hero, problem, services, offers, process, projects, reassurance, faq, contact } =
     freelancePageContent
->>>>>>> 6a3994f (feat: advance premium visual system and agency pages)
 
   return (
     <>
@@ -41,8 +26,7 @@ export function FreelancePage() {
             <div className="freelance-hero__content">
               <p className="section-eyebrow">{heroCopy.heroEyebrow}</p>
               <h1 id="freelance-title">{heroCopy.heroTitle}</h1>
-code src/pages/FreelancePage.tsx src/styles/agency-harmony.csscode src/pages/FreelancePage.tsx src/styles/agency-harmony.csscode src/pages/FreelancePage.tsx src/styles/agency-harmony.csscode src/pages/FreelancePage.tsx src/styles/agency-harmony.css              <p className="freelance-hero__description">{heroCopy.heroDescription}</p>
-
+              <p className="freelance-hero__description">{heroCopy.heroDescription}</p>
               <div className="hero-actions">
                 <ButtonLink href={hero.primaryCta.href} size="lg">
                   {heroCopy.primaryCta}
@@ -149,16 +133,9 @@ code src/pages/FreelancePage.tsx src/styles/agency-harmony.csscode src/pages/Fre
           </Container>
         </section>
 
-        <section className="freelance-section quote-simulator-section" aria-labelledby="quote-simulator-title">
+        <section className="freelance-section quote-simulator-section">
           <Container>
-            <SectionHeader
-              eyebrow={quoteSimulator.eyebrow}
-              title={quoteSimulator.title}
-              description={quoteSimulator.description}
-              className="freelance-section__header"
-            />
-
-            <QuoteSimulatorSection content={quoteSimulator} />
+            <QuoteSimulator />
           </Container>
         </section>
 

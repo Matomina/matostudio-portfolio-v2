@@ -142,7 +142,8 @@ export const freelancePageContent = {
         name: 'Sur mesure',
         price: 'Sur devis',
         amount: null,
-        description: 'Projet avance, refonte complete, besoin specifique ou integration particuliere.',
+        description:
+          'Projet avance, refonte complete, besoin specifique ou integration particuliere.',
       },
     ],
     options: [
