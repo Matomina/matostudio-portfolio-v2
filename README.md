@@ -104,6 +104,7 @@ npm run check
 ## Documentation
 
 - [Roadmap](docs/00-roadmap.md)
+- [6steps production](docs/06-6steps-production-readiness.md)
 - [Stratégie de branches](docs/01-branch-strategy.md)
 - [Contribution](docs/02-contributing.md)
 
