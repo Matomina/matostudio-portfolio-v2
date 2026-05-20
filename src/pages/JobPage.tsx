@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail } from 'lucide-react'
+import { Mail } from 'lucide-react'
 
 import { Footer } from '@/components/layout/Footer'
 import { Header } from '@/components/layout/Header'
@@ -215,10 +215,10 @@ export function JobPage() {
                   <Mail size={20} aria-hidden="true" />
                 </a>
                 <a href={contact.github} target="_blank" rel="noreferrer" aria-label="GitHub">
-                  <Github size={20} aria-hidden="true" />
+                  GH
                 </a>
                 <a href={contact.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn">
-                  <Linkedin size={20} aria-hidden="true" />
+                  in
                 </a>
               </div>
 
