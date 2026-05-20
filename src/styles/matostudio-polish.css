@@ -1,0 +1,364 @@
+/* =========================================================
+   MATOSTUDIO POLISH
+   Final silver/gold visual pass after screenshots review.
+========================================================= */
+
+:root {
+  --agency-bg: #17181d;
+  --agency-bg-deep: #0f1014;
+  --agency-bg-soft: #24262d;
+  --agency-silver-50: #ffffff;
+  --agency-silver-100: #f0f2f5;
+  --agency-silver-200: #d9dde5;
+  --agency-silver-300: #b9c0cc;
+  --agency-gold-100: #fff0bd;
+  --agency-gold-300: var(--color-gold-300);
+  --agency-gold-500: var(--color-gold-500);
+  --agency-silver-gradient: linear-gradient(115deg, var(--agency-silver-50) 0%, var(--agency-silver-200) 28%, var(--agency-silver-300) 52%, var(--agency-silver-50) 76%, var(--agency-silver-200) 100%);
+  --agency-gold-gradient: linear-gradient(135deg, var(--agency-gold-100) 0%, var(--agency-gold-300) 40%, var(--agency-gold-500) 100%);
+  --agency-page-background: radial-gradient(circle at 18% 12%, rgba(242, 215, 139, 0.09), transparent 28rem), radial-gradient(circle at 82% 18%, rgba(240, 242, 245, 0.07), transparent 30rem), radial-gradient(circle at 50% 82%, rgba(185, 192, 204, 0.08), transparent 34rem), linear-gradient(135deg, #111216 0%, #1a1c22 44%, #24262d 100%);
+  --agency-main-glow: radial-gradient(circle at 50% 8%, rgba(242, 215, 139, 0.12), transparent 24rem), radial-gradient(circle at 50% 42%, rgba(240, 242, 245, 0.055), transparent 34rem);
+  --agency-header-bg: rgba(17, 18, 22, 0.88);
+  --agency-footer-bg: radial-gradient(circle at 18% 0%, rgba(242, 215, 139, 0.12), transparent 26rem), radial-gradient(circle at 78% 38%, rgba(240, 242, 245, 0.08), transparent 30rem), linear-gradient(180deg, rgba(38, 40, 47, 0.95), rgba(18, 19, 24, 0.98));
+  --agency-mobile-menu-bg: rgba(17, 18, 22, 0.98);
+  --agency-border-gold: rgba(242, 215, 139, 0.56);
+  --agency-glow-silver: 0 0 24px rgba(240, 242, 245, 0.12);
+  --agency-glow-gold: 0 0 28px rgba(242, 215, 139, 0.22);
+  --agency-shadow-card-hover: 0 28px 84px rgba(0, 0, 0, 0.48), 0 0 30px rgba(242, 215, 139, 0.12);
+}
+
+html,
+body,
+#root {
+  background: var(--agency-page-background);
+}
+
+body {
+  color: var(--agency-silver-200);
+  background-attachment: fixed;
+}
+
+body:not(.legal-page) main,
+.conversion-page {
+  background: linear-gradient(180deg, rgba(240, 242, 245, 0.025), transparent 18rem), var(--agency-page-background);
+}
+
+body:not(.legal-page) .container,
+body:not(.legal-page) .page-shell,
+body:not(.legal-page) section,
+body:not(.legal-page) article,
+body:not(.legal-page) .premium-hero__content,
+body:not(.legal-page) .premium-centered-header,
+body:not(.legal-page) .section-header,
+body:not(.legal-page) .section-heading,
+body:not(.legal-page) .home-path-card,
+body:not(.legal-page) .agency-card,
+body:not(.legal-page) .premium-card,
+body:not(.legal-page) .premium-side-panel__card,
+body:not(.legal-page) .payment-security-panel,
+body:not(.legal-page) .payment-security-grid article,
+body:not(.legal-page) .quote-simulator__shell,
+body:not(.legal-page) .quote-summary,
+body:not(.legal-page) .quote-summary__main,
+body:not(.legal-page) .quote-summary__details div,
+body:not(.legal-page) .premium-cta-band,
+body:not(.legal-page) .site-footer__inner,
+body:not(.legal-page) .site-footer__brand-block,
+body:not(.legal-page) .site-footer__copyright {
+  text-align: center;
+}
+
+body:not(.legal-page) p,
+body:not(.legal-page) li,
+body:not(.legal-page) dd,
+body:not(.legal-page) dt,
+body:not(.legal-page) small,
+body:not(.legal-page) span:not(.site-footer__socials span) {
+  color: var(--agency-silver-200);
+}
+
+body:not(.legal-page) h1,
+body:not(.legal-page) h2,
+body:not(.legal-page) h3,
+body:not(.legal-page) .section-header__title,
+body:not(.legal-page) .premium-hero__content h1,
+body:not(.legal-page) .quote-summary__main h3,
+body:not(.legal-page) .silver-text,
+body:not(.legal-page) .site-footer__description,
+body:not(.legal-page) .site-footer__copyright p {
+  color: transparent;
+  background: var(--agency-silver-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  text-shadow: var(--agency-glow-silver);
+}
+
+body:not(.legal-page) .section-eyebrow,
+body:not(.legal-page) .section-header__eyebrow,
+body:not(.legal-page) .eyebrow,
+body:not(.legal-page) .home-path-card__eyebrow,
+body:not(.legal-page) .quote-estimator__badge,
+body:not(.legal-page) .quote-estimator__step-kicker,
+body:not(.legal-page) .payment-method-card span,
+body:not(.legal-page) .quote-simulator__total span,
+body:not(.legal-page) .quote-choice small,
+body:not(.legal-page) .quote-summary__details dt {
+  color: var(--agency-gold-100);
+  border-color: rgba(242, 215, 139, 0.42);
+  background: rgba(242, 215, 139, 0.1);
+  box-shadow: inset 0 0 18px rgba(242, 215, 139, 0.08);
+  text-shadow: var(--agency-glow-gold);
+}
+
+body:not(.legal-page) .home-hero__panel,
+body:not(.legal-page) .home-path-card,
+body:not(.legal-page) .agency-card,
+body:not(.legal-page) .card,
+body:not(.legal-page) .status-card,
+body:not(.legal-page) .project-card,
+body:not(.legal-page) .service-card,
+body:not(.legal-page) .about-panel,
+body:not(.legal-page) .about-highlight,
+body:not(.legal-page) .about-pillar,
+body:not(.legal-page) .contact-card,
+body:not(.legal-page) .contact-panel,
+body:not(.legal-page) .freelance-hero__panel,
+body:not(.legal-page) .job-hero__panel,
+body:not(.legal-page) .freelance-offer,
+body:not(.legal-page) .freelance-process__step,
+body:not(.legal-page) .job-timeline__step,
+body:not(.legal-page) .premium-form,
+body:not(.legal-page) .premium-card,
+body:not(.legal-page) .premium-side-panel__card,
+body:not(.legal-page) .quote-simulator__shell,
+body:not(.legal-page) .premium-cta-band,
+body:not(.legal-page) .payment-security-panel,
+body:not(.legal-page) .payment-security-grid article,
+body:not(.legal-page) .quote-estimator,
+body:not(.legal-page) .quote-estimator__choice,
+body:not(.legal-page) .quote-estimator__summary-card {
+  border-color: rgba(240, 242, 245, 0.17);
+  background: radial-gradient(circle at 18% 0%, rgba(240, 242, 245, 0.075), transparent 20rem), radial-gradient(circle at 85% 18%, rgba(242, 215, 139, 0.055), transparent 18rem), linear-gradient(145deg, rgba(46, 49, 58, 0.96), rgba(17, 18, 23, 0.96));
+  box-shadow: 0 22px 70px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.045);
+}
+
+body:not(.legal-page) .home-path-card:hover,
+body:not(.legal-page) .agency-card:hover,
+body:not(.legal-page) .card-interactive:hover,
+body:not(.legal-page) .status-card:hover,
+body:not(.legal-page) .project-card:hover,
+body:not(.legal-page) .service-card:hover,
+body:not(.legal-page) .about-highlight:hover,
+body:not(.legal-page) .about-pillar:hover,
+body:not(.legal-page) .contact-card:hover,
+body:not(.legal-page) .freelance-offer:hover,
+body:not(.legal-page) .freelance-process__step:hover,
+body:not(.legal-page) .job-timeline__step:hover,
+body:not(.legal-page) .premium-card:hover,
+body:not(.legal-page) .quote-estimator__choice:hover,
+body:not(.legal-page) .quote-choice:hover,
+body:not(.legal-page) .quote-option:hover,
+body:not(.legal-page) .quote-page-presets button:hover,
+body:not(.legal-page) .quote-page-presets button.is-selected {
+  border-color: var(--agency-border-gold);
+  background: radial-gradient(circle at 18% 0%, rgba(240, 242, 245, 0.09), transparent 20rem), radial-gradient(circle at 85% 18%, rgba(242, 215, 139, 0.13), transparent 18rem), linear-gradient(145deg, rgba(58, 61, 70, 0.98), rgba(22, 24, 30, 0.98));
+  box-shadow: var(--agency-shadow-card-hover);
+}
+
+a:hover,
+.site-header__nav a:hover,
+.mobile-menu__nav a:hover,
+.site-footer__legal-links a:hover,
+.contact-direct a:hover {
+  color: var(--agency-gold-100);
+  border-color: var(--agency-border-gold);
+  text-shadow: var(--agency-glow-gold);
+}
+
+body:not(.legal-page) .button,
+body:not(.legal-page) button,
+body:not(.legal-page) .quote-control {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  max-width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  line-height: 1.18;
+  text-align: center;
+  text-decoration: none;
+  white-space: normal;
+  word-break: normal;
+  text-wrap: balance;
+}
+
+body:not(.legal-page) .button::before,
+body:not(.legal-page) .quote-control::before {
+  content: '';
+  position: absolute;
+  inset: -55%;
+  z-index: -1;
+  opacity: 0;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.36), transparent 42%);
+  transition: opacity var(--transition-base);
+}
+
+body:not(.legal-page) .button:hover::before,
+body:not(.legal-page) .quote-control:hover::before {
+  opacity: 1;
+}
+
+body:not(.legal-page) .button-primary,
+body:not(.legal-page) .quote-control--primary {
+  color: #111216;
+  border-color: rgba(255, 240, 189, 0.5);
+  background: var(--agency-gold-gradient);
+  box-shadow: 0 14px 38px rgba(242, 215, 139, 0.24);
+}
+
+body:not(.legal-page) .button-primary:hover,
+body:not(.legal-page) .button-secondary:hover,
+body:not(.legal-page) .button-ghost:hover,
+body:not(.legal-page) .quote-control:hover {
+  transform: translateY(-2px);
+  border-color: var(--agency-border-gold);
+  box-shadow: 0 18px 48px rgba(242, 215, 139, 0.24), 0 0 28px rgba(242, 215, 139, 0.16);
+}
+
+body:not(.legal-page) .button-secondary,
+body:not(.legal-page) .button-ghost,
+body:not(.legal-page) .quote-control:not(.quote-control--primary) {
+  color: var(--agency-silver-100);
+  background: radial-gradient(circle at 20% 0%, rgba(240, 242, 245, 0.09), transparent 12rem), rgba(255, 255, 255, 0.045);
+}
+
+body:not(.legal-page) .button > svg,
+body:not(.legal-page) .button__icon,
+body:not(.legal-page) .button__label {
+  position: relative;
+  z-index: 1;
+  flex: 0 0 auto;
+}
+
+body:not(.legal-page) .button__label {
+  flex: 1 1 auto;
+  min-width: 0;
+  text-align: center;
+}
+
+.site-footer__socials {
+  width: min(100%, 340px);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(0.45rem, 1.5vw, 0.9rem);
+  margin-inline: auto;
+  overflow: visible;
+}
+
+.site-footer__socials a {
+  width: clamp(38px, 8.2vw, 46px);
+  height: clamp(38px, 8.2vw, 46px);
+  min-width: 0;
+  flex: 0 1 clamp(38px, 8.2vw, 46px);
+  color: var(--agency-silver-200);
+  background: radial-gradient(circle at 28% 18%, rgba(240, 242, 245, 0.12), transparent 55%), rgba(255, 255, 255, 0.045);
+}
+
+.site-footer__social-svg {
+  width: clamp(15px, 3.6vw, 19px);
+  height: clamp(15px, 3.6vw, 19px);
+}
+
+.site-footer__socials a:hover {
+  color: var(--agency-gold-100);
+  border-color: var(--agency-border-gold);
+  background: rgba(242, 215, 139, 0.1);
+  box-shadow: var(--agency-glow-gold);
+}
+
+.site-footer__socials a.is-disabled:hover {
+  border-color: rgba(205, 213, 225, 0.18);
+  color: var(--agency-silver-300);
+  background: rgba(255, 255, 255, 0.045);
+  box-shadow: none;
+}
+
+.form-field,
+.form-field span,
+.form-field input,
+.form-field select,
+.form-field textarea {
+  text-align: left;
+}
+
+@media (min-width: 560px) {
+  .premium-hero__actions .button,
+  .quote-simulator__controls .button,
+  .premium-cta-band__actions .button,
+  .premium-form__footer .button {
+    width: auto;
+    min-width: min(100%, 220px);
+  }
+}
+
+@media (min-width: 860px) {
+  body:not(.legal-page) .home-path-card,
+  body:not(.legal-page) .agency-card,
+  body:not(.legal-page) .premium-cta-band,
+  body:not(.legal-page) .payment-security-panel > div:first-child {
+    text-align: center;
+  }
+
+  .site-footer__inner {
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  }
+
+  .site-footer__socials {
+    justify-content: flex-end;
+    margin-inline: auto 0;
+  }
+}
+
+@media (max-width: 760px) {
+  .site-footer__socials {
+    width: min(100%, 286px);
+    flex-wrap: nowrap;
+  }
+
+  .site-footer__socials a {
+    width: clamp(36px, 16vw, 44px);
+    height: clamp(36px, 16vw, 44px);
+    flex-basis: clamp(36px, 16vw, 44px);
+  }
+
+  .premium-hero__actions .button,
+  .quote-simulator__controls .button,
+  .premium-cta-band__actions .button,
+  .premium-form__footer .button,
+  .home-hero__actions .button,
+  .hero-actions .button,
+  .home-path-card .button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 360px) {
+  .site-footer__socials {
+    gap: 0.4rem;
+  }
+
+  .site-footer__socials a {
+    width: 34px;
+    height: 34px;
+    flex-basis: 34px;
+  }
+
+  .site-footer__social-svg {
+    width: 14px;
+    height: 14px;
+  }
+}
