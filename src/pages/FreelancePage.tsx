@@ -181,7 +181,13 @@ export function FreelancePage() {
 
             <div className="freelance-grid freelance-grid--three">
               {projects.items.map((project) => (
-                <Card isInteractive key={project.title} padding="lg" variant="strong">
+                <Card
+                  className="freelance-project-card"
+                  isInteractive
+                  key={project.title}
+                  padding="lg"
+                  variant="strong"
+                >
                   <p className="freelance-index">{project.category}</p>
                   <h3>{project.title}</h3>
                   <p>{project.description}</p>
@@ -190,6 +196,15 @@ export function FreelancePage() {
                       <li key={item}>{item}</li>
                     ))}
                   </ul>
+                  <ButtonLink
+                    href={project.href}
+                    isExternal
+                    size="sm"
+                    variant="secondary"
+                    className="freelance-project-card__link"
+                  >
+                    {project.ctaLabel}
+                  </ButtonLink>
                 </Card>
               ))}
             </div>
