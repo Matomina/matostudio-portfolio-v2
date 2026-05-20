@@ -18,7 +18,8 @@
   filter: drop-shadow(0 8px 18px rgba(242, 215, 139, 0.18));
 }
 
-.freelance-hero__title {
+.freelance-hero__title,
+.job-hero__title {
   display: grid;
   justify-items: center;
   gap: 0.08em;
@@ -28,18 +29,22 @@
 }
 
 .freelance-hero__title-brand,
-.freelance-hero__title-subtitle {
+.freelance-hero__title-subtitle,
+.job-hero__title-main,
+.job-hero__title-subtitle {
   display: block;
   text-align: center;
   text-wrap: balance;
 }
 
-.freelance-hero__title-brand {
+.freelance-hero__title-brand,
+.job-hero__title-main {
   font-size: 1em;
   line-height: 0.96;
 }
 
-.freelance-hero__title-subtitle {
+.freelance-hero__title-subtitle,
+.job-hero__title-subtitle {
   font-size: calc(1em - 6px);
   line-height: 1.02;
 }
