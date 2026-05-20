@@ -15,6 +15,7 @@ import './styles/footer-socials.css'
 import './styles/accessibility-responsive.css'
 import './styles/matostudio-polish.css'
 import './styles/logo-layout.css'
+import './styles/light-inversion.css'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
