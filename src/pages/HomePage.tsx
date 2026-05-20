@@ -17,7 +17,7 @@ export function HomePage() {
       <Header />
 
       <main id="main-content" className="home-page">
-        <Container className="home-hero">
+        <Container id="accueil" className="home-hero">
           <Reveal className="home-hero__content">
             <p className="section-eyebrow">{copy.home.eyebrow}</p>
 
