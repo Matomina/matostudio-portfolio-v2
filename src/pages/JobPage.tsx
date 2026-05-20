@@ -8,9 +8,19 @@ import { SkipLink } from '@/components/ui/SkipLink'
 import { jobPageContent } from '@/data/job.data'
 import { useLanguage } from '@/hooks/useLanguage'
 
+function getJobTitleParts(title: string) {
+  const [mainTitle, subtitle] = title.split('—').map((part) => part.trim())
+
+  return {
+    mainTitle: mainTitle || title,
+    subtitle: subtitle || '',
+  }
+}
+
 export function JobPage() {
   const { copy } = useLanguage()
   const heroCopy = copy.jobPage
+  const titleParts = getJobTitleParts(heroCopy.heroTitle)
   const { hero, profile, skills, stack, projects, timeline, softSkills, contact } = jobPageContent
 
   return (
@@ -23,7 +33,12 @@ export function JobPage() {
           <Container className="job-hero__layout" size="wide">
             <div className="job-hero__content">
               <p className="section-eyebrow">{heroCopy.heroEyebrow}</p>
-              <h1 id="job-title">{heroCopy.heroTitle}</h1>
+              <h1 id="job-title" className="job-hero__title">
+                <span className="job-hero__title-main">{titleParts.mainTitle}</span>
+                {titleParts.subtitle ? (
+                  <span className="job-hero__title-subtitle">{titleParts.subtitle}</span>
+                ) : null}
+              </h1>
               <p className="job-hero__description">{heroCopy.heroDescription}</p>
 
               <div className="hero-actions">
