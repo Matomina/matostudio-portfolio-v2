@@ -186,6 +186,11 @@ export const freelancePageContent = {
         description:
           'On verifie le rendu, les performances, les liens, le responsive et les elements de contact.',
       },
+      {
+        title: '05 — Suivi et maintenance',
+        description:
+          'Apres la mise en ligne, je peux assurer les ajustements, petites corrections, mises a jour et evolutions pour garder un site propre, stable et professionnel.',
+      },
     ],
   },
   projects: {
@@ -198,6 +203,8 @@ export const freelancePageContent = {
         description:
           'Parcours oriente devis, reassurance, formulaire et presentation claire des prestations.',
         stack: ['React', 'Vite', 'SEO local', 'Responsive'],
+        href: 'https://www.astransports.net',
+        ctaLabel: 'Voir le site',
       },
       {
         title: 'LAVEOO',
@@ -205,6 +212,8 @@ export const freelancePageContent = {
         description:
           'Interface moderne pour renforcer la credibilite et la perception professionnelle.',
         stack: ['React', 'Design system', 'Conversion', 'Performance'],
+        href: 'https://laveoo.fr',
+        ctaLabel: 'Voir le site',
       },
       {
         title: 'MangaBook',
@@ -212,6 +221,8 @@ export const freelancePageContent = {
         description:
           'Projet applicatif complet pour demontrer architecture, logique metier et experience utilisateur.',
         stack: ['Flask', 'PostgreSQL', 'Auth', 'Back-office'],
+        href: 'https://github.com/Matomina/flask-manga-book-V2',
+        ctaLabel: 'Voir le projet',
       },
     ],
   },
