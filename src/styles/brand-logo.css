@@ -1,0 +1,54 @@
+/* =========================================================
+   BRAND LOGO — MatoStudio Agency
+   Keeps the original asset unchanged and only optimizes display sizes.
+========================================================= */
+
+.site-header__brand img {
+  width: clamp(190px, 22vw, 270px);
+  max-height: 82px;
+  object-fit: contain;
+  filter: drop-shadow(0 12px 28px rgba(242, 215, 139, 0.24));
+}
+
+.home-hero__logo {
+  width: min(92vw, 560px);
+  max-height: 360px;
+  object-fit: contain;
+  filter: drop-shadow(0 28px 78px rgba(242, 215, 139, 0.24));
+}
+
+.site-footer__brand img {
+  width: min(88vw, 380px);
+  max-height: 240px;
+  object-fit: contain;
+  filter: drop-shadow(0 26px 72px rgba(242, 215, 139, 0.22));
+}
+
+@media (max-width: 980px) {
+  .site-header__brand img {
+    width: clamp(165px, 34vw, 230px);
+    max-height: 72px;
+  }
+
+  .home-hero__logo {
+    width: min(92vw, 480px);
+    max-height: 320px;
+  }
+}
+
+@media (max-width: 760px) {
+  .site-header__brand img {
+    width: min(56vw, 190px);
+    max-height: 64px;
+  }
+
+  .home-hero__logo {
+    width: min(92vw, 390px);
+    max-height: 280px;
+  }
+
+  .site-footer__brand img {
+    width: min(86vw, 310px);
+    max-height: 210px;
+  }
+}
