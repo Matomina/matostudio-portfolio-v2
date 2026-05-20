@@ -1,12 +1,47 @@
-/* MatoStudio polish: silver, gold, responsive footer icons. */
+/* MatoStudio premium visual system. Loaded last on purpose. */
 :root {
-  --agency-header-bg: rgba(17, 18, 22, 0.88);
-  --agency-footer-bg: linear-gradient(180deg, #26282f, #121318);
-  --agency-mobile-menu-bg: rgba(17, 18, 22, 0.98);
-  --agency-border-gold: rgba(242, 215, 139, 0.56);
-  --mato-gold: linear-gradient(135deg, #fff0bd, var(--color-gold-500));
-  --mato-page-bg: linear-gradient(135deg, #111216 0%, #1a1c22 44%, #24262d 100%);
-  --mato-silver: linear-gradient(115deg, #fff 0%, #d9dde5 35%, #b9c0cc 58%, #fff 78%);
+  --mato-bg-deep: #0f1014;
+  --mato-bg: #17191f;
+  --mato-bg-soft: #252832;
+  --mato-silver: #dfe4ec;
+  --mato-silver-soft: #c5ccd8;
+  --mato-gold: #f2d78b;
+  --mato-gold-strong: #d7b46a;
+  --mato-border: rgba(226, 232, 240, 0.18);
+  --mato-border-gold: rgba(242, 215, 139, 0.55);
+  --mato-glow-gold: 0 0 30px rgba(242, 215, 139, 0.22);
+  --mato-glow-silver: 0 0 24px rgba(226, 232, 240, 0.14);
+  --mato-shadow-card: 0 24px 76px rgba(0, 0, 0, 0.44);
+  --mato-shadow-hover: 0 30px 90px rgba(0, 0, 0, 0.52), 0 0 34px rgba(242, 215, 139, 0.16);
+  --mato-gradient-page:
+    radial-gradient(circle at 18% 12%, rgba(242, 215, 139, 0.12), transparent 30rem),
+    radial-gradient(circle at 82% 18%, rgba(226, 232, 240, 0.09), transparent 32rem),
+    linear-gradient(135deg, var(--mato-bg-deep) 0%, var(--mato-bg) 45%, var(--mato-bg-soft) 100%);
+  --mato-gradient-silver: linear-gradient(
+    115deg,
+    #ffffff 0%,
+    #e8ecf2 24%,
+    #aeb8c7 54%,
+    #ffffff 76%,
+    #c8ceda 100%
+  );
+  --mato-gradient-gold: linear-gradient(
+    135deg,
+    #fff4c7 0%,
+    var(--mato-gold) 38%,
+    var(--mato-gold-strong) 72%,
+    #8f6923 100%
+  );
+  --mato-gradient-card:
+    radial-gradient(circle at 18% 0%, rgba(255, 255, 255, 0.08), transparent 20rem),
+    radial-gradient(circle at 85% 18%, rgba(242, 215, 139, 0.08), transparent 18rem),
+    linear-gradient(145deg, rgba(48, 52, 62, 0.97), rgba(16, 18, 23, 0.98));
+  --agency-header-bg: rgba(15, 16, 20, 0.9);
+  --agency-footer-bg:
+    radial-gradient(circle at 18% 0%, rgba(242, 215, 139, 0.15), transparent 26rem),
+    linear-gradient(180deg, rgba(39, 42, 50, 0.96), rgba(15, 16, 20, 0.99));
+  --agency-mobile-menu-bg: rgba(15, 16, 20, 0.98);
+  --agency-border-gold: var(--mato-border-gold);
 }
 
 html,
@@ -14,18 +49,45 @@ body,
 #root,
 body:not(.legal-page) main,
 .conversion-page {
-  background: var(--mato-page-bg);
+  background: var(--mato-gradient-page) !important;
+}
+
+body {
+  color: var(--mato-silver);
 }
 
 body:not(.legal-page) section,
 body:not(.legal-page) article,
+body:not(.legal-page) .page-shell,
 body:not(.legal-page) .section-header,
 body:not(.legal-page) .section-heading,
 body:not(.legal-page) .premium-hero__content,
 body:not(.legal-page) .premium-centered-header,
+body:not(.legal-page) .home-hero,
+body:not(.legal-page) .freelance-hero,
+body:not(.legal-page) .job-hero,
 body:not(.legal-page) .site-footer__inner,
+body:not(.legal-page) .site-footer__brand-block,
 body:not(.legal-page) .site-footer__copyright {
   text-align: center;
+}
+
+body:not(.legal-page) .section-header,
+body:not(.legal-page) .section-heading,
+body:not(.legal-page) .premium-hero__content,
+body:not(.legal-page) .premium-centered-header,
+body:not(.legal-page) .home-hero__content,
+body:not(.legal-page) .freelance-hero__content,
+body:not(.legal-page) .job-hero__content {
+  justify-items: center;
+  margin-inline: auto;
+}
+
+body:not(.legal-page) .section-header::before,
+body:not(.legal-page) .section-heading::before {
+  margin-inline: auto;
+  background: linear-gradient(90deg, transparent, var(--mato-gold), #ffffff, transparent);
+  box-shadow: var(--mato-glow-gold);
 }
 
 body:not(.legal-page) h1,
@@ -35,16 +97,126 @@ body:not(.legal-page) .section-header__title,
 body:not(.legal-page) .silver-text,
 body:not(.legal-page) .site-footer__description,
 body:not(.legal-page) .site-footer__copyright p {
-  color: transparent;
-  background: var(--mato-silver);
+  color: transparent !important;
+  background: var(--mato-gradient-silver);
   background-clip: text;
   -webkit-background-clip: text;
+  text-shadow: var(--mato-glow-silver);
 }
 
-body:not(.legal-page) .button-primary,
-body:not(.legal-page) .quote-control--primary {
-  color: #111216;
-  background: var(--mato-gold);
+body:not(.legal-page) p,
+body:not(.legal-page) li,
+body:not(.legal-page) dd,
+body:not(.legal-page) dt,
+body:not(.legal-page) small {
+  color: var(--mato-silver-soft);
+}
+
+body:not(.legal-page) .section-header__description,
+body:not(.legal-page) .home-hero__description,
+body:not(.legal-page) .freelance-hero__description,
+body:not(.legal-page) .job-hero__description,
+body:not(.legal-page) .premium-hero__content > p:not(.section-eyebrow),
+body:not(.legal-page) .project-card__description {
+  max-width: 760px;
+  margin-inline: auto;
+}
+
+body:not(.legal-page) .eyebrow,
+body:not(.legal-page) .section-eyebrow,
+body:not(.legal-page) .section-header__eyebrow,
+body:not(.legal-page) .home-path-card__eyebrow,
+body:not(.legal-page) .freelance-index,
+body:not(.legal-page) .job-index,
+body:not(.legal-page) .quote-estimator__badge,
+body:not(.legal-page) .quote-estimator__step-kicker {
+  margin-inline: auto;
+  color: #fff4c7;
+  border-color: var(--mato-border-gold);
+  background: rgba(242, 215, 139, 0.11);
+  box-shadow:
+    inset 0 0 22px rgba(242, 215, 139, 0.08),
+    var(--mato-glow-gold);
+  text-shadow: var(--mato-glow-gold);
+}
+
+body:not(.legal-page) .home-hero__panel,
+body:not(.legal-page) .home-path-card,
+body:not(.legal-page) .agency-card,
+body:not(.legal-page) .card,
+body:not(.legal-page) .status-card,
+body:not(.legal-page) .project-card,
+body:not(.legal-page) .service-card,
+body:not(.legal-page) .about-panel,
+body:not(.legal-page) .about-highlight,
+body:not(.legal-page) .about-pillar,
+body:not(.legal-page) .contact-card,
+body:not(.legal-page) .contact-panel,
+body:not(.legal-page) .freelance-hero__panel,
+body:not(.legal-page) .job-hero__panel,
+body:not(.legal-page) .freelance-offer,
+body:not(.legal-page) .freelance-process__step,
+body:not(.legal-page) .job-timeline__step,
+body:not(.legal-page) .premium-form,
+body:not(.legal-page) .premium-card,
+body:not(.legal-page) .premium-side-panel__card,
+body:not(.legal-page) .quote-simulator__shell,
+body:not(.legal-page) .premium-cta-band,
+body:not(.legal-page) .payment-security-panel,
+body:not(.legal-page) .payment-security-grid article,
+body:not(.legal-page) .quote-estimator,
+body:not(.legal-page) .quote-estimator__choice,
+body:not(.legal-page) .quote-estimator__summary-card {
+  border-color: var(--mato-border) !important;
+  background: var(--mato-gradient-card) !important;
+  box-shadow: var(--mato-shadow-card);
+}
+
+body:not(.legal-page) .home-path-card:hover,
+body:not(.legal-page) .agency-card:hover,
+body:not(.legal-page) .card-interactive:hover,
+body:not(.legal-page) .status-card:hover,
+body:not(.legal-page) .project-card:hover,
+body:not(.legal-page) .service-card:hover,
+body:not(.legal-page) .about-highlight:hover,
+body:not(.legal-page) .about-pillar:hover,
+body:not(.legal-page) .contact-card:hover,
+body:not(.legal-page) .freelance-offer:hover,
+body:not(.legal-page) .freelance-process__step:hover,
+body:not(.legal-page) .job-timeline__step:hover,
+body:not(.legal-page) .premium-card:hover,
+body:not(.legal-page) .quote-estimator__choice:hover,
+body:not(.legal-page) .quote-choice:hover,
+body:not(.legal-page) .quote-option:hover,
+body:not(.legal-page) .quote-page-presets button:hover,
+body:not(.legal-page) .quote-page-presets button.is-selected {
+  transform: translateY(-3px);
+  border-color: var(--mato-border-gold) !important;
+  box-shadow: var(--mato-shadow-hover);
+}
+
+body:not(.legal-page) a,
+body:not(.legal-page) button,
+body:not(.legal-page) .button,
+body:not(.legal-page) .quote-control,
+.site-footer__socials a {
+  transition:
+    transform var(--transition-base),
+    color var(--transition-base),
+    border-color var(--transition-base),
+    background var(--transition-base),
+    box-shadow var(--transition-smooth),
+    text-shadow var(--transition-base);
+}
+
+body:not(.legal-page) a:hover,
+.site-header__nav a:hover,
+.mobile-menu__nav a:hover,
+.site-footer__legal-links a:hover,
+.contact-direct a:hover {
+  color: #fff4c7 !important;
+  border-color: var(--mato-border-gold) !important;
+  text-shadow: var(--mato-glow-gold);
 }
 
 body:not(.legal-page) .button,
@@ -54,24 +226,52 @@ body:not(.legal-page) .quote-control {
   isolation: isolate;
   overflow: hidden;
   max-width: 100%;
+  align-items: center;
   justify-content: center;
+  gap: var(--space-2);
+  line-height: 1.16;
   text-align: center;
   white-space: normal;
+  word-break: normal;
+  text-wrap: balance;
 }
 
-a:hover,
-.site-header__nav a:hover,
-.mobile-menu__nav a:hover,
-.site-footer__legal-links a:hover {
-  color: #fff0bd;
-  border-color: var(--agency-border-gold);
-  text-shadow: 0 0 28px rgba(242, 215, 139, 0.22);
+body:not(.legal-page) .button-primary,
+body:not(.legal-page) .quote-control--primary {
+  color: #111216 !important;
+  border-color: rgba(255, 244, 199, 0.55);
+  background: var(--mato-gradient-gold) !important;
+  box-shadow: 0 16px 44px rgba(242, 215, 139, 0.26);
+}
+
+body:not(.legal-page) .button-secondary,
+body:not(.legal-page) .button-ghost,
+body:not(.legal-page) .quote-control:not(.quote-control--primary) {
+  color: var(--mato-silver) !important;
+  border-color: var(--mato-border);
+  background: rgba(255, 255, 255, 0.055) !important;
+}
+
+body:not(.legal-page) .button > svg,
+body:not(.legal-page) .button__icon,
+body:not(.legal-page) .button__label {
+  position: relative;
+  z-index: 1;
+}
+
+.form-field,
+.form-field span,
+.form-field input,
+.form-field select,
+.form-field textarea,
+.quote-pages-step__counter input {
+  text-align: left;
 }
 
 .site-footer__socials {
-  width: min(100%, 340px);
-  display: flex;
-  flex-flow: row nowrap;
+  width: min(100%, 340px) !important;
+  display: flex !important;
+  flex-flow: row nowrap !important;
   align-items: center;
   justify-content: center;
   gap: clamp(0.45rem, 1.5vw, 0.9rem);
@@ -80,25 +280,49 @@ a:hover,
 }
 
 .site-footer__socials a {
-  width: clamp(38px, 8.2vw, 46px);
-  height: clamp(38px, 8.2vw, 46px);
+  width: clamp(38px, 8.2vw, 46px) !important;
+  height: clamp(38px, 8.2vw, 46px) !important;
   min-width: 0;
-  flex: 0 1 clamp(38px, 8.2vw, 46px);
+  flex: 0 1 clamp(38px, 8.2vw, 46px) !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--mato-silver) !important;
+  background: rgba(255, 255, 255, 0.055);
+}
+
+.site-footer__socials a:hover {
+  transform: translateY(-3px);
+  color: #fff4c7 !important;
+  border-color: var(--mato-border-gold) !important;
+  background: rgba(242, 215, 139, 0.1);
+  box-shadow: var(--mato-glow-gold);
 }
 
 .site-footer__social-svg {
-  width: clamp(15px, 3.6vw, 19px);
-  height: clamp(15px, 3.6vw, 19px);
+  width: clamp(15px, 3.6vw, 19px) !important;
+  height: clamp(15px, 3.6vw, 19px) !important;
+}
+
+@media (min-width: 760px) {
+  body:not(.legal-page) .home-hero__actions .button,
+  body:not(.legal-page) .hero-actions .button,
+  body:not(.legal-page) .premium-hero__actions .button,
+  body:not(.legal-page) .premium-form__footer .button,
+  body:not(.legal-page) .quote-simulator__controls .button {
+    width: auto;
+    min-width: min(100%, 220px);
+  }
 }
 
 @media (max-width: 760px) {
   .site-footer__socials {
-    width: min(100%, 286px);
+    width: min(100%, 286px) !important;
   }
 
   .site-footer__socials a {
-    width: clamp(36px, 16vw, 44px);
-    height: clamp(36px, 16vw, 44px);
-    flex-basis: clamp(36px, 16vw, 44px);
+    width: clamp(36px, 16vw, 44px) !important;
+    height: clamp(36px, 16vw, 44px) !important;
+    flex-basis: clamp(36px, 16vw, 44px) !important;
   }
 }
