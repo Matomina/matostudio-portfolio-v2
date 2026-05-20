@@ -5,8 +5,16 @@
 
 body {
   background:
-    radial-gradient(circle at 50% -12%, rgba(255, 244, 210, 0.18), transparent 28rem),
-    radial-gradient(circle at 12% 18%, rgba(215, 180, 106, 0.16), transparent 22rem),
+    radial-gradient(
+      circle at 50% -12%,
+      rgba(255, 244, 210, 0.18),
+      transparent 28rem
+    ),
+    radial-gradient(
+      circle at 12% 18%,
+      rgba(215, 180, 106, 0.16),
+      transparent 22rem
+    ),
     linear-gradient(145deg, #030304 0%, #07080d 44%, #111014 100%);
 }
 
@@ -33,13 +41,22 @@ body {
 .button-primary {
   background:
     linear-gradient(135deg, rgba(255, 255, 255, 0.86), transparent 42%),
-    linear-gradient(135deg, var(--color-gold-300), var(--color-gold-500) 72%, #6d4a19);
+    linear-gradient(
+      135deg,
+      var(--color-gold-300),
+      var(--color-gold-500) 72%,
+      #6d4a19
+    );
   box-shadow: 0 18px 48px rgba(215, 180, 106, 0.22);
 }
 
 .button-secondary {
   background:
-    linear-gradient(145deg, rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.025)),
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.09),
+      rgba(255, 255, 255, 0.025)
+    ),
     rgba(255, 255, 255, 0.04);
 }
 
@@ -55,8 +72,16 @@ body {
   z-index: -1;
   pointer-events: none;
   background:
-    radial-gradient(circle at 50% 9%, rgba(255, 255, 255, 0.08), transparent 18rem),
-    radial-gradient(circle at 50% 28%, rgba(215, 180, 106, 0.12), transparent 24rem);
+    radial-gradient(
+      circle at 50% 9%,
+      rgba(255, 255, 255, 0.08),
+      transparent 18rem
+    ),
+    radial-gradient(
+      circle at 50% 28%,
+      rgba(215, 180, 106, 0.12),
+      transparent 24rem
+    );
 }
 
 .home-hero {
@@ -84,7 +109,9 @@ body {
   max-width: 920px;
   font-size: clamp(2.45rem, 14vw, 5.8rem);
   color: #f4f5f7;
-  text-shadow: 0 18px 62px rgba(255, 255, 255, 0.08), 0 24px 80px rgba(0, 0, 0, 0.42);
+  text-shadow:
+    0 18px 62px rgba(255, 255, 255, 0.08),
+    0 24px 80px rgba(0, 0, 0, 0.42);
 }
 
 .home-hero__description {
@@ -125,7 +152,11 @@ body {
 .legal-card {
   border: var(--border-width) solid rgba(205, 213, 225, 0.16);
   background:
-    radial-gradient(circle at top right, rgba(255, 255, 255, 0.06), transparent 18rem),
+    radial-gradient(
+      circle at top right,
+      rgba(255, 255, 255, 0.06),
+      transparent 18rem
+    ),
     linear-gradient(145deg, rgba(38, 42, 49, 0.94), rgba(16, 18, 23, 0.94));
   box-shadow: 0 22px 70px rgba(0, 0, 0, 0.38);
 }
@@ -198,9 +229,15 @@ body {
   transform: translateY(-4px);
   border-color: rgba(229, 233, 240, 0.52);
   background:
-    radial-gradient(circle at top right, rgba(255, 255, 255, 0.08), transparent 18rem),
+    radial-gradient(
+      circle at top right,
+      rgba(255, 255, 255, 0.08),
+      transparent 18rem
+    ),
     linear-gradient(145deg, rgba(50, 55, 64, 0.96), rgba(22, 25, 31, 0.96));
-  box-shadow: 0 26px 80px rgba(0, 0, 0, 0.44), 0 0 34px rgba(229, 233, 240, 0.08);
+  box-shadow:
+    0 26px 80px rgba(0, 0, 0, 0.44),
+    0 0 34px rgba(229, 233, 240, 0.08);
 }
 
 .home-path-card__eyebrow {
@@ -274,8 +311,16 @@ body {
   overflow: hidden;
   border-top-color: rgba(255, 255, 255, 0.12);
   background:
-    radial-gradient(circle at 18% 0%, rgba(215, 180, 106, 0.16), transparent 28rem),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.018));
+    radial-gradient(
+      circle at 18% 0%,
+      rgba(215, 180, 106, 0.16),
+      transparent 28rem
+    ),
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.04),
+      rgba(255, 255, 255, 0.018)
+    );
 }
 
 .site-footer__inner {
@@ -312,7 +357,13 @@ body {
 
 .silver-text {
   color: transparent;
-  background: linear-gradient(115deg, #ffffff 0%, #d7dce5 32%, #aeb6c4 54%, #f7fbff 76%);
+  background: linear-gradient(
+    115deg,
+    #ffffff 0%,
+    #d7dce5 32%,
+    #aeb6c4 54%,
+    #f7fbff 76%
+  );
   background-clip: text;
   -webkit-background-clip: text;
   text-shadow: 0 0 22px rgba(255, 255, 255, 0.08);
@@ -331,7 +382,9 @@ body {
   font-size: var(--text-sm);
   font-weight: 800;
   text-align: center;
-  transition: color var(--transition-base), text-shadow var(--transition-base);
+  transition:
+    color var(--transition-base),
+    text-shadow var(--transition-base);
 }
 
 .site-footer__legal-links a:hover {
