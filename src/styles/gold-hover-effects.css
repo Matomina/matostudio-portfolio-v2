@@ -47,6 +47,23 @@
     drop-shadow(0 0 28px rgba(185, 141, 53, 0.36)) !important;
 }
 
+.home-hero__logo {
+  border-radius: 2rem;
+  cursor: default;
+  transition:
+    transform 180ms ease,
+    filter 180ms ease;
+}
+
+.home-hero__logo:hover,
+.home-hero__logo:focus-visible {
+  transform: translateY(-3px) scale(1.015);
+  filter:
+    drop-shadow(0 0 10px rgba(242, 215, 139, 0.55))
+    drop-shadow(0 0 28px rgba(242, 215, 139, 0.42))
+    drop-shadow(0 0 52px rgba(185, 141, 53, 0.28)) !important;
+}
+
 .site-footer__legal-links a {
   position: relative;
   isolation: isolate;
