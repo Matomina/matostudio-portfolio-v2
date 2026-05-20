@@ -136,7 +136,7 @@ const fr: TranslationCopy = {
     paths: [
       {
         title: 'Projet client et freelance',
-        eyebrow: 'Portfolio freelance',
+        eyebrow: 'Parcours freelance',
         description:
           'Un parcours pensé pour présenter vos offres avec clarté, renforcer votre crédibilité et transformer les visiteurs en demandes de projet qualifiées.',
         hrefId: 'freelance',
@@ -144,7 +144,7 @@ const fr: TranslationCopy = {
       },
       {
         title: 'Profil développeur et emploi',
-        eyebrow: 'Portfolio emploi',
+        eyebrow: 'Parcours emploi',
         description:
           'Un espace dédié pour valoriser vos compétences, vos projets techniques et votre sérieux professionnel auprès des recruteurs et des équipes.',
         hrefId: 'job',
@@ -222,14 +222,14 @@ const fr: TranslationCopy = {
     ],
   },
   freelancePage: {
-    heroEyebrow: 'Portfolio freelance',
+    heroEyebrow: 'Parcours freelance',
     heroTitle: 'MatoStudio — Sites web premium pour indépendants, artisans et petites entreprises',
     heroDescription: 'Je conçois des sites modernes, rapides et crédibles pour transformer les visiteurs en demandes de contact.',
     primaryCta: 'Demander un devis',
     secondaryCta: 'Voir les services',
   },
   jobPage: {
-    heroEyebrow: 'Portfolio emploi',
+    heroEyebrow: 'Profil emploi',
     heroTitle: 'Développeur web et web mobile — profil orienté projet, qualité et progression',
     heroDescription: 'Je recherche une opportunité pour contribuer à des projets web sérieux avec une méthode propre.',
     primaryCta: 'Me contacter',
@@ -272,12 +272,16 @@ const en: TranslationCopy = {
     title: 'A premium web presence, clear and designed to convert.',
     clientCta: 'I am a client',
     recruiterCta: 'I am a recruiter',
+    paths: [
+      { ...fr.home.paths[0], eyebrow: 'Agency path' },
+      { ...fr.home.paths[1], eyebrow: 'Career path' },
+    ],
   },
   contactPage: { ...fr.contactPage, heroTitle: 'Let’s talk about your next premium website.', submit: 'Send my request', preparedStatus: 'Your email is ready. Review it, then send it from your mailbox.' },
   quotePage: { ...fr.quotePage, heroTitle: 'Simulate a first budget range for your web project.', contactCta: 'Contact the agency' },
   paymentPage: { ...fr.paymentPage, heroTitle: 'A visual foundation ready for future secure payment.' },
-  freelancePage: { ...fr.freelancePage, heroEyebrow: 'Agency portfolio', primaryCta: 'Request a quote', secondaryCta: 'View services' },
-  jobPage: { ...fr.jobPage, heroEyebrow: 'Career portfolio', primaryCta: 'Contact me', secondaryCta: 'View my GitHub' },
+  freelancePage: { ...fr.freelancePage, heroEyebrow: 'Agency path', primaryCta: 'Request a quote', secondaryCta: 'View services' },
+  jobPage: { ...fr.jobPage, heroEyebrow: 'Career profile', primaryCta: 'Contact me', secondaryCta: 'View my GitHub' },
 }
 
 const zh: TranslationCopy = {
@@ -290,8 +294,8 @@ const zh: TranslationCopy = {
   contactPage: { ...fr.contactPage, heroTitle: '聊聊您的下一个高端网站。', submit: '发送需求', preparedStatus: '邮件已准备好，请检查后从邮箱发送。' },
   quotePage: { ...fr.quotePage, heroTitle: '为您的网站项目快速估算预算。', contactCta: '联系工作室' },
   paymentPage: { ...fr.paymentPage, heroTitle: '为未来安全支付准备的视觉基础。' },
-  freelancePage: { ...fr.freelancePage, heroEyebrow: '服务作品集', primaryCta: '申请报价', secondaryCta: '查看服务' },
-  jobPage: { ...fr.jobPage, heroEyebrow: '职业作品集', primaryCta: '联系我', secondaryCta: '查看 GitHub' },
+  freelancePage: { ...fr.freelancePage, heroEyebrow: '服务路径', primaryCta: '申请报价', secondaryCta: '查看服务' },
+  jobPage: { ...fr.jobPage, heroEyebrow: '职业资料', primaryCta: '联系我', secondaryCta: '查看 GitHub' },
 }
 
 const ru: TranslationCopy = {
@@ -304,8 +308,8 @@ const ru: TranslationCopy = {
   contactPage: { ...fr.contactPage, heroTitle: 'Обсудим ваш следующий премиальный сайт.', submit: 'Отправить запрос', preparedStatus: 'Письмо готово. Проверьте его и отправьте из почты.' },
   quotePage: { ...fr.quotePage, heroTitle: 'Оцените первый бюджет для вашего веб-проекта.', contactCta: 'Связаться со студией' },
   paymentPage: { ...fr.paymentPage, heroTitle: 'Визуальная база для будущей безопасной оплаты.' },
-  freelancePage: { ...fr.freelancePage, heroEyebrow: 'Портфолио услуг', primaryCta: 'Запросить смету', secondaryCta: 'Посмотреть услуги' },
-  jobPage: { ...fr.jobPage, heroEyebrow: 'Карьерное портфолио', primaryCta: 'Связаться со мной', secondaryCta: 'Посмотреть GitHub' },
+  freelancePage: { ...fr.freelancePage, heroEyebrow: 'Путь услуг', primaryCta: 'Запросить смету', secondaryCta: 'Посмотреть услуги' },
+  jobPage: { ...fr.jobPage, heroEyebrow: 'Профиль карьеры', primaryCta: 'Связаться со мной', secondaryCta: 'Посмотреть GitHub' },
 }
 
 export const translations: Record<Language, TranslationCopy> = {
