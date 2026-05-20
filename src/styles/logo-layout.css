@@ -18,6 +18,32 @@
   filter: drop-shadow(0 8px 18px rgba(242, 215, 139, 0.18));
 }
 
+.freelance-hero__title {
+  display: grid;
+  justify-items: center;
+  gap: 0.08em;
+  max-width: 1040px;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.freelance-hero__title-brand,
+.freelance-hero__title-subtitle {
+  display: block;
+  text-align: center;
+  text-wrap: balance;
+}
+
+.freelance-hero__title-brand {
+  font-size: 1em;
+  line-height: 0.96;
+}
+
+.freelance-hero__title-subtitle {
+  font-size: calc(1em - 6px);
+  line-height: 1.02;
+}
+
 .site-footer__inner {
   gap: clamp(1.25rem, 3vw, 2rem);
   padding-block: clamp(2.25rem, 5vw, 3.25rem) clamp(1.5rem, 4vw, 2.25rem);
