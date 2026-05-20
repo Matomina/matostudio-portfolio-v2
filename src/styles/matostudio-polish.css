@@ -12,25 +12,11 @@
   --mato-glow-gold: 0 0 30px rgba(242, 215, 139, 0.22);
   --mato-glow-silver: 0 0 24px rgba(226, 232, 240, 0.14);
   --mato-shadow-card: 0 24px 76px rgba(0, 0, 0, 0.44);
-  --mato-shadow-hover:
-    0 30px 90px rgba(0, 0, 0, 0.52), 0 0 34px rgba(242, 215, 139, 0.16);
+  --mato-shadow-hover: 0 30px 90px rgba(0, 0, 0, 0.52), 0 0 34px rgba(242, 215, 139, 0.16);
   --mato-gradient-page:
-    radial-gradient(
-      circle at 18% 12%,
-      rgba(242, 215, 139, 0.12),
-      transparent 30rem
-    ),
-    radial-gradient(
-      circle at 82% 18%,
-      rgba(226, 232, 240, 0.09),
-      transparent 32rem
-    ),
-    linear-gradient(
-      135deg,
-      var(--mato-bg-deep) 0%,
-      var(--mato-bg) 45%,
-      var(--mato-bg-soft) 100%
-    );
+    radial-gradient(circle at 18% 12%, rgba(242, 215, 139, 0.12), transparent 30rem),
+    radial-gradient(circle at 82% 18%, rgba(226, 232, 240, 0.09), transparent 32rem),
+    linear-gradient(135deg, var(--mato-bg-deep) 0%, var(--mato-bg) 45%, var(--mato-bg-soft) 100%);
   --mato-gradient-silver: linear-gradient(
     115deg,
     #ffffff 0%,
@@ -47,24 +33,12 @@
     #8f6923 100%
   );
   --mato-gradient-card:
-    radial-gradient(
-      circle at 18% 0%,
-      rgba(255, 255, 255, 0.08),
-      transparent 20rem
-    ),
-    radial-gradient(
-      circle at 85% 18%,
-      rgba(242, 215, 139, 0.08),
-      transparent 18rem
-    ),
+    radial-gradient(circle at 18% 0%, rgba(255, 255, 255, 0.08), transparent 20rem),
+    radial-gradient(circle at 85% 18%, rgba(242, 215, 139, 0.08), transparent 18rem),
     linear-gradient(145deg, rgba(48, 52, 62, 0.97), rgba(16, 18, 23, 0.98));
   --agency-header-bg: rgba(15, 16, 20, 0.9);
   --agency-footer-bg:
-    radial-gradient(
-      circle at 18% 0%,
-      rgba(242, 215, 139, 0.15),
-      transparent 26rem
-    ),
+    radial-gradient(circle at 18% 0%, rgba(242, 215, 139, 0.15), transparent 26rem),
     linear-gradient(180deg, rgba(39, 42, 50, 0.96), rgba(15, 16, 20, 0.99));
   --agency-mobile-menu-bg: rgba(15, 16, 20, 0.98);
   --agency-border-gold: var(--mato-border-gold);
@@ -112,13 +86,7 @@ body:not(.legal-page) .job-hero__content {
 body:not(.legal-page) .section-header::before,
 body:not(.legal-page) .section-heading::before {
   margin-inline: auto;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    var(--mato-gold),
-    #ffffff,
-    transparent
-  );
+  background: linear-gradient(90deg, transparent, var(--mato-gold), #ffffff, transparent);
   box-shadow: var(--mato-glow-gold);
 }
 
