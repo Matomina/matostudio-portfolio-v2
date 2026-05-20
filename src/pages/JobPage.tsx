@@ -19,6 +19,21 @@ function getJobTitleParts(title: string) {
   }
 }
 
+function SocialSvg({ name }: { name: 'github' | 'linkedin' }) {
+  const paths = {
+    github:
+      'M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.2.8-.6v-2.1c-3.3.7-4-1.4-4-1.4-.6-1.4-1.4-1.8-1.4-1.8-1.1-.8.1-.8.1-.8 1.2.1 1.9 1.3 1.9 1.3 1.1 1.9 2.9 1.3 3.6 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.6.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.6 1.6.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .4.2.7.8.6A12 12 0 0 0 12 .5Z',
+    linkedin:
+      'M4.98 3.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0ZM.32 8.1h4.3v13.8H.32V8.1Zm7.04 0h4.12v1.9h.06c.57-1.08 1.98-2.22 4.08-2.22 4.36 0 5.17 2.87 5.17 6.6v7.52h-4.3v-6.67c0-1.6-.03-3.64-2.22-3.64-2.22 0-2.56 1.73-2.56 3.52v6.79H7.36V8.1Z',
+  }
+
+  return (
+    <svg aria-hidden="true" viewBox="0 0 24 24" className="job-contact__social-svg">
+      <path fill="currentColor" d={paths[name]} />
+    </svg>
+  )
+}
+
 export function JobPage() {
   const { copy } = useLanguage()
   const heroCopy = copy.jobPage
@@ -215,10 +230,10 @@ export function JobPage() {
                   <Mail size={20} aria-hidden="true" />
                 </a>
                 <a href={contact.github} target="_blank" rel="noreferrer" aria-label="GitHub">
-                  GH
+                  <SocialSvg name="github" />
                 </a>
                 <a href={contact.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn">
-                  in
+                  <SocialSvg name="linkedin" />
                 </a>
               </div>
 
