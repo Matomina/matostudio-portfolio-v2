@@ -18,6 +18,7 @@ import './styles/logo-layout.css'
 import './styles/light-inversion.css'
 import './styles/home-path-cards.css'
 import './styles/job-contact-card.css'
+import './styles/gold-hover-effects.css'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
