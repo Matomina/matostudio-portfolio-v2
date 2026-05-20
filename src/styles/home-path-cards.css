@@ -1,0 +1,31 @@
+/* Home path cards final alignment pass. */
+
+.home-path-card {
+  justify-items: center !important;
+  align-content: center;
+  min-height: clamp(255px, 26vw, 330px);
+  text-align: center !important;
+}
+
+.home-path-card .home-path-card__eyebrow,
+.home-path-card h3,
+.home-path-card p,
+.home-path-card .button {
+  text-align: center !important;
+}
+
+.home-path-card h3 {
+  max-width: 760px;
+  margin-inline: auto;
+}
+
+.home-path-card p {
+  max-width: 760px;
+  margin-inline: auto;
+  text-wrap: balance;
+}
+
+.home-path-card .button {
+  width: min(100%, 820px) !important;
+  margin-inline: auto;
+}
