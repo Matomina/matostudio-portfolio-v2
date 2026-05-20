@@ -1,0 +1,213 @@
+/* True premium light mode overrides.
+   Loaded last because matostudio-polish.css intentionally uses strong !important rules. */
+
+:root[data-theme='light'] {
+  color-scheme: light;
+
+  --mato-bg-deep: #fffdf7;
+  --mato-bg: #f7f3ea;
+  --mato-bg-soft: #ece3d1;
+  --mato-silver: #242832;
+  --mato-silver-soft: #343a46;
+  --mato-silver-muted: #68707d;
+  --mato-silver-highlight: #090a0d;
+  --mato-silver-shadow: #ffffff;
+  --mato-gold: #f2d78b;
+  --mato-gold-strong: #b98d35;
+  --mato-border: rgba(18, 19, 24, 0.16);
+  --mato-border-gold: rgba(185, 141, 53, 0.62);
+  --mato-border-silver-bright: rgba(246, 248, 252, 0.95);
+  --mato-glow-gold: 0 0 28px rgba(185, 141, 53, 0.2);
+  --mato-glow-silver: 0 1px 0 rgba(255, 255, 255, 0.78), 0 0 18px rgba(17, 18, 23, 0.08);
+  --mato-glow-silver-bright:
+    0 0 0 1px rgba(255, 255, 255, 0.92), 0 0 18px rgba(246, 248, 252, 0.9),
+    0 0 34px rgba(190, 199, 213, 0.42);
+  --mato-title-glow:
+    0 1px 0 rgba(255, 255, 255, 0.88), 0 2px 10px rgba(17, 18, 23, 0.08),
+    0 0 20px rgba(255, 255, 255, 0.42);
+  --mato-shadow-card: 0 24px 76px rgba(58, 48, 30, 0.14);
+  --mato-shadow-hover: 0 30px 90px rgba(58, 48, 30, 0.18), var(--mato-glow-silver-bright);
+  --mato-gradient-page:
+    radial-gradient(circle at 18% 12%, rgba(242, 215, 139, 0.16), transparent 30rem),
+    radial-gradient(circle at 82% 18%, rgba(255, 255, 255, 0.82), transparent 32rem),
+    linear-gradient(135deg, var(--mato-bg-deep) 0%, var(--mato-bg) 45%, var(--mato-bg-soft) 100%);
+  --mato-gradient-card:
+    radial-gradient(circle at 18% 0%, rgba(255, 255, 255, 0.86), transparent 20rem),
+    radial-gradient(circle at 85% 18%, rgba(242, 215, 139, 0.14), transparent 18rem),
+    linear-gradient(145deg, rgba(255, 255, 255, 0.96), rgba(236, 227, 209, 0.94));
+  --mato-gradient-silver-text: linear-gradient(
+    112deg,
+    #111217 0%,
+    #343a46 18%,
+    #050608 34%,
+    #596170 52%,
+    #15171d 68%,
+    #404756 84%,
+    #090a0d 100%
+  );
+  --agency-header-bg: rgba(255, 253, 247, 0.9);
+  --agency-footer-bg:
+    radial-gradient(circle at 18% 0%, rgba(185, 141, 53, 0.14), transparent 26rem),
+    linear-gradient(180deg, rgba(255, 253, 247, 0.96), rgba(236, 227, 209, 0.99));
+  --agency-mobile-menu-bg: rgba(255, 253, 247, 0.98);
+  --agency-border-gold: var(--mato-border-gold);
+}
+
+:root[data-theme='light'],
+:root[data-theme='light'] body,
+:root[data-theme='light'] #root,
+:root[data-theme='light'] body:not(.legal-page) main,
+:root[data-theme='light'] .conversion-page {
+  background: var(--mato-gradient-page) !important;
+}
+
+:root[data-theme='light'] body:not(.legal-page),
+:root[data-theme='light'] body:not(.legal-page) main,
+:root[data-theme='light'] body:not(.legal-page) section,
+:root[data-theme='light'] body:not(.legal-page) article,
+:root[data-theme='light'] body:not(.legal-page) p,
+:root[data-theme='light'] body:not(.legal-page) li,
+:root[data-theme='light'] body:not(.legal-page) span,
+:root[data-theme='light'] body:not(.legal-page) small,
+:root[data-theme='light'] body:not(.legal-page) strong,
+:root[data-theme='light'] body:not(.legal-page) b,
+:root[data-theme='light'] body:not(.legal-page) label,
+:root[data-theme='light'] body:not(.legal-page) legend,
+:root[data-theme='light'] body:not(.legal-page) input,
+:root[data-theme='light'] body:not(.legal-page) textarea,
+:root[data-theme='light'] body:not(.legal-page) select,
+:root[data-theme='light'] body:not(.legal-page) .site-header__nav a,
+:root[data-theme='light'] body:not(.legal-page) .mobile-menu__nav a,
+:root[data-theme='light'] body:not(.legal-page) .site-footer__legal-links a,
+:root[data-theme='light'] body:not(.legal-page) .contact-direct a {
+  color: var(--mato-silver-soft) !important;
+  text-shadow: var(--mato-glow-silver);
+}
+
+:root[data-theme='light'] body:not(.legal-page) h1,
+:root[data-theme='light'] body:not(.legal-page) h2,
+:root[data-theme='light'] body:not(.legal-page) h3,
+:root[data-theme='light'] body:not(.legal-page) h4,
+:root[data-theme='light'] body:not(.legal-page) h5,
+:root[data-theme='light'] body:not(.legal-page) h6,
+:root[data-theme='light'] body:not(.legal-page) .section-header__title,
+:root[data-theme='light'] body:not(.legal-page) .silver-text,
+:root[data-theme='light'] body:not(.legal-page) .site-footer__copyright p {
+  color: transparent !important;
+  background: var(--mato-gradient-silver-text) !important;
+  background-size: 180% 100%;
+  background-position: 45% 50%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 1px 0 rgba(255, 255, 255, 0.86)) drop-shadow(0 0 12px rgba(17, 18, 23, 0.08));
+  text-shadow: var(--mato-title-glow);
+}
+
+:root[data-theme='light'] body:not(.legal-page) .section-eyebrow,
+:root[data-theme='light'] body:not(.legal-page) .section-header__eyebrow,
+:root[data-theme='light'] body:not(.legal-page) .eyebrow,
+:root[data-theme='light'] body:not(.legal-page) .home-path-card__eyebrow,
+:root[data-theme='light'] body:not(.legal-page) .freelance-index,
+:root[data-theme='light'] body:not(.legal-page) .job-index,
+:root[data-theme='light'] body:not(.legal-page) .quote-estimator__badge,
+:root[data-theme='light'] body:not(.legal-page) .quote-estimator__step-kicker {
+  color: #8a651e !important;
+  border-color: var(--mato-border-gold) !important;
+  background: rgba(242, 215, 139, 0.18) !important;
+  box-shadow:
+    inset 0 0 22px rgba(242, 215, 139, 0.12),
+    var(--mato-glow-gold) !important;
+}
+
+:root[data-theme='light'] body:not(.legal-page) .home-hero__panel,
+:root[data-theme='light'] body:not(.legal-page) .home-path-card,
+:root[data-theme='light'] body:not(.legal-page) .agency-card,
+:root[data-theme='light'] body:not(.legal-page) .card,
+:root[data-theme='light'] body:not(.legal-page) .status-card,
+:root[data-theme='light'] body:not(.legal-page) .project-card,
+:root[data-theme='light'] body:not(.legal-page) .service-card,
+:root[data-theme='light'] body:not(.legal-page) .about-panel,
+:root[data-theme='light'] body:not(.legal-page) .about-highlight,
+:root[data-theme='light'] body:not(.legal-page) .about-pillar,
+:root[data-theme='light'] body:not(.legal-page) .contact-card,
+:root[data-theme='light'] body:not(.legal-page) .contact-panel,
+:root[data-theme='light'] body:not(.legal-page) .freelance-hero__panel,
+:root[data-theme='light'] body:not(.legal-page) .job-hero__panel,
+:root[data-theme='light'] body:not(.legal-page) .freelance-offer,
+:root[data-theme='light'] body:not(.legal-page) .freelance-process__step,
+:root[data-theme='light'] body:not(.legal-page) .job-timeline__step,
+:root[data-theme='light'] body:not(.legal-page) .premium-form,
+:root[data-theme='light'] body:not(.legal-page) .premium-card,
+:root[data-theme='light'] body:not(.legal-page) .premium-side-panel__card,
+:root[data-theme='light'] body:not(.legal-page) .quote-simulator__shell,
+:root[data-theme='light'] body:not(.legal-page) .premium-cta-band,
+:root[data-theme='light'] body:not(.legal-page) .payment-security-panel,
+:root[data-theme='light'] body:not(.legal-page) .payment-security-grid article,
+:root[data-theme='light'] body:not(.legal-page) .quote-estimator,
+:root[data-theme='light'] body:not(.legal-page) .quote-estimator__choice,
+:root[data-theme='light'] body:not(.legal-page) .quote-estimator__summary-card {
+  border-color: var(--mato-border) !important;
+  background: var(--mato-gradient-card) !important;
+  box-shadow: var(--mato-shadow-card) !important;
+}
+
+:root[data-theme='light'] body:not(.legal-page) .home-path-card:hover,
+:root[data-theme='light'] body:not(.legal-page) .agency-card:hover,
+:root[data-theme='light'] body:not(.legal-page) .card-interactive:hover,
+:root[data-theme='light'] body:not(.legal-page) .status-card:hover,
+:root[data-theme='light'] body:not(.legal-page) .project-card:hover,
+:root[data-theme='light'] body:not(.legal-page) .service-card:hover,
+:root[data-theme='light'] body:not(.legal-page) .about-highlight:hover,
+:root[data-theme='light'] body:not(.legal-page) .about-pillar:hover,
+:root[data-theme='light'] body:not(.legal-page) .contact-card:hover,
+:root[data-theme='light'] body:not(.legal-page) .freelance-offer:hover,
+:root[data-theme='light'] body:not(.legal-page) .freelance-process__step:hover,
+:root[data-theme='light'] body:not(.legal-page) .job-timeline__step:hover,
+:root[data-theme='light'] body:not(.legal-page) .premium-card:hover,
+:root[data-theme='light'] body:not(.legal-page) .quote-estimator__choice:hover,
+:root[data-theme='light'] body:not(.legal-page) .quote-choice:hover,
+:root[data-theme='light'] body:not(.legal-page) .quote-option:hover,
+:root[data-theme='light'] body:not(.legal-page) .quote-page-presets button:hover,
+:root[data-theme='light'] body:not(.legal-page) .quote-page-presets button.is-selected {
+  transform: translateY(-3px);
+  border-color: var(--mato-border-silver-bright) !important;
+  box-shadow: var(--mato-shadow-hover) !important;
+}
+
+:root[data-theme='light'] body:not(.legal-page) a:hover,
+:root[data-theme='light'] .site-header__nav a:hover,
+:root[data-theme='light'] .mobile-menu__nav a:hover,
+:root[data-theme='light'] .site-footer__legal-links a:hover,
+:root[data-theme='light'] .contact-direct a:hover,
+:root[data-theme='light'] .site-header__tool-button:hover,
+:root[data-theme='light'] .site-header__language-button:hover,
+:root[data-theme='light'] .site-footer__socials a:hover,
+:root[data-theme='light'] body:not(.legal-page) .button-primary:hover,
+:root[data-theme='light'] body:not(.legal-page) .button-secondary:hover,
+:root[data-theme='light'] body:not(.legal-page) .button-ghost:hover {
+  border-color: var(--mato-border-silver-bright) !important;
+  color: #111217 !important;
+  background-color: rgba(255, 255, 255, 0.42) !important;
+  box-shadow: var(--mato-glow-silver-bright) !important;
+  text-shadow: 0 0 18px rgba(255, 255, 255, 0.88) !important;
+}
+
+:root[data-theme='light'] body:not(.legal-page) .button-primary,
+:root[data-theme='light'] body:not(.legal-page) .quote-control--primary,
+:root[data-theme='light'] body:not(.legal-page) .button-primary span,
+:root[data-theme='light'] body:not(.legal-page) .quote-control--primary span {
+  color: #111216 !important;
+  text-shadow: none !important;
+}
+
+:root[data-theme='light'] .site-header,
+:root[data-theme='light'] .site-footer {
+  border-color: rgba(18, 19, 24, 0.12) !important;
+  background: var(--agency-header-bg) !important;
+  box-shadow: 0 18px 70px rgba(58, 48, 30, 0.12) !important;
+}
+
+:root[data-theme='light'] .site-footer {
+  background: var(--agency-footer-bg) !important;
+}
