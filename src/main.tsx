@@ -11,6 +11,7 @@ import '@/styles/freelance.css'
 import '@/styles/job.css'
 import '@/styles/agency-harmony.css'
 import '@/styles/header-controls.css'
+import '@/styles/dashboard.css'
 import './styles/premium-final.css'
 
 createRoot(document.getElementById('root')!).render(
