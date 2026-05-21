@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import { SeoManager } from '@/components/seo/SeoManager'
 import { ROUTES } from '@/lib/constants/routes'
 import { ContactPage } from '@/pages/ContactPage'
+import { DashboardOverviewPage } from '@/pages/dashboard/DashboardOverviewPage'
 import { FreelancePage } from '@/pages/FreelancePage'
 import { HomePage } from '@/pages/HomePage'
 import { JobPage } from '@/pages/JobPage'
@@ -54,6 +55,10 @@ const router = createBrowserRouter([
   {
     path: ROUTES.privacy,
     element: withSeo(<PrivacyPage />),
+  },
+  {
+    path: ROUTES.dashboard,
+    element: withSeo(<DashboardOverviewPage />),
   },
   {
     path: '*',
