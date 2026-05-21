@@ -1,1 +1,7 @@
 src/styles/matostudio-polish.css
+src/components/layout/Footer.tsx
+src/data/i18n.data.ts
+src/styles/global-card-hover-system.css
+src/styles/gold-hover-effects.css
+src/styles/home-path-cards.css
+src/styles/themes.css
