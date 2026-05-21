@@ -10,7 +10,10 @@ export function DashboardContactsPage() {
           <div>
             <p className="section-eyebrow">Contacts</p>
             <h2>Suivi des demandes entrantes</h2>
-            <p>Template prepare pour afficher les contacts persistants quand PostgreSQL sera connecte.</p>
+            <p>
+              Template prepare pour afficher les contacts persistants quand PostgreSQL sera
+              connecte.
+            </p>
           </div>
           <PhoneCall size={30} aria-hidden="true" />
         </div>
