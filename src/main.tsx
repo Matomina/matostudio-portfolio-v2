@@ -11,16 +11,7 @@ import '@/styles/freelance.css'
 import '@/styles/job.css'
 import '@/styles/agency-harmony.css'
 import '@/styles/header-controls.css'
-import './styles/footer-socials.css'
-import './styles/accessibility-responsive.css'
-import './styles/matostudio-polish.css'
-import './styles/logo-layout.css'
-import './styles/light-inversion.css'
-import './styles/home-path-cards.css'
-import './styles/job-contact-card.css'
-import './styles/gold-hover-effects.css'
-import './styles/legal-pages.css'
-import './styles/global-card-hover-system.css'
+import './styles/premium-final.css'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
