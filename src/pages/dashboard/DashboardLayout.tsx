@@ -15,21 +15,25 @@ const dashboardNavItems = [
     label: 'Contacts',
     href: ROUTES.dashboardContacts,
     icon: Users,
+    end: false,
   },
   {
     label: 'Devis',
     href: ROUTES.dashboardQuotes,
     icon: FileText,
+    end: false,
   },
   {
     label: 'Statistiques',
     href: ROUTES.dashboardStats,
     icon: BarChart3,
+    end: false,
   },
   {
     label: 'Parametres',
     href: ROUTES.dashboardSettings,
     icon: Settings,
+    end: false,
   },
 ] as const
 
