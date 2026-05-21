@@ -3,32 +3,84 @@ import { Header } from '@/components/layout/Header'
 import { Container } from '@/components/ui/Container'
 import { SkipLink } from '@/components/ui/SkipLink'
 import { siteConfig } from '@/data/site.config'
+import { ROUTES } from '@/lib/constants/routes'
 
 const privacySections = [
   {
-    title: 'Données collectées',
-    content:
-      'Le site peut collecter les informations transmises volontairement via un formulaire de contact ou un lien de contact direct : nom, adresse e-mail, téléphone, message et informations utiles à la demande.',
+    title: 'Responsable du traitement',
+    content: [
+      `Le responsable du traitement des données collectées via ce site est ${siteConfig.name}.`,
+      `Pour toute question relative à vos données personnelles, vous pouvez écrire à : ${siteConfig.email}.`,
+    ],
   },
   {
-    title: 'Finalité du traitement',
-    content:
-      'Les données sont utilisées uniquement pour répondre aux demandes, préparer un échange commercial, assurer le suivi d’un projet ou améliorer la qualité de service.',
+    title: 'Données personnelles collectées',
+    content: [
+      'Le site peut collecter uniquement les informations transmises volontairement par l’utilisateur via un formulaire, un lien de contact ou une prise de contact directe.',
+      'Ces données peuvent inclure : nom, prénom, adresse e-mail, numéro de téléphone, type de projet, budget estimé, délai souhaité, message libre et informations nécessaires à la compréhension de la demande.',
+      'Aucune donnée sensible au sens du RGPD n’est demandée sur ce site.',
+    ],
+  },
+  {
+    title: 'Finalités du traitement',
+    content: [
+      'Les données sont utilisées pour répondre aux demandes de contact, préparer un devis, cadrer un projet web, assurer le suivi d’un échange commercial ou professionnel et améliorer la qualité du service.',
+      'Les données peuvent également être utilisées pour conserver une trace raisonnable des échanges nécessaires à la gestion administrative ou contractuelle d’un projet.',
+    ],
+  },
+  {
+    title: 'Base légale du traitement',
+    content: [
+      'Les traitements reposent principalement sur l’intérêt légitime de MatoStudio Agency à répondre aux demandes entrantes et à assurer le suivi de ses échanges professionnels.',
+      'Lorsque la demande vise la préparation ou l’exécution d’une prestation, le traitement peut également être nécessaire à des mesures précontractuelles ou contractuelles.',
+      'Lorsque la loi impose une conservation particulière, le traitement peut reposer sur une obligation légale.',
+    ],
   },
   {
     title: 'Durée de conservation',
-    content:
-      'Les données de contact sont conservées pendant la durée nécessaire au traitement de la demande, puis archivées ou supprimées selon leur utilité administrative, commerciale ou légale.',
+    content: [
+      'Les données liées à une simple demande de contact sont conservées pendant la durée nécessaire au traitement de la demande, puis supprimées ou archivées si aucun échange utile ne se poursuit.',
+      'Les données liées à une relation commerciale, un devis, une facture ou un projet peuvent être conservées pendant la durée nécessaire à la gestion administrative, comptable, contractuelle ou légale.',
+      'Les durées définitives pourront être précisées selon l’organisation administrative finale de MatoStudio Agency.',
+    ],
   },
   {
-    title: 'Confidentialité',
-    content:
-      'Les informations transmises ne sont pas vendues ni cédées à des tiers. Elles restent strictement utilisées dans le cadre de la relation entre le visiteur et MatoStudio.',
+    title: 'Destinataires des données',
+    content: [
+      'Les données sont destinées à MatoStudio Agency et ne sont pas vendues, louées ou cédées à des tiers à des fins commerciales.',
+      'Certaines données peuvent transiter par des prestataires techniques strictement nécessaires au fonctionnement du site, de l’hébergement, de la messagerie, des formulaires ou des outils de déploiement.',
+      'Ces prestataires ne peuvent intervenir que dans la limite de leur rôle technique ou contractuel.',
+    ],
   },
   {
-    title: 'Droits des utilisateurs',
-    content:
-      'Conformément à la réglementation applicable, chaque utilisateur peut demander l’accès, la rectification ou la suppression de ses données en contactant MatoStudio par e-mail.',
+    title: 'Cookies et traceurs',
+    content: [
+      'Le site ne doit pas déposer de cookies publicitaires ou de traceurs marketing sans information préalable et, lorsque cela est requis, sans consentement de l’utilisateur.',
+      'Des cookies ou mécanismes techniques strictement nécessaires peuvent être utilisés pour assurer le bon fonctionnement du site, la sécurité, l’affichage ou la mémorisation de préférences indispensables.',
+      'Si des outils de mesure d’audience, de publicité, de chat ou de suivi avancé sont ajoutés ultérieurement, cette politique devra être mise à jour et un mécanisme de consentement adapté devra être prévu.',
+    ],
+  },
+  {
+    title: 'Sécurité des données',
+    content: [
+      'MatoStudio Agency met en œuvre des mesures raisonnables pour préserver la confidentialité, l’intégrité et la sécurité des informations transmises.',
+      'Aucun système n’étant totalement exempt de risque, l’utilisateur doit éviter de transmettre des informations sensibles ou inutiles via les formulaires ou messages de contact.',
+    ],
+  },
+  {
+    title: 'Droits des personnes concernées',
+    content: [
+      'Conformément au RGPD et à la réglementation applicable, vous pouvez demander l’accès, la rectification, l’effacement, la limitation du traitement ou l’opposition au traitement de vos données personnelles.',
+      'Lorsque le traitement repose sur le consentement, vous pouvez retirer ce consentement à tout moment pour l’avenir.',
+      `Pour exercer vos droits, contactez MatoStudio Agency à l’adresse : ${siteConfig.email}. Une réponse sera apportée dans les meilleurs délais, conformément aux délais prévus par la réglementation applicable.`,
+    ],
+  },
+  {
+    title: 'Réclamation auprès de la CNIL',
+    content: [
+      'Si vous estimez, après avoir contacté MatoStudio Agency, que vos droits ne sont pas respectés, vous pouvez introduire une réclamation auprès de la CNIL, autorité française de protection des données personnelles.',
+      'Site de la CNIL : https://www.cnil.fr',
+    ],
   },
 ]
 
@@ -41,11 +93,12 @@ export function PrivacyPage() {
       <main id="main-content">
         <Container className="page-shell legal-page-shell">
           <section className="legal-hero" aria-labelledby="privacy-title">
-            <p className="section-eyebrow">Confidentialité</p>
+            <p className="section-eyebrow">Confidentialité et RGPD</p>
             <h1 id="privacy-title">Politique de confidentialité</h1>
             <p>
-              Cette page présente de façon claire la manière dont MatoStudio traite les données
-              personnelles transmises depuis le site portfolio.
+              Cette politique explique comment {siteConfig.name} collecte, utilise, conserve et
+              protège les données personnelles transmises via le site, dans une logique de
+              conformité au RGPD.
             </p>
           </section>
 
@@ -56,16 +109,23 @@ export function PrivacyPage() {
             {privacySections.map((section) => (
               <article className="legal-card" key={section.title}>
                 <h2>{section.title}</h2>
-                <p>{section.content}</p>
+                {section.content.map((paragraph) => (
+                  <p key={paragraph}>{paragraph}</p>
+                ))}
               </article>
             ))}
 
             <article className="legal-card legal-card--highlight">
-              <h2>Contact</h2>
+              <h2>Contact données personnelles</h2>
               <p>
-                Pour toute demande relative aux données personnelles, vous pouvez contacter
-                MatoStudio à l’adresse suivante :{' '}
+                Pour toute demande relative à vos données personnelles, vous pouvez contacter
+                MatoStudio Agency à l’adresse suivante :{' '}
                 <a href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a>.
+              </p>
+              <p>
+                Cette politique complète les <a href={ROUTES.legal}>mentions légales</a> du site et
+                pourra être mise à jour selon l’évolution des services, des outils utilisés ou des
+                obligations réglementaires applicables.
               </p>
             </article>
           </section>
