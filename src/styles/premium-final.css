@@ -1,0 +1,21 @@
+/* =========================================================
+   PREMIUM FINAL LAYER — MatoStudio Agency
+   Centralizes final overrides and premium motion polish.
+
+   This file must stay loaded after the core styles because it contains
+   the latest validated visual refinements: responsive fixes, logo layout,
+   light mode inversion, footer/social polish, legal page readability,
+   global card hover system and premium animations.
+========================================================= */
+
+@import './footer-socials.css';
+@import './accessibility-responsive.css';
+@import './matostudio-polish.css';
+@import './logo-layout.css';
+@import './light-inversion.css';
+@import './home-path-cards.css';
+@import './job-contact-card.css';
+@import './gold-hover-effects.css';
+@import './legal-pages.css';
+@import './global-card-hover-system.css';
+@import './premium-animations.css';
