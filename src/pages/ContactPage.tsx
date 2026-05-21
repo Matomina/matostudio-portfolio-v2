@@ -16,54 +16,83 @@ import { siteConfig } from '@/data/site.config'
 import { useLanguage } from '@/hooks/useLanguage'
 import { ROUTES } from '@/lib/constants/routes'
 
+type FormStatus = 'idle' | 'submitting' | 'success' | 'error'
+
 function readFormValue(formData: FormData, name: string) {
   const value = formData.get(name)
 
   return typeof value === 'string' ? value.trim() : ''
 }
 
-function buildMailtoUrl(form: HTMLFormElement, recipient: string) {
+function getApiBaseUrl() {
+  return (import.meta.env.VITE_API_URL ?? 'http://localhost:3000').replace(/\/$/, '')
+}
+
+function buildContactPayload(form: HTMLFormElement) {
   const formData = new FormData(form)
-  const name = readFormValue(formData, 'name')
-  const email = readFormValue(formData, 'email')
-  const phone = readFormValue(formData, 'phone') || 'Non renseigné'
-  const projectType = readFormValue(formData, 'projectType')
-  const budget = readFormValue(formData, 'budget')
-  const timeline = readFormValue(formData, 'timeline')
-  const message = readFormValue(formData, 'message')
 
-  const subject = `Nouvelle demande MatoStudio - ${name}`
-  const body = [
-    'Bonjour MatoStudio,',
-    '',
-    'Je souhaite vous contacter pour un projet web.',
-    '',
-    `Nom : ${name}`,
-    `Email : ${email}`,
-    `Téléphone : ${phone}`,
-    `Type de projet : ${projectType}`,
-    `Budget estimé : ${budget}`,
-    `Délai souhaité : ${timeline}`,
-    '',
-    'Message :',
-    message,
-    '',
-    'Merci,',
-    name,
-  ].join('\n')
-
-  return `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
+  return {
+    name: readFormValue(formData, 'name'),
+    email: readFormValue(formData, 'email'),
+    phone: readFormValue(formData, 'phone'),
+    projectType: readFormValue(formData, 'projectType'),
+    budget: readFormValue(formData, 'budget'),
+    timeline: readFormValue(formData, 'timeline'),
+    message: readFormValue(formData, 'message'),
+  }
 }
 
 export function ContactPage() {
-  const [isPrepared, setIsPrepared] = useState(false)
+  const [formStatus, setFormStatus] = useState<FormStatus>('idle')
   const { copy } = useLanguage()
   const contactCopy = copy.contactPage
 
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault()
-    setIsPrepared(true)
-    window.location.href = buildMailtoUrl(event.currentTarget, siteConfig.email)
+
+    const form = event.currentTarget
+    const payload = buildContactPayload(form)
+    const apiBaseUrl = getApiBaseUrl()
+
+    setFormStatus('submitting')
+
+    try {
+      const response = await fetch(`${apiBaseUrl}/api/contact`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(payload),
+      })
+
+      if (!response.ok) {
+        throw new Error('Unable to send contact request.')
+      }
+
+      form.reset()
+      setFormStatus('success')
+    } catch (error) {
+      console.error(error)
+      setFormStatus('error')
+    }
+  }
+
+  const isSubmitting = formStatus === 'submitting'
+
+  function getStatusMessage() {
+    if (formStatus === 'submitting') {
+      return 'Envoi de votre demande en cours...'
+    }
+
+    if (formStatus === 'success') {
+      return 'Votre demande a bien été envoyée. Je vous répondrai rapidement.'
+    }
+
+    if (formStatus === 'error') {
+      return 'Une erreur est survenue. Vous pouvez aussi me contacter directement par email.'
+    }
+
+    return contactCopy.initialStatus
   }
 
   return (
@@ -182,13 +211,19 @@ export function ContactPage() {
               </div>
 
               <div className="premium-form__footer">
-                <button className="button button-primary button-lg" type="submit">
-                  <span className="button__label">{contactCopy.submit}</span>
+                <button
+                  className="button button-primary button-lg"
+                  type="submit"
+                  disabled={isSubmitting}
+                >
+                  <span className="button__label">
+                    {isSubmitting ? 'Envoi en cours...' : contactCopy.submit}
+                  </span>
                   <ArrowRight size={18} aria-hidden="true" />
                 </button>
 
                 <p className="form-status" aria-live="polite">
-                  {isPrepared ? contactCopy.preparedStatus : contactCopy.initialStatus}
+                  {getStatusMessage()}
                 </p>
               </div>
             </form>
