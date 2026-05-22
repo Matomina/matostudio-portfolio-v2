@@ -30,7 +30,7 @@ const dashboardNavItems = [
     end: false,
   },
   {
-    label: 'Parametres',
+    label: 'Paramètres',
     href: ROUTES.dashboardSettings,
     icon: Settings,
     end: false,
@@ -74,10 +74,13 @@ export function DashboardLayout() {
         <Container size="wide" className="dashboard-container">
           <header className="dashboard-topbar">
             <div>
-              <p className="section-eyebrow">Espace prive</p>
+              <p className="section-eyebrow">Espace privé</p>
               <h1>Dashboard MatoStudio</h1>
+              <p>
+                Pilotage commercial, demandes entrantes, devis, statistiques et préparation API.
+              </p>
             </div>
-            <span className="dashboard-topbar__status">Template pret pour API</span>
+            <span className="dashboard-topbar__status">Template premium prêt pour API</span>
           </header>
 
           <Outlet />
