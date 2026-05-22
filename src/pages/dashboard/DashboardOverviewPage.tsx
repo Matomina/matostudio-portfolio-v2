@@ -19,8 +19,8 @@ export function DashboardOverviewPage() {
           <p className="section-eyebrow">Vue globale</p>
           <h2>Pilotage commercial MatoStudio</h2>
           <p>
-            Une vue claire pour suivre les leads, prioriser les relances, transformer les devis
-            et préparer la future connexion à l’API MatoStudio.
+            Suivez les leads, priorisez les relances, transformez les devis et preparez la future
+            connexion a l API MatoStudio.
           </p>
         </div>
 
@@ -31,13 +31,19 @@ export function DashboardOverviewPage() {
           >
             Voir les contacts
           </Link>
-          <Link to={ROUTES.dashboardQuotes} className="dashboard-button dashboard-button--ghost">
+          <Link
+            to={ROUTES.dashboardQuotes}
+            className="dashboard-button dashboard-button--ghost"
+          >
             Suivre les devis
           </Link>
         </div>
       </section>
 
-      <section className="dashboard-grid dashboard-grid--stats" aria-label="Indicateurs principaux">
+      <section
+        className="dashboard-grid dashboard-grid--stats"
+        aria-label="Indicateurs principaux"
+      >
         {dashboardStats.map((stat) => (
           <article
             className={`dashboard-card dashboard-stat-card is-${stat.tone}`}
@@ -56,7 +62,7 @@ export function DashboardOverviewPage() {
           <div className="dashboard-panel__header">
             <div>
               <p className="section-eyebrow">Contacts</p>
-              <h2>Dernières demandes</h2>
+              <h2>Dernieres demandes</h2>
             </div>
             <Link to={ROUTES.dashboardContacts} className="dashboard-inline-link">
               Voir tout <ArrowRight size={16} aria-hidden="true" />
@@ -80,7 +86,7 @@ export function DashboardOverviewPage() {
           <div className="dashboard-panel__header">
             <div>
               <p className="section-eyebrow">Devis</p>
-              <h2>Estimations récentes</h2>
+              <h2>Estimations recentes</h2>
             </div>
             <Link to={ROUTES.dashboardQuotes} className="dashboard-inline-link">
               Voir tout <ArrowRight size={16} aria-hidden="true" />
@@ -129,7 +135,7 @@ export function DashboardOverviewPage() {
           <div className="dashboard-panel__header">
             <div>
               <p className="section-eyebrow">Revenus</p>
-              <h2>Potentiel estimé</h2>
+              <h2>Potentiel estime</h2>
             </div>
             <Euro size={30} aria-hidden="true" />
           </div>
@@ -149,8 +155,8 @@ export function DashboardOverviewPage() {
       <section className="dashboard-card dashboard-panel">
         <div className="dashboard-panel__header">
           <div>
-            <p className="section-eyebrow">Méthode Mato</p>
-            <h2>Priorités opérationnelles</h2>
+            <p className="section-eyebrow">Methode Mato</p>
+            <h2>Priorites operationnelles</h2>
           </div>
           <ClipboardList size={30} aria-hidden="true" />
         </div>
@@ -168,10 +174,10 @@ export function DashboardOverviewPage() {
       <section className="dashboard-card dashboard-panel dashboard-panel--cta">
         <div>
           <p className="section-eyebrow">Action rapide</p>
-          <h2>Transformer les demandes en missions cadrées</h2>
+          <h2>Transformer les demandes en missions cadrees</h2>
           <p>
-            Le dashboard reste volontairement prêt pour API : l’interface est complète, mais les
-            données pourront ensuite venir de PostgreSQL via le backend MatoStudio.
+            Le dashboard reste pret pour API : l interface est complete et les donnees pourront
+            ensuite venir de PostgreSQL via le backend MatoStudio.
           </p>
         </div>
         <PhoneCall size={34} aria-hidden="true" />
