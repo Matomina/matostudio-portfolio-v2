@@ -21,7 +21,10 @@ export function DashboardStatsPage() {
 
       <section className="dashboard-grid dashboard-grid--stats" aria-label="Indicateurs clés">
         {dashboardStats.map((stat) => (
-          <article className={`dashboard-card dashboard-stat-card is-${stat.tone}`} key={stat.label}>
+          <article
+            className={`dashboard-card dashboard-stat-card is-${stat.tone}`}
+            key={stat.label}
+          >
             <span>{stat.label}</span>
             <strong>{stat.value}</strong>
             <p>{stat.detail}</p>
