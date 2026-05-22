@@ -24,7 +24,13 @@ export function DashboardContactsPage() {
       const matchesStatus = activeStatus === 'Tous' || contact.status === activeStatus
       const matchesSearch =
         normalizedSearch.length === 0 ||
-        [contact.name, contact.email, contact.projectType, contact.priority, contact.budget]
+        [
+          contact.name,
+          contact.email,
+          contact.projectType,
+          contact.priority,
+          contact.budget,
+        ]
           .join(' ')
           .toLowerCase()
           .includes(normalizedSearch)
@@ -74,7 +80,11 @@ export function DashboardContactsPage() {
           </div>
         </div>
 
-        <div className="dashboard-table" role="table" aria-label="Contacts MatoStudio">
+        <div
+          className="dashboard-table"
+          role="table"
+          aria-label="Contacts MatoStudio"
+        >
           <div
             className="dashboard-table__row dashboard-table__row--head dashboard-table__row--contacts"
             role="row"
@@ -114,7 +124,9 @@ export function DashboardContactsPage() {
         </div>
 
         {filteredContacts.length === 0 ? (
-          <p className="dashboard-empty-state">Aucun contact ne correspond à ces filtres.</p>
+          <p className="dashboard-empty-state">
+            Aucun contact ne correspond à ces filtres.
+          </p>
         ) : null}
       </section>
     </div>
