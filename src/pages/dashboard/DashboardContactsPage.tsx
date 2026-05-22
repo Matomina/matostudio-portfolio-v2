@@ -5,7 +5,13 @@ import { dashboardContacts } from '@/data/dashboard.data'
 
 type ContactStatus = 'Tous' | (typeof dashboardContacts)[number]['status']
 
-const contactStatuses: ContactStatus[] = ['Tous', 'Nouveau', 'Contacté', 'À qualifier', 'À relancer']
+const contactStatuses: ContactStatus[] = [
+  'Tous',
+  'Nouveau',
+  'Contacté',
+  'À qualifier',
+  'À relancer',
+]
 
 export function DashboardContactsPage() {
   const [activeStatus, setActiveStatus] = useState<ContactStatus>('Tous')
@@ -69,7 +75,10 @@ export function DashboardContactsPage() {
         </div>
 
         <div className="dashboard-table" role="table" aria-label="Contacts MatoStudio">
-          <div className="dashboard-table__row dashboard-table__row--head dashboard-table__row--contacts" role="row">
+          <div
+            className="dashboard-table__row dashboard-table__row--head dashboard-table__row--contacts"
+            role="row"
+          >
             <span role="columnheader">Prospect</span>
             <span role="columnheader">Projet</span>
             <span role="columnheader">Priorité</span>
@@ -78,7 +87,11 @@ export function DashboardContactsPage() {
           </div>
 
           {filteredContacts.map((contact) => (
-            <article className="dashboard-table__row dashboard-table__row--contacts" role="row" key={contact.id}>
+            <article
+              className="dashboard-table__row dashboard-table__row--contacts"
+              role="row"
+              key={contact.id}
+            >
               <span role="cell">
                 <strong>{contact.name}</strong>
                 <small>
