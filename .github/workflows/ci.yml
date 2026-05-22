@@ -27,4 +27,8 @@ jobs:
         run: npm ci
 
       - name: Run project checks
-        run: npm run check
+        run: |
+          npm run lint
+          npx prettier --write src/pages/dashboard/DashboardContactsPage.tsx src/pages/dashboard/DashboardOverviewPage.tsx src/pages/dashboard/DashboardStatsPage.tsx
+          git diff -- src/pages/dashboard/DashboardContactsPage.tsx src/pages/dashboard/DashboardOverviewPage.tsx src/pages/dashboard/DashboardStatsPage.tsx
+          exit 1
