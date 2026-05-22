@@ -25,7 +25,10 @@ export function DashboardOverviewPage() {
         </div>
 
         <div className="dashboard-hero-card__actions">
-          <Link to={ROUTES.dashboardContacts} className="dashboard-button dashboard-button--primary">
+          <Link
+            to={ROUTES.dashboardContacts}
+            className="dashboard-button dashboard-button--primary"
+          >
             Voir les contacts
           </Link>
           <Link to={ROUTES.dashboardQuotes} className="dashboard-button dashboard-button--ghost">
@@ -36,7 +39,10 @@ export function DashboardOverviewPage() {
 
       <section className="dashboard-grid dashboard-grid--stats" aria-label="Indicateurs principaux">
         {dashboardStats.map((stat) => (
-          <article className={`dashboard-card dashboard-stat-card is-${stat.tone}`} key={stat.label}>
+          <article
+            className={`dashboard-card dashboard-stat-card is-${stat.tone}`}
+            key={stat.label}
+          >
             <span>{stat.label}</span>
             <strong>{stat.value}</strong>
             <p>{stat.detail}</p>
