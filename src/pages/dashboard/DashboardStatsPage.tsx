@@ -1,10 +1,6 @@
 import { BarChart3 } from 'lucide-react'
 
-import {
-  dashboardPipeline,
-  dashboardRevenue,
-  dashboardStats,
-} from '@/data/dashboard.data'
+import { dashboardPipeline, dashboardRevenue, dashboardStats } from '@/data/dashboard.data'
 
 export function DashboardStatsPage() {
   const maxPipelineValue = Math.max.apply(
@@ -19,17 +15,14 @@ export function DashboardStatsPage() {
           <p className="section-eyebrow">Indicateurs</p>
           <h2>Vue des résultats</h2>
           <p>
-            Suivez la performance commerciale du portfolio MatoStudio avant la connexion aux
-            données réelles du backend.
+            Suivez la performance commerciale du portfolio MatoStudio avant la connexion aux données
+            réelles du backend.
           </p>
         </div>
         <BarChart3 size={34} aria-hidden="true" />
       </section>
 
-      <section
-        className="dashboard-grid dashboard-grid--stats"
-        aria-label="Indicateurs clés"
-      >
+      <section className="dashboard-grid dashboard-grid--stats" aria-label="Indicateurs clés">
         {dashboardStats.map((stat) => (
           <article
             className={`dashboard-card dashboard-stat-card is-${stat.tone}`}
@@ -59,11 +52,7 @@ export function DashboardStatsPage() {
                   <strong>{item.label}</strong>
                   <span>{item.value}</span>
                 </div>
-                <progress
-                  value={item.value}
-                  max={maxPipelineValue}
-                  aria-label={item.label}
-                />
+                <progress value={item.value} max={maxPipelineValue} aria-label={item.label} />
                 <p>{item.detail}</p>
               </article>
             ))}
