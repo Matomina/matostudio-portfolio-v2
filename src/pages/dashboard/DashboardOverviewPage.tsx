@@ -31,19 +31,13 @@ export function DashboardOverviewPage() {
           >
             Voir les contacts
           </Link>
-          <Link
-            to={ROUTES.dashboardQuotes}
-            className="dashboard-button dashboard-button--ghost"
-          >
+          <Link to={ROUTES.dashboardQuotes} className="dashboard-button dashboard-button--ghost">
             Suivre les devis
           </Link>
         </div>
       </section>
 
-      <section
-        className="dashboard-grid dashboard-grid--stats"
-        aria-label="Indicateurs principaux"
-      >
+      <section className="dashboard-grid dashboard-grid--stats" aria-label="Indicateurs principaux">
         {dashboardStats.map((stat) => (
           <article
             className={`dashboard-card dashboard-stat-card is-${stat.tone}`}
