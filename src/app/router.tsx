@@ -4,11 +4,6 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import { SeoManager } from '@/components/seo/SeoManager'
 import { ROUTES } from '@/lib/constants/routes'
 import { ContactPage } from '@/pages/ContactPage'
-import { DashboardContactsPage } from '@/pages/dashboard/DashboardContactsPage'
-import { DashboardOverviewPage } from '@/pages/dashboard/DashboardOverviewPage'
-import { DashboardPreferencesPage } from '@/pages/dashboard/DashboardPreferencesPage'
-import { DashboardQuotesPage } from '@/pages/dashboard/DashboardQuotesPage'
-import { DashboardStatsPage } from '@/pages/dashboard/DashboardStatsPage'
 import { FreelancePage } from '@/pages/FreelancePage'
 import { HomePage } from '@/pages/HomePage'
 import { JobPage } from '@/pages/JobPage'
@@ -59,26 +54,6 @@ const router = createBrowserRouter([
   {
     path: ROUTES.privacy,
     element: withSeo(<PrivacyPage />),
-  },
-  {
-    path: ROUTES.dashboard,
-    element: withSeo(<DashboardOverviewPage />),
-  },
-  {
-    path: ROUTES.dashboardContacts,
-    element: withSeo(<DashboardContactsPage />),
-  },
-  {
-    path: ROUTES.dashboardQuotes,
-    element: withSeo(<DashboardQuotesPage />),
-  },
-  {
-    path: ROUTES.dashboardStats,
-    element: withSeo(<DashboardStatsPage />),
-  },
-  {
-    path: ROUTES.dashboardSettings,
-    element: withSeo(<DashboardPreferencesPage />),
   },
   {
     path: '*',
