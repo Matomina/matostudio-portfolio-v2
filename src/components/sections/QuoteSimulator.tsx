@@ -1,6 +1,7 @@
 import { useMemo, useState, type ChangeEvent, type FormEvent } from 'react'
 import { motion, useReducedMotion } from 'framer-motion'
 
+import { FormPrivacyNotice } from '@/components/forms/FormPrivacyNotice'
 import { quoteDeadlines, quoteOptions, quoteProjectTypes } from '@/data/quote-simulator.data'
 import { useLanguage } from '@/hooks/useLanguage'
 import { sendQuoteRequest } from '@/lib/api/quote'
@@ -420,6 +421,8 @@ export function QuoteSimulator() {
             />
           </label>
         </div>
+
+        <FormPrivacyNotice checkboxId="quote-privacy-accepted" />
 
         <div className="premium-form__footer">
           <button

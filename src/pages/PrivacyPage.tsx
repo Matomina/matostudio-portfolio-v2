@@ -29,6 +29,16 @@ const privacySections = [
     ],
   },
   {
+    title: 'Gestion des formulaires de contact et de devis',
+    content: [
+      'Les formulaires peuvent collecter : nom, email, téléphone, type de projet, budget, délai, nombre de pages, options choisies, estimation calculée et message libre.',
+      'Ces données servent uniquement à analyser la demande, répondre au prospect, préparer un devis, organiser un échange commercial ou assurer un suivi précontractuel.',
+      'La base légale principale est l’exécution de mesures précontractuelles lorsque l’utilisateur demande un devis ou un échange commercial. L’intérêt légitime peut s’appliquer au suivi raisonnable des demandes entrantes.',
+      'Les données ne sont pas utilisées pour de la prospection marketing sans consentement séparé. L’utilisateur doit éviter d’envoyer des informations sensibles dans les champs libres.',
+      'Les données sont conservées uniquement le temps nécessaire au traitement de la demande, au suivi commercial raisonnable, ou aux obligations administratives et légales en cas de relation contractuelle.',
+    ],
+  },
+  {
     title: 'Base légale du traitement',
     content: [
       'Les traitements reposent principalement sur l’intérêt légitime de MatoStudio Agency à répondre aux demandes entrantes et à assurer le suivi de ses échanges professionnels.',

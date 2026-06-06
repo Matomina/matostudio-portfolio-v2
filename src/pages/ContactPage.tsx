@@ -1,6 +1,7 @@
 import { useState, type FormEvent } from 'react'
 import { ArrowRight, CheckCircle2, Mail, Phone, ShieldCheck } from 'lucide-react'
 
+import { FormPrivacyNotice } from '@/components/forms/FormPrivacyNotice'
 import { Footer } from '@/components/layout/Footer'
 import { Header } from '@/components/layout/Header'
 import { ButtonLink } from '@/components/ui/ButtonLink'
@@ -194,6 +195,8 @@ export function ContactPage() {
                   />
                 </label>
               </div>
+
+              <FormPrivacyNotice checkboxId="contact-privacy-accepted" />
 
               <div className="premium-form__footer">
                 <button
