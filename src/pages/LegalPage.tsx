@@ -1,4 +1,4 @@
-import { Footer } from '@/components/layout/Footer'
+﻿import { Footer } from '@/components/layout/Footer'
 import { Header } from '@/components/layout/Header'
 import { Container } from '@/components/ui/Container'
 import { SkipLink } from '@/components/ui/SkipLink'
@@ -6,6 +6,8 @@ import { siteConfig } from '@/data/site.config'
 import { ROUTES } from '@/lib/constants/routes'
 
 const legalSections = [
+  // TODO: Replace placeholder text with SIREN/SIRET, official address, and registration details
+  // after official business registration (immatriculation au RCS ou registre des entreprises).
   {
     title: 'Éditeur du site',
     content: [
@@ -22,6 +24,9 @@ const legalSections = [
       `Téléphone : ${siteConfig.phone}.`,
     ],
   },
+  // TODO: Replace with definitive hosting provider details (name, address, contact info)
+  // after final production deployment. If using Vercel: Vercel Inc., 340 Pine Street Suite 701,
+  // San Francisco, CA 94104, USA — vercel.com. Adjust if another provider is used.
   {
     title: 'Hébergement et déploiement',
     content: [

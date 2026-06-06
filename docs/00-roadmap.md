@@ -1,11 +1,11 @@
 # Roadmap — MatoStudio Portfolio V2
 
-Dernière mise à jour : 2026-05-19
+Dernière mise à jour : 2026-06-06
 
-Statut global : socle technique, gouvernance, routing split, design system, portfolio freelance
-et portfolio emploi terminés.
+Statut global : socle technique, design system, portfolios freelance et emploi, SEO, formulaires,
+simulateur de devis, pages légales, tests unitaires et centralisation API terminés.
 
-Prochaine phase : production readiness.
+Prochaine phase : finalisation légale et déploiement production.
 
 ---
 
@@ -95,11 +95,26 @@ Une PR est validable uniquement si :
 - [x] Portfolio freelance complet construit et mergé
 - [x] Portfolio emploi complet construit et mergé
 
+### Récemment terminé
+
+- [x] SEO dynamique par page — SeoManager, Open Graph, canonical
+- [x] Sitemap et robots.txt
+- [x] Données structurées JSON-LD
+- [x] Page contact avec formulaire qualifié
+- [x] Simulateur de devis interactif (QuoteSimulator)
+- [x] Page paiement
+- [x] Mentions légales et politique de confidentialité
+- [x] Dashboard admin retiré du bundle public (PR #46 — en attente d'authentification)
+- [x] Tests unitaires vitest — 18 tests sur la logique de calcul devis (PR #47)
+- [x] Appels API centralisés dans `src/lib/api/` avec timeout AbortController (PR #48)
+
 ### À faire
 
-- [ ] Finaliser SEO, accessibilité, performance et production
-- [ ] Préparer le déploiement production
-- [ ] Réaliser l'audit final du repo
+- [ ] Compléter SIREN/SIRET et adresse administrative dans les mentions légales
+- [ ] Renseigner l'hébergeur définitif dans les mentions légales
+- [ ] Audit Lighthouse performance
+- [ ] Déploiement production officiel sur matostudio.fr
+- [ ] Réintroduire le dashboard derrière une authentification sécurisée
 
 ---
 
@@ -211,23 +226,21 @@ PR : `#9 feat: build job portfolio page`
 
 ### Phase 6 — SEO, accessibilité, performance et production
 
-Statut : prochaine phase.
+Statut : en cours.
 
-Branche cible : `chore/production-readiness`
-
-- [ ] SEO global
-- [ ] SEO spécifique freelance
-- [ ] SEO spécifique emploi
-- [ ] Open Graph
-- [ ] favicon
-- [ ] social preview
-- [ ] sitemap
-- [ ] robots.txt
-- [ ] pages légales si nécessaires
-- [ ] accessibilité clavier
-- [ ] performance Lighthouse
-- [ ] responsive final
-- [ ] déploiement Vercel ou équivalent
+- [x] SEO global — SeoManager, balises dynamiques par route
+- [x] SEO spécifique freelance
+- [x] SEO spécifique emploi
+- [x] Open Graph et Twitter Card
+- [x] Sitemap
+- [x] Robots.txt
+- [x] Pages légales — mentions légales et politique de confidentialité
+- [x] Accessibilité clavier et responsive
+- [x] Tests unitaires intégrés dans la CI
+- [x] Formulaires contact et devis avec validation et gestion d'erreurs
+- [ ] Compléter les informations légales (SIREN/SIRET, hébergeur)
+- [ ] Audit Lighthouse performance
+- [ ] Déploiement production officiel sur matostudio.fr
 
 ---
 
@@ -240,16 +253,14 @@ Branche cible : `chore/production-readiness`
 - 2026-05-19 — Phase 3 — Design system foundation : PR #5 mergée.
 - 2026-05-19 — Phase 4 — Portfolio freelance : PR #7 mergée.
 - 2026-05-19 — Phase 5 — Portfolio emploi : PR #9 mergée.
+- 2026-06-04 — Audit production établi — plan d'action en 8 priorités.
+- 2026-06-06 — Dashboard admin retiré du bundle public : PR #46 mergée.
+- 2026-06-06 — Tests unitaires vitest ajoutés, 18 tests métier : PR #47 mergée.
+- 2026-06-06 — Appels API centralisés dans `src/lib/api/` : PR #48 mergée.
 
 ---
 
 ## 6. Prochaine action
 
-Démarrer la Phase 6 sur :
-
-```txt
-chore/production-readiness
-```
-
-Priorité : stabiliser SEO, accessibilité, performance, configuration production et préparation au
-déploiement.
+Compléter les informations légales (SIREN/SIRET, hébergeur), réaliser l'audit Lighthouse,
+puis déployer en production sur matostudio.fr.
