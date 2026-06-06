@@ -1,4 +1,4 @@
-﻿# MatoStudio Portfolio V2
+# MatoStudio Portfolio V2
 
 Portfolio professionnel de MatoStudio, conçu comme une vitrine premium pour présenter mes projets, mes compétences et mes offres de développement web.
 
@@ -19,19 +19,21 @@ Objectifs :
 
 ## Démo
 
-Lien à ajouter prochainement.
+Site déployé en continu sur Vercel à chaque merge sur `main`.
+Lien de production disponible après mise en ligne officielle sur matostudio.fr.
 
 ---
 
 ## Stack
 
-- React
-- TypeScript
+- React 19
+- TypeScript (strict)
 - Vite
-- Tailwind CSS
+- Tailwind CSS v4
 - Framer Motion
-- ESLint
-- Prettier
+- React Router v7
+- ESLint + Prettier
+- Vitest + Testing Library
 
 ---
 
@@ -49,12 +51,14 @@ npm run dev
 ## Commandes utiles
 
 ```bash
-npm run dev
-npm run lint
-npm run format:check
-npm run build
-npm run check
-npm run preview
+npm run dev           # serveur de développement
+npm run test          # tests unitaires (vitest)
+npm run test:watch    # tests en mode watch
+npm run lint          # ESLint
+npm run format:check  # vérification Prettier
+npm run build         # build de production
+npm run check         # vérification complète (lint + format + test + build)
+npm run preview       # aperçu du build local
 ```
 
 ---
@@ -81,6 +85,12 @@ Créer un fichier `.env` à partir du modèle :
 cp .env.example .env
 ```
 
+Variables disponibles :
+
+| Variable       | Description                  | Exemple                 |
+| -------------- | ---------------------------- | ----------------------- |
+| `VITE_API_URL` | URL de base de l'API backend | `http://localhost:3000` |
+
 ---
 
 ## Qualité
@@ -88,10 +98,10 @@ cp .env.example .env
 Le projet utilise :
 
 - TypeScript strict
-- ESLint
-- Prettier
-- build Vite
-- GitHub Actions CI
+- ESLint + Prettier
+- Vitest — tests unitaires sur la logique métier (simulateur de devis)
+- Validation des assets de production (`validate:production`)
+- GitHub Actions CI — lint + format + tests + build sur chaque PR
 
 Commande de vérification complète :
 
@@ -101,12 +111,21 @@ npm run check
 
 ---
 
+## Notes
+
+Le dashboard admin est temporairement retiré du bundle public. Le code reste
+disponible dans l'historique git et sera réintroduit derrière une authentification
+sécurisée dans une future version.
+
+---
+
 ## Documentation
 
 - [Roadmap](docs/00-roadmap.md)
-- [6steps production](docs/06-6steps-production-readiness.md)
-- [Stratégie de branches](docs/01-branch-strategy.md)
-- [Contribution](docs/02-contributing.md)
+- [Production readiness](docs/06-6steps-production-readiness.md)
+- [Git workflow](docs/01-git-workflow.md)
+- [Architecture](docs/02-architecture.md)
+- [Plan d'audit](docs/10-audit-action-plan.md)
 
 ---
 

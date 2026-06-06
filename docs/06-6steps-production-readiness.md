@@ -49,19 +49,19 @@ Validation : navigation clavier, contraste, affichage 360 px, 390 px, 430 px, 76
 
 ## Step 5 — Performance et qualité
 
-Statut : en cours.
+Statut : fait (audit Lighthouse restant).
 
-- Garder `npm run check` obligatoire avant merge.
-- Vérifier lint, format, TypeScript et build.
-- Ajouter une validation dédiée aux assets de production.
-- Réaliser un audit Lighthouse.
-- Nettoyer les PR obsolètes et les branches inutiles après merge.
+- `npm run check` obligatoire avant merge — lint + format + tests + build.
+- Tests unitaires vitest ajoutés (18 tests sur la logique métier).
+- Validation dédiée aux assets de production (`validate:production`).
+- CI GitHub Actions couvre tous les checks sur chaque PR.
+- Audit Lighthouse à réaliser après déploiement production.
 
 Validation : CI GitHub verte, `npm run check` et build Vite OK.
 
 ## Step 6 — Livraison production
 
-Statut : prochain step.
+Statut : en cours.
 
 - Mettre à jour le README avec lien de démo quand disponible.
 - Vérifier les variables d'environnement.
