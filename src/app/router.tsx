@@ -1,24 +1,35 @@
-import type { ReactElement } from 'react'
+import { lazy, Suspense, type ReactElement } from 'react'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 import { SeoManager } from '@/components/seo/SeoManager'
 import { ROUTES } from '@/lib/constants/routes'
-import { ContactPage } from '@/pages/ContactPage'
-import { FreelancePage } from '@/pages/FreelancePage'
 import { HomePage } from '@/pages/HomePage'
-import { JobPage } from '@/pages/JobPage'
-import { LegalPage } from '@/pages/LegalPage'
-import { NotFoundPage } from '@/pages/NotFoundPage'
-import { PaymentPage } from '@/pages/PaymentPage'
-import { PrivacyPage } from '@/pages/PrivacyPage'
-import { QuotePage } from '@/pages/QuotePage'
+
+const ContactPage = lazy(() =>
+  import('@/pages/ContactPage').then((m) => ({ default: m.ContactPage })),
+)
+const FreelancePage = lazy(() =>
+  import('@/pages/FreelancePage').then((m) => ({ default: m.FreelancePage })),
+)
+const JobPage = lazy(() => import('@/pages/JobPage').then((m) => ({ default: m.JobPage })))
+const LegalPage = lazy(() => import('@/pages/LegalPage').then((m) => ({ default: m.LegalPage })))
+const NotFoundPage = lazy(() =>
+  import('@/pages/NotFoundPage').then((m) => ({ default: m.NotFoundPage })),
+)
+const PaymentPage = lazy(() =>
+  import('@/pages/PaymentPage').then((m) => ({ default: m.PaymentPage })),
+)
+const PrivacyPage = lazy(() =>
+  import('@/pages/PrivacyPage').then((m) => ({ default: m.PrivacyPage })),
+)
+const QuotePage = lazy(() => import('@/pages/QuotePage').then((m) => ({ default: m.QuotePage })))
 
 function withSeo(element: ReactElement) {
   return (
-    <>
+    <Suspense fallback={null}>
       <SeoManager />
       {element}
-    </>
+    </Suspense>
   )
 }
 

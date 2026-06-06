@@ -1,4 +1,5 @@
 import type { AnchorHTMLAttributes } from 'react'
+import { Link } from 'react-router-dom'
 
 type ButtonLinkVariant = 'primary' | 'secondary' | 'ghost'
 type ButtonLinkSize = 'sm' | 'md' | 'lg'
@@ -29,18 +30,28 @@ export function ButtonLink({
   isExternal = false,
   rel,
   target,
-  ...props
+  href,
+  ...rest
 }: ButtonLinkProps) {
   const classNames = ['button', variantClassNames[variant], sizeClassNames[size], className]
     .filter(Boolean)
     .join(' ')
 
+  if (!isExternal && typeof href === 'string' && href.startsWith('/')) {
+    return (
+      <Link to={href} className={classNames} {...rest}>
+        {children}
+      </Link>
+    )
+  }
+
   return (
     <a
+      href={href}
       className={classNames}
       rel={isExternal ? (rel ?? 'noreferrer') : rel}
       target={isExternal ? (target ?? '_blank') : target}
-      {...props}
+      {...rest}
     >
       {children}
     </a>
