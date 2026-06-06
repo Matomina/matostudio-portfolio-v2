@@ -14,6 +14,7 @@ import {
 } from '@/data/contact-form.data'
 import { siteConfig } from '@/data/site.config'
 import { useLanguage } from '@/hooks/useLanguage'
+import { sendContactRequest } from '@/lib/api/contact'
 import { ROUTES } from '@/lib/constants/routes'
 
 type FormStatus = 'idle' | 'submitting' | 'success' | 'error'
@@ -22,10 +23,6 @@ function readFormValue(formData: FormData, name: string) {
   const value = formData.get(name)
 
   return typeof value === 'string' ? value.trim() : ''
-}
-
-function getApiBaseUrl() {
-  return (import.meta.env.VITE_API_URL ?? 'http://localhost:3000').replace(/\/$/, '')
 }
 
 function buildContactPayload(form: HTMLFormElement) {
@@ -52,23 +49,11 @@ export function ContactPage() {
 
     const form = event.currentTarget
     const payload = buildContactPayload(form)
-    const apiBaseUrl = getApiBaseUrl()
 
     setFormStatus('submitting')
 
     try {
-      const response = await fetch(`${apiBaseUrl}/api/contact`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(payload),
-      })
-
-      if (!response.ok) {
-        throw new Error('Unable to send contact request.')
-      }
-
+      await sendContactRequest(payload)
       form.reset()
       setFormStatus('success')
     } catch (error) {
