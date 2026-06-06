@@ -3,6 +3,7 @@ import { motion, useReducedMotion } from 'framer-motion'
 
 import { quoteDeadlines, quoteOptions, quoteProjectTypes } from '@/data/quote-simulator.data'
 import { useLanguage } from '@/hooks/useLanguage'
+import { sendQuoteRequest } from '@/lib/api/quote'
 import { calculateQuoteEstimate, formatQuoteAmount } from '@/lib/utils/quoteEstimate'
 
 import type { QuoteDeadlineId, QuoteOptionId, QuoteProjectTypeId } from '@/types/agency.types'
@@ -23,10 +24,6 @@ function readFormValue(formData: FormData, name: string) {
   const value = formData.get(name)
 
   return typeof value === 'string' ? value.trim() : ''
-}
-
-function getApiBaseUrl() {
-  return (import.meta.env.VITE_API_URL ?? 'http://localhost:3000').replace(/\/$/, '')
 }
 
 export function QuoteSimulator() {
@@ -131,18 +128,7 @@ export function QuoteSimulator() {
     setQuoteRequestStatus('submitting')
 
     try {
-      const response = await fetch(`${getApiBaseUrl()}/api/quote`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(payload),
-      })
-
-      if (!response.ok) {
-        throw new Error('Unable to send quote request.')
-      }
-
+      await sendQuoteRequest(payload)
       form.reset()
       setQuoteRequestStatus('success')
     } catch (error) {
