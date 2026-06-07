@@ -162,10 +162,18 @@ h1,
 .button,
 .site-header__tool-button,
 .site-header__language-button,
-.site-footer__socials a,
-.whatsapp-floating-button {
+.site-footer__socials a {
   overflow: hidden;
   position: relative;
+}
+
+.whatsapp-floating-button {
+  position: fixed !important;
+  right: max(18px, env(safe-area-inset-right)) !important;
+  bottom: max(18px, env(safe-area-inset-bottom)) !important;
+  left: auto !important;
+  z-index: calc(var(--z-header) + 2) !important;
+  overflow: hidden;
 }
 
 .button::before,

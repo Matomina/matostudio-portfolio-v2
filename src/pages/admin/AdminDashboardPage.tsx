@@ -6,7 +6,7 @@ import { LeadStatusBadge } from '@/components/admin/LeadStatusBadge'
 import { StatsCard } from '@/components/admin/StatsCard'
 import { adminGetLeads, adminGetStats } from '@/lib/api/admin'
 import type { AdminStats, Lead } from '@/types/admin'
-
+import adminLogo from '@/assets/brand/matostudioagency-logo.png'
 function formatDate(iso: string) {
   return new Date(iso).toLocaleDateString('fr-FR', {
     day: '2-digit',
@@ -43,7 +43,7 @@ export function AdminDashboardPage() {
       <header className="admin-header">
         <div className="admin-header__brand">
           <span className="section-eyebrow">Administration</span>
-          <strong>MatoStudio</strong>
+          <img className="admin-header__logo" src={adminLogo} alt="MatoStudio Agency" />
         </div>
         <button
           type="button"

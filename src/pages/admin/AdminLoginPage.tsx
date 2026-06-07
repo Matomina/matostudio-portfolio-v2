@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom'
 import { useAuth } from '@/hooks/useAuth'
 import { adminLogin, AdminApiError } from '@/lib/api/admin'
 import { ROUTES } from '@/lib/constants/routes'
+import adminLogo from '@/assets/brand/matostudioagency-logo.png'
 
 type LoginStatus = 'idle' | 'submitting' | 'error'
 
@@ -40,7 +41,7 @@ export function AdminLoginPage() {
       <div className="admin-login-card">
         <div className="admin-login-card__header">
           <p className="section-eyebrow">Administration</p>
-          <h1>MatoStudio</h1>
+          <img className="admin-login-card__logo" src={adminLogo} alt="MatoStudio Agency" />
           <p>Accès réservé</p>
         </div>
 
