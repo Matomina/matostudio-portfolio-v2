@@ -1498,7 +1498,7 @@ body:not(.legal-page) .button-secondary {
   }
 
   .site-footer__copyright {
-    padding-bottom: calc(var(--space-6) + 56px);
+    padding-bottom: var(--space-6);
   }
 
   .whatsapp-floating-button {

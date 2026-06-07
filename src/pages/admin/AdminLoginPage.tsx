@@ -2,13 +2,14 @@ import { type FormEvent, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 import { useAuth } from '@/hooks/useAuth'
-import { adminLogin } from '@/lib/api/admin'
+import { adminLogin, AdminApiError } from '@/lib/api/admin'
 import { ROUTES } from '@/lib/constants/routes'
 
 type LoginStatus = 'idle' | 'submitting' | 'error'
 
 export function AdminLoginPage() {
   const [status, setStatus] = useState<LoginStatus>('idle')
+  const [errorMessage, setErrorMessage] = useState('')
   const { checkSession } = useAuth()
   const navigate = useNavigate()
 
@@ -22,7 +23,14 @@ export function AdminLoginPage() {
       await adminLogin(password)
       await checkSession()
       navigate(ROUTES.adminDashboard, { replace: true })
-    } catch {
+    } catch (err) {
+      if (err instanceof AdminApiError) {
+        if (err.status === 401) setErrorMessage('Mot de passe incorrect.')
+        else if (err.status === 503) setErrorMessage('Authentification admin non configurée.')
+        else setErrorMessage('Impossible de contacter le serveur admin.')
+      } else {
+        setErrorMessage('Impossible de contacter le serveur admin.')
+      }
       setStatus('error')
     }
   }
@@ -51,7 +59,7 @@ export function AdminLoginPage() {
 
           {status === 'error' && (
             <p className="admin-login-card__error" role="alert">
-              Mot de passe incorrect.
+              {errorMessage}
             </p>
           )}
 

@@ -6,7 +6,7 @@ function getApiBaseUrl() {
   return (import.meta.env.VITE_API_URL ?? 'http://localhost:3000').replace(/\/$/, '')
 }
 
-class AdminApiError extends Error {
+export class AdminApiError extends Error {
   constructor(readonly status: number) {
     super(`Admin API error: ${status}`)
     this.name = 'AdminApiError'
