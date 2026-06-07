@@ -429,7 +429,8 @@ body:not(.legal-page) .button-secondary {
 
 .site-footer__brand::after,
 .site-footer__socials a::after,
-.site-footer__legal-links a::after {
+.site-footer__legal-links a::after,
+.site-footer__copyright-link::after {
   display: none;
 }
 
@@ -454,8 +455,8 @@ body:not(.legal-page) .button-secondary {
     var(--agency-text-muted) 58%,
     var(--agency-text-luxury) 78%
   );
-  background-clip: text;
   -webkit-background-clip: text;
+  background-clip: text;
   text-shadow: 0 0 22px rgba(255, 255, 255, 0.08);
 }
 

@@ -307,6 +307,87 @@
   color: var(--color-error);
 }
 
+/* -- Agency-harmony + matostudio-polish isolation --------- */
+/*
+ * matostudio-polish.css forces body:not(.legal-page) h1/h2/h3 and main
+ * with !important (specificity 0,1,2). admin.css is loaded AFTER, so
+ * selectors with equal specificity + !important here win by cascade order.
+ */
+
+/* Fix h1 in admin login card: undo giant agency-harmony font + gradient text */
+body .admin-login-page .admin-login-card h1 {
+  font-size: clamp(1.75rem, 4vw, 2.2rem) !important;
+  letter-spacing: -0.02em !important;
+  line-height: 1.2 !important;
+  color: var(--color-text) !important;
+  background: none !important;
+  -webkit-background-clip: unset !important;
+  background-clip: unset !important;
+  -webkit-text-fill-color: var(--color-text) !important;
+  filter: none !important;
+  text-shadow: none !important;
+}
+
+/* Fix h1 in admin dashboard */
+body .admin-layout .admin-section-header h1 {
+  font-size: clamp(1.5rem, 3vw, 2.2rem) !important;
+  letter-spacing: -0.02em !important;
+  line-height: 1.2 !important;
+  color: var(--color-text) !important;
+  background: none !important;
+  -webkit-text-fill-color: var(--color-text) !important;
+  filter: none !important;
+  text-shadow: none !important;
+}
+
+/* Fix h2 in admin leads section */
+body .admin-layout .admin-leads-section h2 {
+  font-size: clamp(1.1rem, 2vw, 1.5rem) !important;
+  color: var(--color-text) !important;
+  background: none !important;
+  -webkit-text-fill-color: var(--color-text) !important;
+  filter: none !important;
+  text-shadow: none !important;
+}
+
+/* Fix h2/h3 in admin detail cards */
+body .admin-layout .admin-detail-card h2,
+body .admin-layout .admin-sidebar-card h3,
+body .admin-layout .admin-detail-message h3 {
+  color: var(--color-text) !important;
+  background: none !important;
+  -webkit-text-fill-color: var(--color-text) !important;
+  filter: none !important;
+  text-shadow: none !important;
+}
+
+/* Fix admin main background: matostudio-polish forces body:not(.legal-page) main { background !important } */
+body .admin-layout .admin-main {
+  background: transparent !important;
+  overflow: auto !important;
+}
+
+/* Remove the main::before glow pseudo-element in admin context */
+.admin-layout .admin-main::before {
+  content: none !important;
+}
+
+/* Button full-width in admin login form */
+.admin-login-card__form .button {
+  width: 100%;
+}
+
+/* Ensure form field inputs don't overflow the card */
+.admin-login-card .form-field {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.admin-login-card .form-field input {
+  width: 100%;
+  box-sizing: border-box;
+}
+
 /* -- Login Page --------------------------------------------- */
 
 .admin-login-page {

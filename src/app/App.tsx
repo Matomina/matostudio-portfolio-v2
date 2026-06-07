@@ -1,5 +1,4 @@
 import { StructuredData } from '@/components/seo/StructuredData'
-import { WhatsAppFloatingButton } from '@/components/ui/WhatsAppFloatingButton'
 import { useScrollReveal } from '@/hooks/useScrollReveal'
 
 import { AppProviders } from './providers/AppProviders'
@@ -12,7 +11,6 @@ export default function App() {
     <AppProviders>
       <StructuredData />
       <AppRouter />
-      <WhatsAppFloatingButton />
     </AppProviders>
   )
 }
