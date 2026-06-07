@@ -72,7 +72,7 @@ export function AdminDashboardPage() {
         )}
 
         {!loading && !error && stats && (
-          <>
+          <div className="admin-dashboard-card">
             <div className="admin-stats-grid">
               <StatsCard label="Total demandes" value={stats.total} accent />
               <StatsCard label="Nouvelles" value={stats.new} />
@@ -140,7 +140,7 @@ export function AdminDashboardPage() {
                 </div>
               )}
             </div>
-          </>
+          </div>
         )}
       </main>
     </div>

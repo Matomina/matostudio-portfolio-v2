@@ -86,6 +86,8 @@
 }
 
 .admin-main {
+  display: grid;
+  justify-items: center;
   padding: clamp(1.5rem, 4vw, 2.5rem);
   max-width: 1280px;
   margin-inline: auto;
@@ -93,6 +95,8 @@
 }
 
 .admin-section-header {
+  width: min(100%, 1180px);
+  margin-inline: auto;
   margin-bottom: 2rem;
 }
 
@@ -390,17 +394,21 @@ body .admin-layout .admin-main {
 
 /* -- Login Page --------------------------------------------- */
 
-.admin-login-page {
+body .admin-login-page {
+  width: 100%;
+  min-height: 100svh;
   display: grid;
   place-items: center;
-  min-height: 100svh;
+  place-content: center;
   padding: 2rem;
+  box-sizing: border-box;
+  overflow-x: hidden;
   background: var(--gradient-page, var(--color-bg));
 }
 
-.admin-login-card {
-  width: 100%;
-  max-width: 400px;
+body .admin-login-card {
+  width: min(100%, 400px);
+  max-width: calc(100vw - 2rem);
   margin: 0 auto;
   display: grid;
   gap: 2rem;
@@ -409,6 +417,19 @@ body .admin-layout .admin-main {
   border-radius: var(--radius-lg);
   background: var(--gradient-card, var(--color-surface));
   box-shadow: var(--shadow-card);
+  box-sizing: border-box;
+}
+
+@media (min-width: 720px) {
+  body .admin-login-page {
+    place-items: center;
+    place-content: center;
+  }
+
+  body .admin-login-card {
+    width: 400px;
+    max-width: 400px;
+  }
 }
 
 .admin-login-card__header {
@@ -637,4 +658,29 @@ body .admin-layout .admin-main {
   .admin-stats-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+}
+
+/* -- Dashboard card ----------------------------------------- */
+
+.admin-dashboard-card {
+  width: min(100%, 1180px);
+  display: grid;
+  gap: 2rem;
+  padding: clamp(1.5rem, 4vw, 2rem);
+  border: 1px solid var(--color-border-gold);
+  border-radius: var(--radius-lg);
+  background: var(--gradient-card, var(--color-surface));
+  box-shadow: var(--shadow-card);
+  box-sizing: border-box;
+}
+
+/* -- Footer pseudo-lignes parasites ------------------------- */
+
+.site-footer a::after,
+.site-footer__brand::after,
+.site-footer__socials a::after,
+.site-footer__legal-links a::after,
+.site-footer__copyright-link::after {
+  content: none !important;
+  display: none !important;
 }
