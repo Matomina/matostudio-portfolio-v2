@@ -1,8 +1,9 @@
 import { lazy, Suspense, type ReactElement } from 'react'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { createBrowserRouter, Outlet, RouterProvider } from 'react-router-dom'
 
 import { RequireAuth } from '@/components/admin/RequireAuth'
 import { SeoManager } from '@/components/seo/SeoManager'
+import { WhatsAppFloatingButton } from '@/components/ui/WhatsAppFloatingButton'
 import { ROUTES } from '@/lib/constants/routes'
 import { HomePage } from '@/pages/HomePage'
 
@@ -35,6 +36,15 @@ const AdminLeadDetailPage = lazy(() =>
   import('@/pages/admin/AdminLeadDetailPage').then((m) => ({ default: m.AdminLeadDetailPage })),
 )
 
+function PublicLayout() {
+  return (
+    <>
+      <Outlet />
+      <WhatsAppFloatingButton />
+    </>
+  )
+}
+
 function withSeo(element: ReactElement) {
   return (
     <Suspense fallback={null}>
@@ -54,36 +64,18 @@ function withAuth(element: ReactElement) {
 
 const router = createBrowserRouter([
   {
-    path: ROUTES.home,
-    element: withSeo(<HomePage />),
-  },
-  {
-    path: ROUTES.contact,
-    element: withSeo(<ContactPage />),
-  },
-  {
-    path: ROUTES.quote,
-    element: withSeo(<QuotePage />),
-  },
-  {
-    path: ROUTES.payment,
-    element: withSeo(<PaymentPage />),
-  },
-  {
-    path: ROUTES.freelance,
-    element: withSeo(<FreelancePage />),
-  },
-  {
-    path: ROUTES.job,
-    element: withSeo(<JobPage />),
-  },
-  {
-    path: ROUTES.legal,
-    element: withSeo(<LegalPage />),
-  },
-  {
-    path: ROUTES.privacy,
-    element: withSeo(<PrivacyPage />),
+    element: <PublicLayout />,
+    children: [
+      { path: ROUTES.home, element: withSeo(<HomePage />) },
+      { path: ROUTES.contact, element: withSeo(<ContactPage />) },
+      { path: ROUTES.quote, element: withSeo(<QuotePage />) },
+      { path: ROUTES.payment, element: withSeo(<PaymentPage />) },
+      { path: ROUTES.freelance, element: withSeo(<FreelancePage />) },
+      { path: ROUTES.job, element: withSeo(<JobPage />) },
+      { path: ROUTES.legal, element: withSeo(<LegalPage />) },
+      { path: ROUTES.privacy, element: withSeo(<PrivacyPage />) },
+      { path: '*', element: withSeo(<NotFoundPage />) },
+    ],
   },
   {
     path: ROUTES.adminLogin,
@@ -100,10 +92,6 @@ const router = createBrowserRouter([
   {
     path: '/admin/leads/:id',
     element: withAuth(<AdminLeadDetailPage />),
-  },
-  {
-    path: '*',
-    element: withSeo(<NotFoundPage />),
   },
 ])
 
