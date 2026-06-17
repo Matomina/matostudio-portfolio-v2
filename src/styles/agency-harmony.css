@@ -1520,7 +1520,7 @@ body:not(.legal-page) .button-secondary {
     grid-template-columns: minmax(0, 1fr);
   }
 
-ator  .quote-summary__details {
+  ator .quote-summary__details {
     width: 100%;
     min-width: 0;
   }
