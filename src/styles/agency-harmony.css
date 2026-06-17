@@ -1196,6 +1196,12 @@ body:not(.legal-page) .button-secondary {
   line-height: var(--leading-relaxed);
 }
 
+.quote-summary > .form-grid,
+.quote-summary > .form-privacy-notice,
+.quote-summary > .premium-form__footer {
+  grid-column: 1 / -1;
+}
+
 .premium-cta-band {
   display: grid;
   gap: var(--space-5);
@@ -1506,6 +1512,25 @@ body:not(.legal-page) .button-secondary {
     bottom: max(14px, env(safe-area-inset-bottom));
     width: 52px;
     height: 52px;
+  }
+}
+
+@media (min-width: 860px) and (max-width: 1119px) {
+  .quote-summary {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+ator  .quote-summary__details {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .quote-summary .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .quote-summary .form-field--full {
+    grid-column: auto;
   }
 }
 
